@@ -10,6 +10,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Fixed
 - Sample case study no longer claims the "IT Manager" job title; replaced with `[placeholder]` until the real title is confirmed.
 - `CLAUDE.md` now lists the routes that actually exist; `/work/` and `/lab/` marked as planned.
+- Light-mode `theme-color` meta now matches the soft blue background (`#f3f8ff`) instead of the old green design.
 
 ## [0.1.0] — 2026-10-15 — Sprint 0 (prototype)
 ### Added

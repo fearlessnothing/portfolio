@@ -5,7 +5,7 @@
 ## Backlog
 | # | Task | Priority | Status |
 |---|---|---|---|
-| 1 | Fix Sprint 0 known issues (order field, theme-color, mobile aria-current) | Must | To do |
+| 1 | Fix Sprint 0 known issues (order field, theme-color, mobile aria-current) | Must | Done 2026-10-15 |
 | 2 | Apply soft blue design system to `global.css` (light + dark) | Must | To do |
 | 3 | Add name and title to header and hero | Must | To do |
 | 4 | Rename Case studies → Work; create Lab page | Must | To do |
@@ -17,6 +17,7 @@
 ## Notes
 - 2026-10-15: Pre-sprint fixes done — sample case study job title set to `[placeholder]`; `CLAUDE.md` routes corrected (Work/Lab marked planned until task #4).
 - 2026-10-15: Task #7 done — first commit pushed to GitHub (`fearlessnothing/portfolio`, branch `main`). GitHub's auto-created README was merged; the local README was kept.
+- 2026-10-15: Task #1 done — `order` sorting and mobile `aria-current` were already correct; light `theme-color` set to `#f3f8ff` (dark value left until task #2).
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro
