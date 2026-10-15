@@ -5,6 +5,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ## [Unreleased]
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
+### Added
+- Project pushed to GitHub (`main` branch) for sync between laptops.
 ### Fixed
 - Sample case study no longer claims the "IT Manager" job title; replaced with `[placeholder]` until the real title is confirmed.
 - `CLAUDE.md` now lists the routes that actually exist; `/work/` and `/lab/` marked as planned.
