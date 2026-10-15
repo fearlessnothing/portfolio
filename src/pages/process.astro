@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const phases = [
+  { number: '01', title: 'Discover', description: 'Understand the business goals, factory footprint, production calendar and the daily experience of users.', outcome: 'A shared picture of the current state, constraints and priority risks.' },
+  { number: '02', title: 'Assess & prioritize', description: 'Map systems and dependencies, review security and continuity, and compare options against cost, risk and operational fit.', outcome: 'A sequenced roadmap with ownership, assumptions and decision points.' },
+  { number: '03', title: 'Design & plan', description: 'Define architecture, scope, service impacts, change windows, rollback paths and clear acceptance criteria.', outcome: 'A delivery plan that business and technical teams can act on.' },
+  { number: '04', title: 'Implement & test', description: 'Deliver in controlled phases, involve users, test integrations and maintain a safe route back.', outcome: 'Verified changes with support readiness and documented handover.' },
+  { number: '05', title: 'Operate & improve', description: 'Monitor service health, review incidents and adoption, capture lessons and refine the next improvement.', outcome: 'Sustainable services with visible measures and continuous learning.' },
+];
+---
+
+<BaseLayout title="Process">
+  <section class="page-intro"><div class="container"><span class="eyebrow">Delivery approach</span><h1>Disciplined change, close to the work.</h1><p>A practical lifecycle that keeps production continuity, security and the people affected by change in view.</p></div></section>
+  <section class="container content-section">
+    <div class="process-list">
+      {phases.map((phase) => <article class="phase"><div class="phase-num">PHASE / {phase.number}</div><div><h2>{phase.title}</h2><p>{phase.description}</p></div><div class="phase-outcome"><strong>Output</strong><br />{phase.outcome}</div></article>)}
+    </div>
+    <div class="sample-notice">Every engagement adapts to the factory's operating calendar, risk profile and available capacity. Production continuity comes first.</div>
+  </section>
+</BaseLayout>

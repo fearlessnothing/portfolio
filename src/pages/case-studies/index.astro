@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSortedCaseStudies } from '../../lib/case-studies';
+
+const caseStudies = await getSortedCaseStudies();
+---
+
+<BaseLayout title="Case Studies" description="Selected IT operations and transformation case studies for garment manufacturing.">
+  <section class="page-intro"><div class="container"><span class="eyebrow">Selected work</span><h1>Problems understood. Improvements delivered.</h1><p>Examples of the decisions, trade-offs and outcomes behind practical technology leadership in manufacturing.</p></div></section>
+  <section class="container section">
+    {caseStudies.length ? (
+      <div class="case-grid">
+        {caseStudies.map((study, index) => (
+          <a class="case-card" href={`/case-studies/${study.id}/`}>
+            <div class="card-topline"><span>{study.data.role} / {study.data.duration}</span><span class="card-index">{String(index + 1).padStart(2, '0')}</span></div>
+            <h3>{study.data.title}</h3>
+            <p>{study.data.summary}</p>
+            <ul class="tag-list">{study.data.tags.map((tag) => <li>{tag}</li>)}</ul>
+            <span class="text-link">Read case study <span aria-hidden="true">↗</span></span>
+          </a>
+        ))}
+      </div>
+    ) : <p class="empty-state">No case studies published yet.</p>}
+  </section>
+</BaseLayout>

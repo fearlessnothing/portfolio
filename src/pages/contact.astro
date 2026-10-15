@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? '';
+---
+
+<BaseLayout title="Contact" description="Start a conversation about IT leadership and garment manufacturing in Myanmar.">
+  <section class="page-intro"><div class="container"><span class="eyebrow">Contact</span><h1>Let’s make the next change count.</h1><p>Share a little about your factory, your team or the technology challenge you’re working through.</p></div></section>
+  <section class="container contact-grid">
+    <div class="contact-details"><h2>A good place to start.</h2><p>Whether you’re planning a transformation, strengthening IT operations or looking for a thoughtful sounding board, send a note.</p><div class="contact-note">Myanmar / Garment manufacturing / IT leadership</div></div>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value={accessKey} />
+      <input type="hidden" name="subject" value="Portfolio contact request" />
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+      <div class="form-grid">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required /></div>
+        <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+        <div class="field full"><label for="organization">Organization</label><input id="organization" name="organization" autocomplete="organization" /></div>
+        <div class="field full"><label for="message">What would you like to discuss?</label><textarea id="message" name="message" required></textarea></div>
+      </div>
+      <div class="form-footer"><button class="button" type="submit">Send message <span aria-hidden="true">↗</span></button><p>Your details are sent securely via Web3Forms.</p></div>
+      {!accessKey && <p class="sample-notice">Contact form is not configured yet. Add your Web3Forms key to <code>.env</code> before deployment.</p>}
+    </form>
+  </section>
+</BaseLayout>

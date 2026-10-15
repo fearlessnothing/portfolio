@@ -1,0 +1,110 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'IT leadership for resilient garment manufacturing in Myanmar.' } = Astro.props;
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) => currentPath === href || (href !== '/' && currentPath.startsWith(href));
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about/', label: 'About' },
+  { href: '/case-studies/', label: 'Case studies' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/process/', label: 'Process' },
+  { href: '/contact/', label: 'Contact' },
+];
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f4f5f1" data-light="#f4f5f1" data-dark="#151c1a" />
+    <title>{title} | Garment IT Leadership</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script is:inline>
+      const storedTheme = localStorage.getItem('portfolio-theme');
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = storedTheme || preferredTheme;
+      const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+      if (themeColorMeta) themeColorMeta.content = themeColorMeta.dataset[document.documentElement.dataset.theme];
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="/" aria-label="Garment IT Leadership home">
+          <span class="wordmark-mark">GI<span>.</span></span>
+          <span class="wordmark-copy">IT LEADERSHIP<small>MYANMAR · APPAREL</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          {navItems.map((item) => (
+            <a href={item.href} class:list={['nav-link', { active: isActive(item.href) }]} aria-current={currentPath === item.href ? 'page' : undefined}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation">
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+        {navItems.map((item) => <a href={item.href} class:list={{ active: isActive(item.href) }} aria-current={currentPath === item.href ? 'page' : undefined}>{item.label}</a>)}
+        <button class="mobile-theme-toggle" type="button">Switch theme</button>
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>IT systems that keep production moving.</span>
+        <span>Myanmar <span class="footer-dot">/</span> Garment manufacturing</span>
+        <a href="/contact/">Start a conversation <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+    <script>
+      const root = document.documentElement;
+      const themeButtons = document.querySelectorAll<HTMLButtonElement>('.theme-toggle, .mobile-theme-toggle');
+      const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const mobileNav = document.querySelector<HTMLElement>('#mobile-navigation');
+      const themeColorMeta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+
+      function syncThemeButton() {
+        const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        if (themeColorMeta) themeColorMeta.content = themeColorMeta.dataset[root.dataset.theme ?? 'light'] ?? themeColorMeta.content;
+        themeButtons.forEach((button) => {
+          button.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
+          button.setAttribute('title', `Switch to ${nextTheme} mode`);
+        });
+      }
+
+      themeButtons.forEach((button) => button.addEventListener('click', () => {
+        root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('portfolio-theme', root.dataset.theme);
+        syncThemeButton();
+      }));
+      menuButton?.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+        if (mobileNav) mobileNav.hidden = isOpen;
+      });
+      mobileNav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+        if (mobileNav) mobileNav.hidden = true;
+        menuButton?.setAttribute('aria-expanded', 'false');
+      }));
+      syncThemeButton();
+    </script>
+  </body>
+</html>

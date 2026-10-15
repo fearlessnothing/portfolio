@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  { code: 'OPS / 01', title: 'Factory network resilience', summary: 'Segmented network foundations, monitoring and recovery practices designed to keep production and office teams connected.', tags: ['Network', 'Resilience', 'Infrastructure'] },
+  { code: 'SEC / 02', title: 'Practical security baseline', summary: 'A phased uplift across identity, endpoint protection, access reviews, backup hygiene and incident readiness.', tags: ['Security', 'Identity', 'Governance'] },
+  { code: 'DATA / 03', title: 'Operational reporting', summary: 'A dependable reporting layer that gives production and business leads a clearer view of timely operational information.', tags: ['Data', 'Reporting', 'Visibility'] },
+  { code: 'TEAM / 04', title: 'IT service improvement', summary: 'Clearer request paths, documented ownership and service measures that make support easier to access and improve.', tags: ['Service desk', 'People', 'Process'] },
+];
+---
+
+<BaseLayout title="Projects">
+  <section class="page-intro"><div class="container"><span class="eyebrow">Project portfolio</span><h1>Better foundations for everyday work.</h1><p>Representative initiatives across the systems, safeguards and services that support a garment business. Replace these examples with your own delivery record.</p></div></section>
+  <section class="container section">
+    <div class="project-grid">
+      {projects.map((project) => <article class="project-card"><div class="card-topline"><span>Initiative</span><span class="card-index">{project.code}</span></div><h3>{project.title}</h3><p>{project.summary}</p><ul class="tag-list">{project.tags.map((tag) => <li>{tag}</li>)}</ul></article>)}
+    </div>
+    <p class="sample-notice">Project descriptions are portfolio prompts, not claims of completed client work. Edit them to reflect verified experience.</p>
+  </section>
+</BaseLayout>
