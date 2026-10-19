@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- Header wordmark shows my name and title ("Min Hein Zaw · IT Executive"); browser tab titles end in my name.
 - Home page redesigned: full-width photo hero with navy overlay and a hexagon grid linking to the main pages (replaces the focus-area strip). Image sources in `docs/03-design/image-credits.md`.
 - Home hero copy rewritten in a personal voice ("Curious by nature. IT by choice.") and now includes my name.
 - Design switched from green to soft blue (light + dark); dark mode uses navy (`#0b1426`).

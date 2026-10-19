@@ -7,7 +7,7 @@
 |---|---|---|---|
 | 1 | Fix Sprint 0 known issues (order field, theme-color, mobile aria-current) | Must | Done 2026-10-15 |
 | 2 | Apply soft blue design system to `global.css` (light + dark) | Must | Done 2026-10-15 |
-| 3 | Add name and title to header and hero | Must | To do |
+| 3 | Add name and title to header and hero | Must | Done 2026-10-19 |
 | 4 | Rename Case studies → Work; create Lab page | Must | To do |
 | 5 | Write first real case study (anonymised) | Must | To do |
 | 6 | About page: experience timeline, capabilities | Must | To do |
@@ -24,6 +24,7 @@
 - 2026-10-16: Home page redesign (unplanned, user request) — photo hero with navy overlay and hexagon tiles to Case studies / Projects / About / Process / Contact. Stock photos from Unsplash.
 - 2026-10-16: Decision — customer-first positioning (ADR-005). Freelance is allowed; any industry and location; message leads with factories. Tasks #9–#10 added.
 - 2026-10-16: Wireframes v2 (as-built) drawn in Figma: https://www.figma.com/design/Kd9ruAifTtahQ1F1ij50cG
+- 2026-10-19: Task #3 done — header wordmark now "MHZ. / Min Hein Zaw / IT Executive"; hero eyebrow and page titles use the name. Title chosen by owner: IT Executive.
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro
