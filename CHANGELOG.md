@@ -5,7 +5,14 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ## [Unreleased]
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
+### Changed
+- Home page redesigned: full-width photo hero with navy overlay and a hexagon grid linking to the main pages (replaces the focus-area strip). Image sources in `docs/03-design/image-credits.md`.
+- Home hero copy rewritten in a personal voice ("Curious by nature. IT by choice.") and now includes my name.
+- Design switched from green to soft blue (light + dark); dark mode uses navy (`#0b1426`).
+### Changed (docs)
+- Positioning changed to customer-first: freelance clients first, employers second (ADR-005). Charter, sitemap and risk register updated.
 ### Added
+- Profile photo on the About page (cropped, metadata removed, served as WebP).
 - Project pushed to GitHub (`main` branch) for sync between laptops.
 ### Fixed
 - Sample case study no longer claims the "IT Manager" job title; replaced with `[placeholder]` until the real title is confirmed.

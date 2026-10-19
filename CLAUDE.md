@@ -18,7 +18,9 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 - `docs/` — SDLC documentation (planning → maintenance). `CHANGELOG.md` at root.
 
 ## Design rules
-- Soft blue: backgrounds `#f3f8ff` / hero `#d8e9ff`, accent `#1e4fd1`, ink `#0f1a33`, lines `#d3e0f0`.
+- Soft blue: background `#f3f8ff`, soft accent `#d8e9ff`, accent `#1e4fd1`, ink `#0f1a33`, lines `#d3e0f0`.
+- Home hero and hexagon tiles: photo under a navy overlay (`#0b1426`) with white text, in both themes.
+- Stock photos: free Unsplash License only; record each one in `docs/03-design/image-credits.md`.
 - Fonts: Manrope (text), DM Mono (small uppercase labels).
 - Never place white text on light blue. Text contrast ≥ 4.5:1. Touch targets ≥ 44 px.
 - Mobile-first; no horizontal scroll from 360 px to 1440 px.
