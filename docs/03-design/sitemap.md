@@ -2,6 +2,7 @@
 
 ```
 /                       Home
+├─ /services/           Services for clients (customer-first, ADR-005)
 ├─ /work/               Case studies (delivered at work) — result-first list
 │   └─ /work/[slug]/    Case study detail
 ├─ /lab/                Learning projects (self-directed builds)

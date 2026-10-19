@@ -10,17 +10,20 @@
 | **Delivery model** | Agile, Scrum-lite, 1-week sprints |
 
 ## 1. Purpose
-Build a public portfolio that shows my readiness for an **IT Manager role in manufacturing**, using real (anonymised) work from a two-factory garment business and documenting the site itself through the full SDLC.
+Build a public site that **wins freelance IT clients first** and also works for employers, using real (anonymised) work from a two-factory garment business and documenting the site itself through the full SDLC. See ADR-005.
+
+_Changed 2026-10-16: was "readiness for an IT Manager role"._
 
 ## 2. Objectives
 1. Present 3–4 real case studies with decisions, trade-offs and results.
 2. Separate **Work** (delivered at my job) from **Lab** (self-directed learning builds).
 3. Show the full SDLC: plan → requirements → design → build → test → deploy → maintain.
 4. Publish on a free host with a live URL and a public GitHub repository.
+5. Show clear services a client can buy, each backed by real proof.
 
 ## 3. Scope
 **In scope**
-- Pages: Home, Work (case study list + detail), Lab, About, Contact
+- Pages: Home, Services, Work (case study list + detail), Lab, About, Contact
 - Markdown-based case studies
 - Light/dark mode, mobile-first layout
 - Contact form (Web3Forms), résumé PDF download
@@ -38,6 +41,7 @@ Build a public portfolio that shows my readiness for an **IT Manager role in man
 - [ ] Works on phone (390 px) and desktop (1280 px+)
 - [ ] All SDLC phase documents complete
 - [ ] Zero confidential data in the repo
+- [ ] Services page with 3–6 offers, each linked to proof
 
 ## 5. Constraints
 - Free tools only
@@ -48,7 +52,8 @@ Build a public portfolio that shows my readiness for an **IT Manager role in man
 ## 6. Stakeholders
 | Stakeholder | Interest |
 |---|---|
-| Me (owner) | Career move to IT Manager |
+| Me (owner) | Freelance clients; career options |
+| Freelance clients | Can this person solve my IT problem, and how do I contact him? |
 | Recruiters / hiring managers | Quick evidence of delivery and judgement |
 | Current employer | Nothing confidential is published |
 

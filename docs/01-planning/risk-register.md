@@ -10,3 +10,5 @@
 | R6 | API keys committed to GitHub | Low | High | `.env` in `.gitignore`; keys only in Cloudflare environment variables | Me | Mitigated |
 | R7 | Free hosting limits or service changes | Low | Low | Static site — can move to Vercel / Netlify / GitHub Pages in under an hour | Me | Open |
 | R8 | Scope creep (demo apps, blog) delays v1.0 | Medium | Medium | Out-of-scope list in charter; extras go to backlog after v1.0 | Me | Open |
+| R9 | Freelance work clashes with full-time job hours | Medium | High | Project-based and remote-first services only; no on-call support; state availability on Contact | Me | Open |
+| R10 | Offering services I cannot prove | Medium | High | Every service must link to a case study or credential (ADR-005); learning topics stay in Lab | Me | Open |
