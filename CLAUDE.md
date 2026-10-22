@@ -16,6 +16,7 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 - `src/layouts/BaseLayout.astro` — header, footer, theme toggle
 - `src/styles/global.css` — design tokens (light + dark)
 - `docs/` — SDLC documentation (planning → maintenance). `CHANGELOG.md` at root.
+- `TODO.md` — one-page "what next" list. Read it at the start of a session.
 
 ## Design rules
 - Soft blue: background `#f3f8ff`, soft accent `#d8e9ff`, accent `#1e4fd1`, ink `#0f1a33`, lines `#d3e0f0`.
@@ -36,5 +37,5 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 2. After every change run `npm run check` and `npm run build`; fix errors before stopping.
 3. Never commit `.env` or any key. Web3Forms key is `PUBLIC_WEB3FORMS_ACCESS_KEY` in `.env`.
 4. Commit messages: `type: short description` (feat, fix, docs, style, refactor, chore).
-5. When a change finishes a backlog item, update `docs/04-development/sprints/sprint-XX.md` and `CHANGELOG.md`.
+5. When a change finishes a backlog item, update `docs/04-development/sprints/sprint-XX.md`, `CHANGELOG.md` and tick it in `TODO.md`.
 6. Ask before adding a new dependency.

@@ -11,6 +11,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 - Home hero copy rewritten in a personal voice ("Curious by nature. IT by choice.") and now includes my name.
 - Design switched from green to soft blue (light + dark); dark mode uses navy (`#0b1426`).
 ### Changed (docs)
+- Added `TODO.md` at the root: one-page view of next tasks, inputs I owe, and launch steps.
 - Positioning changed to customer-first: freelance clients first, employers second (ADR-005). Charter, sitemap and risk register updated.
 ### Added
 - Profile photo on the About page (cropped, metadata removed, served as WebP).
