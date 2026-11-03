@@ -2,12 +2,12 @@
 
 > One-page view of what to do next. Detail and history live in the current sprint file:
 > [`docs/04-development/sprints/sprint-01.md`](docs/04-development/sprints/sprint-01.md).
-> Rule: when a task is done, tick it here **and** mark it Done in the sprint file.
+> Rule: when a task is done, tick **every** box carrying its number (a task can appear in
+> more than one section) **and** mark it Done in the sprint file.
 
 _Last updated: 2026-10-22_
 
 ## Now — do next
-- [ ] Push the 4 local commits to GitHub (`git push`) so the other laptop is up to date
 - [ ] #5 Write the first real case study (anonymised) — replaces the illustrative sample
 
 ## Waiting on me (Claude needs this from me)

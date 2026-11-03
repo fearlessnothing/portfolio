@@ -10,7 +10,7 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 - Shell is Windows PowerShell. Do not use bash-only syntax.
 
 ## Structure
-- `src/pages/` — current routes: `/`, `/case-studies/`, `/case-studies/[slug]/`, `/projects/`, `/about/`, `/process/`, `/contact/`
+- `src/pages/` — current routes: `/`, `/case-studies/`, `/case-studies/[...slug]/`, `/projects/`, `/about/`, `/process/`, `/contact/`
 - Planned (Sprint 1, task #4 — not built yet): rename `/case-studies/` → `/work/` and `/projects/` → `/lab/`
 - `src/content/case-studies/*.md` — Work case studies. Frontmatter: title, role, duration, tags, summary, results, order
 - `src/layouts/BaseLayout.astro` — header, footer, theme toggle
