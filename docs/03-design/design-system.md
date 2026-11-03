@@ -1,34 +1,34 @@
 # Design System
 
-**Direction:** soft blue, clean and professional — a calm light-blue base with royal-blue accents.
+**Direction:** denim — indigo blues, a cotton off-white base and copper "stitching" details. It links the site to the garment industry (changed from soft blue on 2026-11-03).
 Inspired by result-first case study layouts (reference research on Pinterest, 2026-10-14).
 
 ## Colours
-| Token | Value | Use |
-|---|---|---|
-| `--bg` | `#f3f8ff` | Page background |
-| `--surface` | `#ffffff` | Cards |
-| `--hero-bg` | `#d8e9ff` | Hero band (light blue) |
-| `--accent` | `#1e4fd1` | Buttons, links, key figures |
-| `--ink` | `#0f1a33` | Headings on light blue |
-| `--text` | `#162033` | Body text |
-| `--muted` | `#4a5568` | Secondary text |
-| `--line` | `#d3e0f0` | Borders, dividers |
-| `--label` | `#bb5539` | Small section labels (complementary orange) |
 
-**Rule:** white text is never placed on light blue — contrast fails. Light blue is a background; royal blue and navy carry text and actions.
+| Token | Light | Dark | Use |
+|---|---|---|---|
+| `--bg` | `#f4f2ed` (cotton) | `#111b2c` (raw indigo) | Page background |
+| `--surface` | `#ffffff` | `#1a2740` | Cards, strips |
+| `--ink` | `#17233a` | `#eeeae2` | Headings and body text |
+| `--muted` | `#3f4a5a` | `#c0c8d3` | Secondary text |
+| `--line` | `#dad5ca` | `#2d3c56` | Borders, dividers |
+| `--accent` | `#2b4a7a` (indigo) | `#a3bddc` (washed denim) | Buttons, links, labels |
+| `--accent-soft` | `#dce5f0` | `#263a5c` | Soft fills, status tags |
+| `--marker` | `#a14f12` (copper) | `#e0a35f` | Small numbers, label lines, rules |
+
+Photo overlay (hero, hexagons, SDLC wheel centre): indigo `#13203a`, white text, in both themes. Hero highlight ("IT"): `#e0a35f`.
+
+**Rules:** every text pair ≥ 4.5:1 (lowest: copper on cotton, 5.15). White text never goes on light backgrounds.
 
 ## Typography
+
 | Role | Font | Size |
 |---|---|---|
-| Display / headings | Manrope 700 | 56–72 px desktop, 34–42 px mobile |
-| Body | Manrope 400 | 15–17 px |
-| Labels, metadata | DM Mono 400, uppercase | 10–11 px |
+| Display / headings | Manrope 600–700 (hero 400) | 56–84 px desktop, 32–44 px mobile |
+| Body | Manrope 400 | 15–17 px; secondary text 14 px |
+| Labels, metadata | DM Mono 400, uppercase | 12 px (tags 11 px; never below 10 px) |
 
 ## Layout
 - Max content width 1120 px, 24 px side padding (16 px on mobile)
-- Cards: white surface, 1 px `--line` border, 12–16 px radius (planned)
+- Cards: white surface, 1 px `--line` border
 - Touch targets ≥ 44 px
-
-## Dark mode
-To be defined in Sprint 1 using the same accent with a navy background.

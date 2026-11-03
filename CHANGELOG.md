@@ -6,6 +6,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- Colour palette changed from soft blue to denim: cotton off-white background, indigo accents, copper "stitching" details; dark mode uses raw indigo.
+- Text made easier to read: small labels and tags enlarged (smallest now 10–12 px), secondary text 14 px and darker, hero headline heavier.
 - Home hero background changed from a night-time globe to a denim fabric photo, to show the garment industry.
 - Home page rebuilt in nine sections: hero, expertise hexagons (Infrastructure, Security & Backup, Microsoft 365, Business Systems, Automation), philosophy, case studies, technology ecosystem, how I work, career timeline, certifications, contact. Five new Unsplash photos; the four old tile photos removed.
 - About page rebuilt from my CV: experience timeline, systems I've worked on, skills, education and certifications, languages. Data in `src/data/career.ts`.
