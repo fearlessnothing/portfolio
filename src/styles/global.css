@@ -191,6 +191,7 @@ button { color: inherit; }
 .contact-details { padding-top: 8px; }
 .contact-details h2 { margin: 0 0 14px; font-size: 28px; font-weight: 600; }
 .contact-details p { max-width: 350px; color: var(--muted); }
+.contact-email { min-height: 44px; white-space: normal; overflow-wrap: anywhere; }
 .contact-note { margin-top: 35px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 19px 14px; }
 .field { display: flex; flex-direction: column; gap: 7px; }
