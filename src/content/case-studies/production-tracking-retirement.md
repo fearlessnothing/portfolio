@@ -1,5 +1,5 @@
 ---
-title: "Retiring a production tracking system that wasn't delivering value"
+title: "Turning Production Feedback into a Better IT Decision"
 order: 2
 role: "[placeholder: my title at the time]"
 duration: "[placeholder: e.g. start month – Oct 2026]"
