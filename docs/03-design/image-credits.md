@@ -5,8 +5,11 @@ Stock photos are from Unsplash under the [Unsplash License](https://unsplash.com
 | File (`src/assets/`) | Used on | Source |
 |---|---|---|
 | `home/hero-network.jpg` | Home hero background | https://images.unsplash.com/photo-1451187580459-43490279c0fa |
-| `home/server-rack.jpg` | Home tile: Case studies | https://images.unsplash.com/photo-1558494949-ef010cbdcc31 |
-| `home/code-laptop.jpg` | Home tile: Projects | https://images.unsplash.com/photo-1517694712202-14dd9538aa97 |
-| `home/planning-board.jpg` | Home tile: Process | https://images.unsplash.com/photo-1531403009284-440f080d1e12 |
-| `home/network-cables.jpg` | Home tile: Contact | https://images.unsplash.com/photo-1544197150-b99a580bb7a8 |
-| `profile.jpg` | About page, Home tile: About | Own photo (cropped, metadata removed) |
+| `home/expertise-infrastructure.jpg` | Home expertise hexagon: Infrastructure | https://images.unsplash.com/photo-1520869562399-e772f042f422 |
+| `home/expertise-security.jpg` | Home expertise hexagon: Security & Backup | https://images.unsplash.com/photo-1597852074816-d933c7d2b988 |
+| `home/expertise-m365.jpg` | Home expertise hexagon: Microsoft 365 | https://images.unsplash.com/photo-1573164713714-d95e436ab8d6 |
+| `home/expertise-business.jpg` | Home expertise hexagon: Business Systems | https://images.unsplash.com/photo-1551288049-bebda4e38f71 |
+| `home/expertise-automation.jpg` | Home expertise hexagon: Automation | https://images.unsplash.com/photo-1581091226825-a6a2a5aee158 |
+| `profile.jpg` | About page | Own photo (cropped, metadata removed) |
+
+_Removed 2026-11-03 (navigation hexagons replaced by expertise hexagons): `server-rack.jpg`, `code-laptop.jpg`, `planning-board.jpg`, `network-cables.jpg`._

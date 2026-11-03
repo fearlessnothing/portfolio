@@ -159,6 +159,33 @@ export const certifications: { done: { name: string; org?: string }[]; inProgres
   ],
 };
 
+/** Home page "Technology ecosystem": tools and systems I have worked with, grouped. */
+export const ecosystem: { group: string; items: string[] }[] = [
+  {
+    group: 'Microsoft',
+    items: ['Microsoft 365', 'Exchange', 'SharePoint Online', 'Forms', 'Power Automate', 'Excel & Office Scripts', 'Windows Server', 'Active Directory'],
+  },
+  {
+    group: 'Infrastructure',
+    items: ['VMware ESXi', 'Windows Server 2008–2016', 'TCP/IP networks', 'Network devices', 'CCTV', 'Network printers', 'IT asset database'],
+  },
+  {
+    group: 'Security',
+    items: ['Backups', 'User accounts & access', 'Microsoft 365 licence reviews', 'Vendor install supervision'],
+  },
+  {
+    group: 'Business systems',
+    items: ['ERP (warehouse & production)', 'FINAC Payroll & Time Attendance', 'Plani8 production planning', 'Fabric Barcode', 'Janet (QA)', 'Raptool (shipments)'],
+  },
+];
+
+/** One line per role, newest first — the short timeline on the home page. */
+export const timeline = experience.flatMap((job) =>
+  job.steps
+    ? job.steps.map((step) => ({ title: step.title, org: step.org, period: step.period }))
+    : [{ title: job.title, org: job.org, period: job.period }],
+);
+
 export const languages: { name: string; level: string }[] = [
   { name: 'Burmese', level: 'Native' },
   { name: 'English', level: 'Working proficiency' },
