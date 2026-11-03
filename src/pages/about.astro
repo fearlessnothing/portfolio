@@ -2,22 +2,120 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import profilePhoto from '../assets/profile.jpg';
+import { yearsInIt, experience, vendorSystems, builtSystems, learningBuilds, skills, education, certifications, languages } from '../data/career';
+
+const systemGroups = [
+  { title: 'Vendor systems I worked on', items: vendorSystems },
+  { title: 'Solutions I built at work', items: builtSystems },
+  { title: 'Learning builds', items: learningBuilds },
+];
 ---
 
-<BaseLayout title="About">
-  <section class="page-intro"><div class="container"><span class="eyebrow">About</span><h1>Grounded in operations. Led by service.</h1><p>Technology leadership for the people, production rhythms and business priorities of garment manufacturing in Myanmar.</p></div></section>
+<BaseLayout title="About" description="Min Hein Zaw, IT Manager for two garment factories in Myanmar: experience, systems, skills and certifications.">
+  <section class="page-intro">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h1>IT that runs, and reports that management can act on.</h1>
+      <p>I run IT for two garment factories in Myanmar and turn technical work into clear plans, summaries and proposals for management. As IT Manager in the Concord Apparel Group, I work with the Director, department heads, the group IT team in Sri Lanka and outside vendors. {yearsInIt} years in IT, from Windows Server support to leading IT across two sites.</p>
+    </div>
+  </section>
+
   <section class="container about-grid">
-    <aside class="about-aside"><Image class="about-photo" src={profilePhoto} alt="Portrait of Min Hein Zaw" loading="eager" /><strong>Technology is a team sport.</strong><p>The best systems are the ones people can rely on, understand and use with confidence.</p></aside>
-    <div class="prose">
-      <p>I work at the intersection of IT operations and garment production. That means looking beyond uptime reports to understand what a technology decision means for a merchandiser, a finance team, a production planner or a line supervisor.</p>
-      <p>My approach is practical: make the current environment visible, reduce avoidable risk, build trusted relationships and deliver improvements in stages. I value clear communication and repeatable operations as much as the technology itself.</p>
-      <h2>What I bring</h2>
-      <p>A broad IT management perspective across infrastructure, business systems, information security, service delivery, vendor relationships and team development, shaped for the realities of a manufacturing environment.</p>
-      <div class="value-grid">
-        <div class="value-item"><span>01</span><h3>Operational clarity</h3><p>Know what matters, who owns it and how to recover.</p></div>
-        <div class="value-item"><span>02</span><h3>Measured change</h3><p>Prioritize outcomes and keep delivery understandable.</p></div>
-        <div class="value-item"><span>03</span><h3>Shared ownership</h3><p>Build capability across IT and business teams.</p></div>
-      </div>
+    <aside class="about-aside">
+      <Image class="about-photo" src={profilePhoto} alt="Portrait of Min Hein Zaw" loading="eager" />
+      <strong>Min Hein Zaw</strong>
+      <p>IT Manager · Concord Apparel Group</p>
+      <dl class="about-facts">
+        <div><dt>In IT</dt><dd>{yearsInIt} years</dd></div>
+        <div><dt>Sites</dt><dd>2 factories</dd></div>
+        <div><dt>Based in</dt><dd>Myanmar</dd></div>
+      </dl>
+    </aside>
+
+    <div class="about-main">
+      <section class="about-block" aria-labelledby="experience-title">
+        <span class="eyebrow">01 / Experience</span>
+        <h2 id="experience-title">Experience</h2>
+        <ol class="timeline">
+          {experience.map((job) => (
+            <li class="timeline-item">
+              <div class="timeline-period">{job.period}</div>
+              <div>
+                <h3>{job.steps ? job.org : job.title}</h3>
+                <p class="timeline-org">{job.steps ? job.place : `${job.org} · ${job.place}`}</p>
+                {job.steps && (
+                  <ul class="role-steps">
+                    {job.steps.map((step) => <li><strong>{step.title}</strong> <span>{step.org} · {step.period}</span></li>)}
+                  </ul>
+                )}
+                <ul class="timeline-points">{job.points.map((point) => <li>{point}</li>)}</ul>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="about-block" aria-labelledby="systems-title">
+        <span class="eyebrow">02 / Systems</span>
+        <h2 id="systems-title">Systems I've worked on</h2>
+        {systemGroups.map((group) => (
+          <div class="system-group">
+            <h3>{group.title}</h3>
+            <ul class="system-list">
+              {group.items.map((item) => (
+                <li>
+                  <span class="system-name">{item.name}{item.status && <span class="status-tag">{item.status}</span>}</span>
+                  {item.note && <span class="system-note">{item.note}</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+
+      <section class="about-block" aria-labelledby="skills-title">
+        <span class="eyebrow">03 / Skills</span>
+        <h2 id="skills-title">Skills</h2>
+        <div class="skill-groups">
+          {skills.map((group) => (
+            <div class="skill-group">
+              <h3>{group.group}</h3>
+              <ul class="tag-list">{group.items.map((item) => <li>{item}</li>)}</ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="about-block" aria-labelledby="education-title">
+        <span class="eyebrow">04 / Learning</span>
+        <h2 id="education-title">Education &amp; certifications</h2>
+        <div class="cred-columns">
+          <div>
+            <h3>Education</h3>
+            <ul class="cred-list">
+              {education.map((item) => <li><strong>{item.name}</strong><span>{item.org} · {item.status}</span></li>)}
+            </ul>
+          </div>
+          <div>
+            <h3>Certifications — completed</h3>
+            <ul class="cred-list">
+              {certifications.done.map((item) => <li><strong>{item.name}</strong>{item.org && <span>{item.org}</span>}</li>)}
+            </ul>
+            <h3>Certifications — in progress</h3>
+            <ul class="cred-list">
+              {certifications.inProgress.map((item) => <li><strong>{item.name}</strong></li>)}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-block" aria-labelledby="languages-title">
+        <span class="eyebrow">05 / Languages</span>
+        <h2 id="languages-title">Languages</h2>
+        <ul class="cred-list cred-inline">
+          {languages.map((item) => <li><strong>{item.name}</strong><span>{item.level}</span></li>)}
+        </ul>
+      </section>
     </div>
   </section>
 </BaseLayout>
