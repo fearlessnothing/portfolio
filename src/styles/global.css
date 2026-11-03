@@ -84,6 +84,10 @@ button { color: inherit; }
 .hero .button { border-color: #ffffff; background: transparent; color: #ffffff; }
 .hero .button.secondary { border-color: rgba(255, 255, 255, .45); }
 .hero .button:hover { border-color: #ffffff; background: #ffffff; color: #0b1426; }
+.focus-strip { border-bottom: 1px solid var(--line); background: var(--surface); }
+.focus-strip ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin: 0 auto; padding: 18px 0; list-style: none; }
+.focus-strip li { color: var(--ink); font-family: var(--mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+.focus-strip li + li::before { margin-right: 14px; color: var(--accent); content: '•'; }
 .explore { padding: 72px 0 88px; }
 .explore-heading { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .explore-heading h2 { margin: 8px 0 0; font-size: clamp(26px, 4vw, 38px); font-weight: 600; line-height: 1.16; }
@@ -256,6 +260,9 @@ button { color: inherit; }
   .footer-inner > :first-child { flex-basis: 100%; }
 }
 @media (max-width: 600px) {
+  /* Strip wraps here; drop the bullets so no line starts with one. */
+  .focus-strip ul { gap: 8px 20px; }
+  .focus-strip li + li::before { content: none; }
   /* Honeycomb becomes 2-1-2 so each hexagon stays large enough to tap. */
   .hex-grid { --hex: min(42vw, 180px); grid-template-columns: repeat(4, calc(var(--hex) / 2)); }
   .hex:nth-child(1) { grid-area: 1 / 1 / 2 / 3; }

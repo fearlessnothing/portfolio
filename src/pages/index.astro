@@ -12,6 +12,7 @@ import automationImage from '../assets/home/expertise-automation.jpg';
 
 const caseStudies = await getSortedCaseStudies();
 const featured = caseStudies.slice(0, 2);
+const focusAreas = ['Infrastructure', 'Cybersecurity', 'Microsoft 365', 'Business Systems', 'Automation'];
 const expertise = [
   { label: 'Infrastructure', note: 'Servers · ESXi · Network · CCTV', image: infrastructureImage },
   { label: 'Security & Backup', note: 'Backups · Accounts · Access', image: securityImage },
@@ -34,6 +35,12 @@ const expertise = [
       </div>
     </div>
   </section>
+
+  <div class="focus-strip">
+    <ul class="container" aria-label="Focus areas">
+      {focusAreas.map((area) => <li>{area}</li>)}
+    </ul>
+  </div>
 
   <section class="explore" id="expertise" aria-labelledby="expertise-title">
     <div class="container">
