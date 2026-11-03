@@ -65,7 +65,7 @@ I worked on the Myanmar factory side, as the link between the people who would u
   <li><span class="cs-step">02</span><div><strong>Factory UAT</strong><p>Tested with factory users against real daily workflows.</p></div></li>
   <li><span class="cs-step">03</span><div><strong>Operational gaps identified</strong><p>The system needed many changes before it could support factory operations.</p></div></li>
   <li><span class="cs-step">04</span><div><strong>Requirements &amp; change requests</strong><p>Feedback consolidated and sent to the development team.</p></div></li>
-  <li class="cs-journey-interim"><span class="cs-step">05</span><div><strong>Interim Microsoft 365 solution <em class="cs-badge">Temporary</em></strong><p>Kept visitor registration running during the changes.</p></div></li>
+  <li class="cs-journey-interim"><span class="cs-step">05</span><div><strong>Interim Microsoft 365 solution <em class="cs-badge">Temporary</em></strong><p>Kept visitor registration running for about a month during the changes.</p></div></li>
   <li><span class="cs-step">06</span><div><strong>Main VMS improvements</strong><p>The development team made the requested changes.</p></div></li>
   <li><span class="cs-step">07</span><div><strong>Re-testing &amp; validation</strong><p>The improved system was checked against factory needs again.</p></div></li>
   <li class="cs-journey-done"><span class="cs-step">08</span><div><strong>Myanmar factory rollout</strong><p>The improved VMS went into use at both Myanmar factories.</p></div></li>
@@ -106,7 +106,7 @@ This was always intended as a bridge to keep operations running, not as a replac
 
 ## Decision &amp; transition
 
-The goal was never to run two competing systems. The Microsoft 365 register supported operations for a limited time. Once the main VMS had been improved, tested and was working at both Myanmar factories, the temporary solution was no longer needed and was retired.
+The goal was never to run two competing systems. The Microsoft 365 register supported operations for about a month. Once the main VMS had been improved, tested and was working at both Myanmar factories, the temporary solution was no longer needed and was retired.
 
 <div class="cs-transition" aria-label="Transition from interim solution to the improved main system">
   <div class="cs-transition-tracks">
@@ -118,7 +118,7 @@ The goal was never to run two competing systems. The Microsoft 365 register supp
     <div class="cs-track-plus" aria-hidden="true">+</div>
     <div class="cs-track cs-track-interim">
       <span class="cs-track-label">Microsoft 365 register <em class="cs-badge">Temporary</em></span>
-      <p>Business continuity</p>
+      <p>Business continuity, about one month</p>
     </div>
   </div>
   <div class="cs-transition-arrow" aria-hidden="true">↓</div>
