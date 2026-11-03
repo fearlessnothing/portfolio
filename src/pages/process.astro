@@ -1,6 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+// Seven SDLC stages. "Build & configure" replaces "Development": most work is
+// configuring vendor or Microsoft 365 systems, not writing software.
+const stages = [
+  { name: 'Planning', note: 'Goals, scope, budget and timeline.' },
+  { name: 'Analysis', note: 'How people work today and what they need.' },
+  { name: 'Design', note: 'Process, data and system design.' },
+  { name: 'Build & configure', note: 'Set up, configure or build the solution.' },
+  { name: 'Testing', note: 'User acceptance testing with the people who will use it.' },
+  { name: 'Deployment', note: 'Go-live, training and handover.' },
+  { name: 'Maintenance', note: 'Support, review and improve.' },
+];
+
+// Wheel geometry (SVG viewBox 600 x 600).
+const center = 300;
+const radius = 215;
+const step = 360 / stages.length;
+const toRad = (deg: number) => (deg * Math.PI) / 180;
+const nodes = stages.map((stage, i) => {
+  const angle = -90 + i * step;
+  return { ...stage, num: String(i + 1).padStart(2, '0'), x: center + radius * Math.cos(toRad(angle)), y: center + radius * Math.sin(toRad(angle)) };
+});
+const arrows = stages.map((_, i) => {
+  const angle = -90 + (i + 0.5) * step;
+  return { x: center + radius * Math.cos(toRad(angle)), y: center + radius * Math.sin(toRad(angle)), rotate: angle + 90 };
+});
+const flow = ['Idea', 'Solution', 'Deployment', 'Business impact'];
+
 const phases = [
   { number: '01', title: 'Discover', description: 'Understand the business goals, factory footprint, production calendar and the daily experience of users.', outcome: 'A shared picture of the current state, constraints and priority risks.' },
   { number: '02', title: 'Assess & prioritize', description: 'Map systems and dependencies, review security and continuity, and compare options against cost, risk and operational fit.', outcome: 'A sequenced roadmap with ownership, assumptions and decision points.' },
@@ -12,9 +39,38 @@ const phases = [
 
 <BaseLayout title="Process">
   <section class="page-intro"><div class="container"><span class="eyebrow">Delivery approach</span><h1>Disciplined change, close to the work.</h1><p>A practical lifecycle that keeps production continuity, security and the people affected by change in view.</p></div></section>
+
+  <section class="container sdlc-section" aria-labelledby="sdlc-title">
+    <div class="sdlc-copy">
+      <span class="eyebrow">From idea to impact</span>
+      <h2 id="sdlc-title">Seven stages, applied to real business needs.</h2>
+      <ol class="sdlc-steps">
+        {nodes.map((stage) => <li><span class="sdlc-num">{stage.num}</span><div><h3>{stage.name}</h3><p>{stage.note}</p></div></li>)}
+      </ol>
+      <ol class="sdlc-flow" aria-label="Outcome path">
+        {flow.map((item) => <li>{item}</li>)}
+      </ol>
+    </div>
+    <svg class="sdlc-wheel" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+      <circle class="wheel-ring" cx={center} cy={center} r={radius} />
+      {arrows.map((a) => <path class="wheel-arrow" d="M -7 -7 L 8 0 L -7 7 Z" transform={`translate(${a.x.toFixed(1)} ${a.y.toFixed(1)}) rotate(${a.rotate.toFixed(1)})`} />)}
+      <circle class="wheel-core" cx={center} cy={center} r="112" />
+      <text class="wheel-core-label" x={center} y="282">SDLC</text>
+      <text class="wheel-core-sub" x={center} y="318">Idea to impact</text>
+      {nodes.map((n) => (
+        <g transform={`translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})`}>
+          <rect class="wheel-node" x="-80" y="-30" width="160" height="60" rx="30" />
+          <text class="wheel-num" x="0" y="-5">{n.num}</text>
+          <text class="wheel-name" x="0" y="18">{n.name}</text>
+        </g>
+      ))}
+    </svg>
+  </section>
+
   <section class="container content-section">
+    <div class="section-heading"><div><span class="eyebrow">Each engagement</span><h2>How the work runs in practice.</h2></div></div>
     <div class="process-list">
-      {phases.map((phase) => <article class="phase"><div class="phase-num">PHASE / {phase.number}</div><div><h2>{phase.title}</h2><p>{phase.description}</p></div><div class="phase-outcome"><strong>Output</strong><br />{phase.outcome}</div></article>)}
+      {phases.map((phase) => <article class="phase"><div class="phase-num">PHASE / {phase.number}</div><div><h3>{phase.title}</h3><p>{phase.description}</p></div><div class="phase-outcome"><strong>Output</strong><br />{phase.outcome}</div></article>)}
     </div>
     <div class="sample-notice">Every engagement adapts to the factory's operating calendar, risk profile and available capacity. Production continuity comes first.</div>
   </section>
