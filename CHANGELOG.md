@@ -6,13 +6,16 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
-- Header wordmark shows my name and title ("Min Hein Zaw · IT Executive"); browser tab titles end in my name.
+- About page rebuilt from my CV: experience timeline, systems I've worked on, skills, education and certifications, languages. Data in `src/data/career.ts`.
+- Title updated to IT Manager (since January 2026) in the header and home hero.
+- Header wordmark shows my name and title; browser tab titles end in my name.
 - Home page redesigned: full-width photo hero with navy overlay and a hexagon grid linking to the main pages (replaces the focus-area strip). Image sources in `docs/03-design/image-credits.md`.
 - Home hero copy rewritten in a personal voice ("Curious by nature. IT by choice.") and now includes my name.
 - Design switched from green to soft blue (light + dark); dark mode uses navy (`#0b1426`).
 ### Changed (docs)
 - Positioning changed to customer-first: freelance clients first, employers second (ADR-005). Charter, sitemap and risk register updated.
 ### Added
+- Email address on the Contact page, next to the form.
 - `TODO.md` at the root: one-page view of next tasks, inputs I owe, and launch steps.
 - Profile photo on the About page (cropped, metadata removed, served as WebP).
 - Project pushed to GitHub (`main` branch) for sync between laptops.
