@@ -39,5 +39,3 @@ Option 3.
 
 ## Amendment — 2026-11-03
 The owner chose a nine-section Home flow (hero → expertise → philosophy → case studies → technology ecosystem → how I work → experience → certifications → contact). The hexagons **stay**, but now show five areas of expertise instead of page navigation. "Cybersecurity" is shown as **Security & Backup**, because firewalls are run by the group IT team (R10). Only real case studies are featured; Infrastructure and Backup/DR case studies wait until their facts are confirmed. The "Hire me for a project" call to action and the Services section still wait for task #10.
-
-- **2026-11-03 (later):** Home hero now follows a two-column layout (text left, SDLC wheel right). The expertise hexagons became five icon cards inside the hero; the focus strip moved into the hero. The stats row shows confirmed figures only.

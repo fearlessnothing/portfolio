@@ -1,9 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SdlcWheel from '../components/SdlcWheel.astro';
-import { sdlcStages } from '../data/sdlc';
 
-const nodes = sdlcStages.map((stage, i) => ({ ...stage, num: String(i + 1).padStart(2, '0') }));
+// Seven SDLC stages. "Build & configure" replaces "Development": most work is
+// configuring vendor or Microsoft 365 systems, not writing software.
+const stages = [
+  { name: 'Planning', note: 'Goals, scope, budget and timeline.' },
+  { name: 'Analysis', note: 'How people work today and what they need.' },
+  { name: 'Design', note: 'Process, data and system design.' },
+  { name: 'Build & configure', note: 'Set up, configure or build the solution.' },
+  { name: 'Testing', note: 'User acceptance testing with the people who will use it.' },
+  { name: 'Deployment', note: 'Go-live, training and handover.' },
+  { name: 'Maintenance', note: 'Support, review and improve.' },
+];
+
+// Wheel geometry (SVG viewBox 600 x 600).
+const center = 300;
+const radius = 215;
+const step = 360 / stages.length;
+const toRad = (deg: number) => (deg * Math.PI) / 180;
+const nodes = stages.map((stage, i) => {
+  const angle = -90 + i * step;
+  return { ...stage, num: String(i + 1).padStart(2, '0'), x: center + radius * Math.cos(toRad(angle)), y: center + radius * Math.sin(toRad(angle)) };
+});
+const arrows = stages.map((_, i) => {
+  const angle = -90 + (i + 0.5) * step;
+  return { x: center + radius * Math.cos(toRad(angle)), y: center + radius * Math.sin(toRad(angle)), rotate: angle + 90 };
+});
 const flow = ['Idea', 'Solution', 'Deployment', 'Business impact'];
 
 const phases = [
@@ -29,7 +51,20 @@ const phases = [
         {flow.map((item) => <li>{item}</li>)}
       </ol>
     </div>
-    <SdlcWheel />
+    <svg class="sdlc-wheel" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+      <circle class="wheel-ring" cx={center} cy={center} r={radius} />
+      {arrows.map((a) => <path class="wheel-arrow" d="M -7 -7 L 8 0 L -7 7 Z" transform={`translate(${a.x.toFixed(1)} ${a.y.toFixed(1)}) rotate(${a.rotate.toFixed(1)})`} />)}
+      <circle class="wheel-core" cx={center} cy={center} r="112" />
+      <text class="wheel-core-label" x={center} y="282">SDLC</text>
+      <text class="wheel-core-sub" x={center} y="318">Idea to impact</text>
+      {nodes.map((n) => (
+        <g transform={`translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})`}>
+          <rect class="wheel-node" x="-80" y="-30" width="160" height="60" rx="30" />
+          <text class="wheel-num" x="0" y="-5">{n.num}</text>
+          <text class="wheel-name" x="0" y="18">{n.name}</text>
+        </g>
+      ))}
+    </svg>
   </section>
 
   <section class="container content-section">

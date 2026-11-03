@@ -6,7 +6,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
-- Home hero rebuilt as a two-column layout: headline, focus areas and buttons on the left, SDLC wheel (links to Process) on the right, then five expertise icon cards and a stats row (15+ years in IT, 2 factories). Replaces the separate focus strip and the expertise hexagons; their five photos removed.
 - Home page rebuilt in nine sections: hero, expertise hexagons (Infrastructure, Security & Backup, Microsoft 365, Business Systems, Automation), philosophy, case studies, technology ecosystem, how I work, career timeline, certifications, contact. Five new Unsplash photos; the four old tile photos removed.
 - About page rebuilt from my CV: experience timeline, systems I've worked on, skills, education and certifications, languages. Data in `src/data/career.ts`.
 - Title updated to IT Manager (since January 2026) in the header and home hero.
