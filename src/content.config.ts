@@ -11,6 +11,12 @@ const caseStudies = defineCollection({
     tags: z.array(z.string()),
     summary: z.string(),
     results: z.array(z.string()),
+    // Optional project overview cards (shown instead of the one-line meta when `focus` is set).
+    system: z.string().optional(),
+    focus: z.array(z.string()).optional(),
+    environment: z.string().optional(),
+    technologies: z.array(z.string()).optional(),
+    technologiesNote: z.string().optional(),
   }),
 });
 

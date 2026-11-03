@@ -6,6 +6,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- VMS case study rewritten and retitled "From UAT Findings to a Successful Visitor Management Rollout": the Microsoft 365 register is shown as an interim continuity solution, retired once the improved main system was in use at both Myanmar factories. Adds project overview cards, a project journey timeline, UAT cycle, interim architecture and transition diagrams, capabilities, lessons learned and a closing call to action. No placeholders remain.
+- Case study template: optional overview fields (system, focus, environment, technologies); bullets restored in case study text.
 - Soft glow behind the hero headline (light glow, copper on "IT") and behind page and section titles (washed-blue glow in light mode, light glow in dark mode).
 - Colour palette changed from soft blue to denim: cotton off-white background, indigo accents, copper "stitching" details; dark mode uses raw indigo.
 - Text made easier to read: small labels and tags enlarged (smallest now 10–12 px), secondary text 14 px and darker, hero headline heavier.

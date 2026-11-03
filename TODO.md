@@ -8,11 +8,11 @@
 _Last updated: 2026-11-03_
 
 ## Now — do next
-- [ ] #5 Finish the VMS and PTS case studies — fill every `[placeholder]` (drafts in `src/content/case-studies/`)
+- [ ] #5 Finish the VMS and PTS case studies — VMS done 2026-11-03; PTS still has `[placeholder]` text
 
 ## Waiting on me (Claude needs this from me)
 - [x] Choose which job project becomes the first case study — VMS and PTS, 2026-11-03
-- [ ] Give the real facts and numbers for VMS and PTS (no invented results)
+- [ ] Give the real facts and numbers for PTS (no invented results) — VMS done 2026-11-03
 - [ ] Decide: name the companies in case studies, or keep them anonymous
 - [ ] Facts for an Infrastructure case study and a Backup / DR case study (to feature them on Home)
 - [ ] Confirm the service list (needed before #10 Services page)
