@@ -14,6 +14,7 @@ _Last updated: 2026-11-03_
 - [x] Choose which job project becomes the first case study — VMS and PTS, 2026-11-03
 - [ ] Give the real facts and numbers for VMS and PTS (no invented results)
 - [ ] Decide: name the companies in case studies, or keep them anonymous
+- [ ] Facts for an Infrastructure case study and a Backup / DR case study (to feature them on Home)
 - [ ] Confirm the service list (needed before #10 Services page)
 - [ ] Update the CV itself to IT Manager (Jan 2026) and Guston Amava from 2023, so CV, site and LinkedIn agree
 - [ ] Optional: year for each certificate, issuer for the three without one, ERP product name
@@ -23,7 +24,7 @@ _Last updated: 2026-11-03_
 - [ ] #5 First real case study (anonymised)
 - [x] #6 About page: experience timeline, capabilities — 2026-11-03
 - [ ] #8 Export wireframes PDF into `docs/03-design/`
-- [ ] #9 Restructure Home for customer-first positioning (ADR-005)
+- [x] #9 Restructure Home for customer-first positioning (ADR-005) — 2026-11-03
 - [ ] #10 Services page (after service list is confirmed)
 
 ## Before first launch
@@ -34,6 +35,7 @@ _Last updated: 2026-11-03_
 - [ ] Run the test plan (`docs/05-testing/test-plan.md`) on desktop and mobile
 
 ## Done recently
+- [x] #9 Home rebuilt in nine sections with expertise hexagons — 2026-11-03
 - [x] #6 About page from the CV + title updated to IT Manager + email on Contact — 2026-11-03
 - [x] #3 Name and IT Executive title in header and hero — 2026-10-19
 - [x] Customer-first positioning decided (ADR-005) — 2026-10-16

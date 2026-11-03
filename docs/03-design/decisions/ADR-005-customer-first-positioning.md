@@ -36,3 +36,6 @@ Option 3.
 - Lab stays separate and is not sold as a service until a real project is delivered.
 - Open question: Burmese text for Services and Contact (multi-language is out of scope for v1.0).
 - New risks R9 and R10 in the risk register.
+
+## Amendment — 2026-11-03
+The owner chose a nine-section Home flow (hero → expertise → philosophy → case studies → technology ecosystem → how I work → experience → certifications → contact). The hexagons **stay**, but now show five areas of expertise instead of page navigation. "Cybersecurity" is shown as **Security & Backup**, because firewalls are run by the group IT team (R10). Only real case studies are featured; Infrastructure and Backup/DR case studies wait until their facts are confirmed. The "Hire me for a project" call to action and the Services section still wait for task #10.

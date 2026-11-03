@@ -13,7 +13,7 @@
 | 6 | About page: experience timeline, capabilities | Must | Done 2026-11-03 |
 | 7 | First git commit and push to GitHub | Must | Done 2026-10-15 |
 | 8 | Export wireframes PDF into `03-design/` | Should | To do |
-| 9 | Restructure Home for customer-first positioning (ADR-005) | Should | To do |
+| 9 | Restructure Home for customer-first positioning (ADR-005) | Should | Done 2026-11-03 |
 | 10 | Create Services page (after service list is confirmed) | Should | To do |
 
 ## Notes
@@ -27,6 +27,7 @@
 - 2026-10-19: Task #3 done — header wordmark now "MHZ. / Min Hein Zaw / IT Executive"; hero eyebrow and page titles use the name. Title chosen by owner: IT Executive.
 - 2026-11-03: Task #6 done — About page rebuilt from the CV: intro, experience timeline (newest first), systems (vendor / built at work / learning builds), skills, education & certifications, languages. Data lives in `src/data/career.ts`. Owner confirmed: IT Manager since Jan 2026 (header and hero updated from IT Executive); "15+ years in IT"; firewalls are handled by the Sri Lanka team, so they are not listed; IE hourly automation and Marker agent shown as learning builds, in progress. Email added to the Contact page.
 - 2026-11-03: Task #5 started — owner chose the Visitor Management System and the Production Tracking System. Both drafted from confirmed inventory facts only; unknowns (dates, role at the time, measured results, lessons) are `[placeholder]`. Company names left out until the owner decides. Illustrative sample case study removed.
+- 2026-11-03: Task #9 done — Home rebuilt to the owner's nine-section flow (see ADR-005 amendment). Expertise hexagons: Infrastructure, Security & Backup, Microsoft 365, Business Systems, Automation, with five new Unsplash photos; the four old navigation photos were removed. Experience and certifications on Home are short versions read from `src/data/career.ts`, linking to About. Checked at 1280 px and 360 px with headless Edge: no horizontal scroll.
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro
