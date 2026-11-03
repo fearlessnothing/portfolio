@@ -39,7 +39,7 @@ results:
 ---
 ```
 
-Include the sections `Context`, `My Role`, `Options Considered`, `Execution`, `Challenges & Risks`, `Results` and `Lessons Learned` in the Markdown body. The detail route is generated from each Markdown filename. The included case study is explicitly illustrative; replace its fictional scenario and outcomes with verified, approved details before publishing.
+Include the sections `Context`, `My Role`, `Options Considered`, `Execution`, `Challenges & Risks`, `Results` and `Lessons Learned` in the Markdown body. The detail route is generated from each Markdown filename. Every fact must be verified; anything not yet confirmed is marked `[placeholder: …]` and must be filled in or removed before publishing.
 
 ## Cloudflare Pages deployment
 
@@ -53,4 +53,4 @@ For a manual upload, run `npm run build` and deploy the generated `dist/` direct
 
 ## Personalize before launch
 
-Replace the illustrative case study and project prompts with verified work, review all copy for accuracy, and add a real contact destination or Web3Forms key. The visual theme toggle supports light and dark modes and remembers the visitor's choice.
+Fill in every `[placeholder]` in the case studies, replace the project prompts with verified work, review all copy for accuracy, and add a real contact destination or Web3Forms key. The visual theme toggle supports light and dark modes and remembers the visitor's choice.

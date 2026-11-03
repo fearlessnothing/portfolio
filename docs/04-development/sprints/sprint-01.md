@@ -9,7 +9,7 @@
 | 2 | Apply soft blue design system to `global.css` (light + dark) | Must | Done 2026-10-15 |
 | 3 | Add name and title to header and hero | Must | Done 2026-10-19 |
 | 4 | Rename Case studies → Work; create Lab page | Must | To do |
-| 5 | Write first real case study (anonymised) | Must | To do |
+| 5 | Write first real case study (anonymised) | Must | In progress — 2 drafts with placeholders |
 | 6 | About page: experience timeline, capabilities | Must | Done 2026-11-03 |
 | 7 | First git commit and push to GitHub | Must | Done 2026-10-15 |
 | 8 | Export wireframes PDF into `03-design/` | Should | To do |
@@ -26,6 +26,7 @@
 - 2026-10-16: Wireframes v2 (as-built) drawn in Figma: https://www.figma.com/design/Kd9ruAifTtahQ1F1ij50cG
 - 2026-10-19: Task #3 done — header wordmark now "MHZ. / Min Hein Zaw / IT Executive"; hero eyebrow and page titles use the name. Title chosen by owner: IT Executive.
 - 2026-11-03: Task #6 done — About page rebuilt from the CV: intro, experience timeline (newest first), systems (vendor / built at work / learning builds), skills, education & certifications, languages. Data lives in `src/data/career.ts`. Owner confirmed: IT Manager since Jan 2026 (header and hero updated from IT Executive); "15+ years in IT"; firewalls are handled by the Sri Lanka team, so they are not listed; IE hourly automation and Marker agent shown as learning builds, in progress. Email added to the Contact page.
+- 2026-11-03: Task #5 started — owner chose the Visitor Management System and the Production Tracking System. Both drafted from confirmed inventory facts only; unknowns (dates, role at the time, measured results, lessons) are `[placeholder]`. Company names left out until the owner decides. Illustrative sample case study removed.
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro

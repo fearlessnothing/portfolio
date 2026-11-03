@@ -8,11 +8,12 @@
 _Last updated: 2026-11-03_
 
 ## Now — do next
-- [ ] #5 Write the first real case study (anonymised) — replaces the illustrative sample
+- [ ] #5 Finish the VMS and PTS case studies — fill every `[placeholder]` (drafts in `src/content/case-studies/`)
 
 ## Waiting on me (Claude needs this from me)
-- [ ] Choose which job project becomes the first case study
-- [ ] Give the real facts and numbers for that case study (no invented results)
+- [x] Choose which job project becomes the first case study — VMS and PTS, 2026-11-03
+- [ ] Give the real facts and numbers for VMS and PTS (no invented results)
+- [ ] Decide: name the companies in case studies, or keep them anonymous
 - [ ] Confirm the service list (needed before #10 Services page)
 - [ ] Update the CV itself to IT Manager (Jan 2026) and Guston Amava from 2023, so CV, site and LinkedIn agree
 - [ ] Optional: year for each certificate, issuer for the three without one, ERP product name
@@ -26,7 +27,8 @@ _Last updated: 2026-11-03_
 - [ ] #10 Services page (after service list is confirmed)
 
 ## Before first launch
-- [ ] Remove or replace the illustrative sample case study
+- [x] Remove or replace the illustrative sample case study — 2026-11-03
+- [ ] No `[placeholder]` left anywhere on the site
 - [ ] Connect the GitHub repo to Cloudflare Pages
 - [ ] Add the live URL as `site:` in `astro.config.mjs`
 - [ ] Run the test plan (`docs/05-testing/test-plan.md`) on desktop and mobile
