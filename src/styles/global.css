@@ -11,6 +11,7 @@
   --accent: #2b4a7a;
   --accent-soft: #dce5f0;
   --marker: #a14f12;
+  --title-glow: 0 0 26px rgba(120, 160, 215, 0.5);
   --header-bg: rgba(244, 242, 237, 0.92);
   --mono: 'DM Mono', monospace;
   --sans: 'Manrope', sans-serif;
@@ -26,6 +27,7 @@
   --accent: #a3bddc;
   --accent-soft: #263a5c;
   --marker: #e0a35f;
+  --title-glow: 0 0 24px rgba(163, 189, 220, 0.38), 0 0 2px rgba(163, 189, 220, 0.2);
   --header-bg: rgba(17, 27, 44, 0.94);
 }
 
@@ -78,7 +80,10 @@ button { color: inherit; }
 .hero .eyebrow { color: #c9d8ea; }
 .hero .eyebrow::before { background: #c9d8ea; }
 .hero h1 { max-width: 900px; margin: 22px 0 18px; font-size: clamp(40px, 7vw, 84px); font-weight: 400; letter-spacing: 0; line-height: 1.02; text-transform: uppercase; }
-.hero h1 em { color: #e0a35f; font-style: normal; font-weight: 800; }
+.hero h1 em { color: #e0a35f; font-style: normal; font-weight: 800; text-shadow: 0 0 28px rgba(224, 163, 95, .6), 0 0 6px rgba(224, 163, 95, .35); }
+/* Soft glow behind titles. Hero sits on indigo in both themes, so it has a fixed light glow. */
+.hero h1 { text-shadow: 0 0 30px rgba(201, 216, 234, .5), 0 0 4px rgba(201, 216, 234, .25); }
+.page-intro h1, .section-heading h2, .explore-heading h2, .split-layout h2, .about-block h2, .sdlc-copy h2, .contact-details h2, .prose h2 { text-shadow: var(--title-glow); }
 .hero-line { display: block; }
 .hero-copy { max-width: 600px; margin: 0; color: #dfe3ea; font-size: 16px; }
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }

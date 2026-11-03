@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- Soft glow behind the hero headline (light glow, copper on "IT") and behind page and section titles (washed-blue glow in light mode, light glow in dark mode).
 - Colour palette changed from soft blue to denim: cotton off-white background, indigo accents, copper "stitching" details; dark mode uses raw indigo.
 - Text made easier to read: small labels and tags enlarged (smallest now 10–12 px), secondary text 14 px and darker, hero headline heavier.
 - Home hero background changed from a night-time globe to a denim fabric photo, to show the garment industry.
