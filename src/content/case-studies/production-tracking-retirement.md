@@ -2,7 +2,7 @@
 title: "Turning Production Feedback into a Better IT Decision"
 order: 2
 role: "[placeholder: my title at the time]"
-duration: "[placeholder: e.g. start month – Oct 2026]"
+duration: "Started 23 February 2026"
 tags:
   - "System review"
   - "User feedback"

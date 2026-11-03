@@ -2,7 +2,7 @@
 title: "Rebuilding a stalled visitor system on Microsoft 365"
 order: 1
 role: "[placeholder: my title at the time]"
-duration: "[placeholder: e.g. start month – Oct 2026]"
+duration: "Started 13 July 2026"
 tags:
   - "Microsoft 365"
   - "Power Automate"
