@@ -32,6 +32,9 @@ _Last updated: 2026-11-03_
 - [ ] No `[placeholder]` left anywhere on the site
 - [ ] Connect the GitHub repo to Cloudflare Pages
 - [ ] Add the live URL as `site:` in `astro.config.mjs`
+- [ ] Web3Forms dashboard: restrict the access key to the live domain
+- [ ] After deploy: check security headers (`curl -I <url>`) and send one test message through the contact form
+- [ ] Later: upgrade Astro 5 → 7 (clears the last 5 npm audit advisories; breaking change, own task)
 - [ ] Run the test plan (`docs/05-testing/test-plan.md`) on desktop and mobile
 
 ## Done recently
