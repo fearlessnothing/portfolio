@@ -12,6 +12,7 @@
 2. Update `CHANGELOG.md` and the version in `package.json`.
 3. Commit, tag (`git tag v1.0.0`), push → Cloudflare deploys automatically.
 4. Open the live URL and smoke-test: Home, one case study, contact form.
+5. Check the response headers include the rules in `public/_headers` (browser dev tools → Network → Headers, or `curl -I <url>`).
 
 ## Rollback
 Cloudflare Pages → Deployments → choose the last good deployment → **Rollback**.

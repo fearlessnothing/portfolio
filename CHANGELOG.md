@@ -22,6 +22,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Changed (docs)
 - Positioning changed to customer-first: freelance clients first, employers second (ADR-005). Charter, sitemap and risk register updated.
 ### Added
+- Security hardening: Cloudflare Pages security headers (CSP, HSTS, nosniff, frame/referrer/permissions policies) in `public/_headers`; theme and menu scripts moved to `public/scripts/` so the CSP can forbid inline scripts; privacy note on the Contact page; `docs/07-maintenance/security.md`. CSP `form-action` also allows `web3forms.com`, so the Web3Forms success redirect is not blocked.
 - SDLC wheel on the Process page: seven stages (Planning to Maintenance) as a decorative SVG, with the same stages as an accessible list and an Idea → Business impact path.
 - Focus-area strip under the home hero: Infrastructure • Cybersecurity • Microsoft 365 • Business Systems • Automation.
 - Two real case study drafts: rebuilding the visitor system on Microsoft 365, and retiring the production tracking system. Unconfirmed facts are marked `[placeholder]`.
@@ -32,6 +33,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Removed
 - Illustrative (fictional) sample case study.
 ### Fixed
+- Dependencies: `npm audit fix` and minor updates (Tailwind 4.3.4, @astrojs/check 0.9.12); 8 advisories down to 5. The rest need Astro 7 (breaking) and only affect build tools, not the static site.
 - `TODO.md` no longer lists the GitHub push as pending (nothing was unpushed), and its rule now says a repeated task number must be ticked in every section it appears in.
 - `CLAUDE.md` route pattern corrected to `/case-studies/[...slug]/` (rest parameter, not `[slug]`).
 - Sample case study no longer claims the "IT Manager" job title; replaced with `[placeholder]` until the real title is confirmed.

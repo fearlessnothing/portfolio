@@ -30,13 +30,7 @@ const navItems = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script is:inline>
-      const storedTheme = localStorage.getItem('portfolio-theme');
-      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = storedTheme || preferredTheme;
-      const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-      if (themeColorMeta) themeColorMeta.content = themeColorMeta.dataset[document.documentElement.dataset.theme];
-    </script>
+    <script is:inline src="/scripts/theme-init.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -73,38 +67,6 @@ const navItems = [
         <a href="/contact/">Start a conversation <span aria-hidden="true">↗</span></a>
       </div>
     </footer>
-    <script>
-      const root = document.documentElement;
-      const themeButtons = document.querySelectorAll<HTMLButtonElement>('.theme-toggle, .mobile-theme-toggle');
-      const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
-      const mobileNav = document.querySelector<HTMLElement>('#mobile-navigation');
-      const themeColorMeta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
-
-      function syncThemeButton() {
-        const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-        if (themeColorMeta) themeColorMeta.content = themeColorMeta.dataset[root.dataset.theme ?? 'light'] ?? themeColorMeta.content;
-        themeButtons.forEach((button) => {
-          button.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
-          button.setAttribute('title', `Switch to ${nextTheme} mode`);
-        });
-      }
-
-      themeButtons.forEach((button) => button.addEventListener('click', () => {
-        root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-        localStorage.setItem('portfolio-theme', root.dataset.theme);
-        syncThemeButton();
-      }));
-      menuButton?.addEventListener('click', () => {
-        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-        menuButton.setAttribute('aria-expanded', String(!isOpen));
-        menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-        if (mobileNav) mobileNav.hidden = isOpen;
-      });
-      mobileNav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-        if (mobileNav) mobileNav.hidden = true;
-        menuButton?.setAttribute('aria-expanded', 'false');
-      }));
-      syncThemeButton();
-    </script>
+    <script is:inline src="/scripts/site.js"></script>
   </body>
 </html>

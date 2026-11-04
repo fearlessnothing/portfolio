@@ -35,6 +35,7 @@ _Last updated: 2026-11-03_
 - [ ] Run the test plan (`docs/05-testing/test-plan.md`) on desktop and mobile
 
 ## Done recently
+- [x] Security hardening: headers, external scripts, contact privacy note — 2026-11-04
 - [x] #9 Home rebuilt in nine sections with expertise hexagons — 2026-11-03
 - [x] #6 About page from the CV + title updated to IT Manager + email on Contact — 2026-11-03
 - [x] #3 Name and IT Executive title in header and hero — 2026-10-19
