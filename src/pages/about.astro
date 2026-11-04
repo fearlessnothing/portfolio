@@ -18,6 +18,15 @@ const path = [
   { period: '2019 – today', role: 'IT Executive, then IT Manager', text: 'Leading IT for two factories. What I enjoy most now is learning how the whole supply chain works, process by process, and working out how IT can support it and make it digital.' },
 ];
 
+// How I work: steps taken from what I actually did on the VMS and PTS projects.
+const approach = [
+  { title: 'Go to the floor', text: 'Talk with the people who do the work, in meetings and during testing.' },
+  { title: 'Understand the process', text: 'Follow how the work flows from one team to the next before changing anything.' },
+  { title: 'Turn needs into requirements', text: 'Group feedback into clear change requests for developers, vendors or the group IT team.' },
+  { title: 'Keep operations running', text: 'If the main system is not ready, put a simple bridge in place, and retire it later.' },
+  { title: 'Validate and report', text: 'Re-test with users, and give management a clear summary to decide on.' },
+];
+
 const beliefs = [
   { title: 'Technology has to fit the operation.', text: 'A system that works technically but not on the factory floor will be bypassed.', href: '/case-studies/visitor-management/', link: 'Visitor system case study' },
   { title: 'Requirements start at ground level.', text: 'Ask who will use it and how it helps production before anything is built.', href: '/case-studies/production-tracking-rebuild/', link: 'Production tracking case study' },
@@ -60,8 +69,27 @@ const beliefs = [
         </ol>
       </section>
 
+      <section class="about-block" aria-labelledby="work-title">
+        <span class="eyebrow">02 / How I work</span>
+        <h2 id="work-title">Between the business and the technology</h2>
+        <p class="about-lead">Most of my work is translation: understanding what the factory needs, and making sure the people who build or supply systems understand it too.</p>
+        <ol class="about-bridge" aria-label="Who I connect">
+          <li><strong>Business &amp; factory users</strong><span>Production, warehouse, merchandising, management</span></li>
+          <li class="about-bridge-link" aria-hidden="true"><span>needs</span><span>feedback</span></li>
+          <li class="about-bridge-me"><strong>IT — my role</strong><span>Translate, coordinate, keep things running</span></li>
+          <li class="about-bridge-link" aria-hidden="true"><span>requirements</span><span>testing</span></li>
+          <li><strong>Developers &amp; vendors</strong><span>The group’s IT team and outside vendors</span></li>
+        </ol>
+        <h3 class="about-subhead">How I approach a problem</h3>
+        <ol class="about-approach">
+          {approach.map((step, i) => (
+            <li><span class="about-approach-num">{String(i + 1).padStart(2, '0')}</span><div><strong>{step.title}</strong><p>{step.text}</p></div></li>
+          ))}
+        </ol>
+      </section>
+
       <section class="about-block" aria-labelledby="beliefs-title">
-        <span class="eyebrow">02 / What I believe</span>
+        <span class="eyebrow">03 / What I believe</span>
         <h2 id="beliefs-title">Three things I hold on to</h2>
         <ul class="about-beliefs">
           {beliefs.map((belief) => (
@@ -75,7 +103,7 @@ const beliefs = [
       </section>
 
       <section class="about-block" aria-labelledby="beyond-title">
-        <span class="eyebrow">03 / Beyond the job</span>
+        <span class="eyebrow">04 / Beyond the job</span>
         <h2 id="beyond-title">Teaching and learning</h2>
         <div class="about-beyond">
           <div>
@@ -90,7 +118,7 @@ const beliefs = [
       </section>
 
       <details class="about-cv" id="cv">
-        <summary><span class="about-cv-text"><span class="eyebrow">04 / Full CV</span><span class="about-cv-title">Experience, systems, skills, education and languages</span></span></summary>
+        <summary><span class="about-cv-text"><span class="eyebrow">05 / Full CV</span><span class="about-cv-title">Experience, systems, skills, education and languages</span></span></summary>
         <div class="about-cv-body">
           <section class="about-block" aria-labelledby="experience-title">
             <h2 id="experience-title">Experience</h2>
