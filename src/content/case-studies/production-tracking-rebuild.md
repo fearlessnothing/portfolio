@@ -41,7 +41,7 @@ Both factories asked to stop using it.
 
 ## My role
 
-As IT Manager, I was the link between our production teams, the group IT team in Sri Lanka and the development team.
+As IT Manager, I was the link between our production teams, the group’s overseas IT team and the development team.
 
 - **Feedback:** held meetings with production teams to understand what was not working and why.
 - **Requirements:** explained to the development team, together with the users, how the system did not align with our requirements.

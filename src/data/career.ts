@@ -40,7 +40,7 @@ export const experience: Job[] = [
       'Run IT for two garment factories and supervise an IT Assistant at each site.',
       'Keep in-house IT projects on track across both factories and report progress to the Director and factory management.',
       'Write executive summaries, system reviews and proposals for the Director.',
-      'Coordinate system roll-outs with the group IT team in Sri Lanka and outside vendors: UAT, change requests and issue follow-up.',
+      'Coordinate system roll-outs with the group’s overseas IT team and outside vendors: UAT, change requests and issue follow-up.',
       'Prepare the monthly IT usage report and IT budget for every department at both factories.',
       'Handle IT purchasing end to end: purchase requests and orders, vendor negotiation, delivery and service follow-up.',
       'Look after servers, VMware ESXi hosts, network devices, CCTV and workstations; inspect installs and supervise vendor work on site.',

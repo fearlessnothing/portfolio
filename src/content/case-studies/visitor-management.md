@@ -2,7 +2,7 @@
 title: "From UAT Findings to a Successful Visitor Management Rollout"
 system: "Visitor Management System"
 order: 1
-role: "IT Executive"
+role: "IT Manager"
 duration: "May – Aug 2026"
 environment: "Manufacturing / factory operations"
 focus:

@@ -9,7 +9,7 @@
 | 2 | Apply soft blue design system to `global.css` (light + dark) | Must | Done 2026-10-15 |
 | 3 | Add name and title to header and hero | Must | Done 2026-10-19 |
 | 4 | Rename Case studies → Work; create Lab page | Must | To do |
-| 5 | Write first real case study (anonymised) | Must | In progress — 2 drafts with placeholders |
+| 5 | Write first real case study (anonymised) | Must | Done 2026-11-04 (VMS and PTS) |
 | 6 | About page: experience timeline, capabilities | Must | Done 2026-11-03 |
 | 7 | First git commit and push to GitHub | Must | Done 2026-10-15 |
 | 8 | Export wireframes PDF into `03-design/` | Should | To do |
@@ -30,6 +30,7 @@
 - 2026-11-03: Task #9 done — Home rebuilt to the owner's nine-section flow (see ADR-005 amendment). Expertise hexagons: Infrastructure, Security & Backup, Microsoft 365, Business Systems, Automation, with five new Unsplash photos; the four old navigation photos were removed. Experience and certifications on Home are short versions read from `src/data/career.ts`, linking to About. Checked at 1280 px and 360 px with headless Edge: no horizontal scroll.
 - 2026-11-04: Security hardening (unplanned, owner request) — added `public/_headers` (CSP, HSTS, nosniff, frame/referrer/permissions policies), moved theme and menu scripts to `public/scripts/` so CSP can use `script-src 'self'`, added a privacy note to the Contact page, and wrote `docs/07-maintenance/security.md`. Dependency upgrades are still open.
 - 2026-11-04: PTS case study rewritten from the owner's answers: not retired but being rebuilt. Feedback gathered in meetings with production teams; gaps explained to the developers with users; stop-or-rebuild discussed with the group IT team and production teams; root cause: a system for eight group factories (six abroad) did not fit the two Myanmar factories; summary still manual for now. Role IT Manager. File renamed to `production-tracking-rebuild.md` (URL `/case-studies/production-tracking-rebuild/`). No placeholders left on the site.
+- 2026-11-04: Task #5 done — VMS role confirmed as IT Manager; company names stay out of case studies; "Sri Lanka" replaced by "the group’s overseas IT team" (About and case studies).
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro

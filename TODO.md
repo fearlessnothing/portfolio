@@ -8,12 +8,12 @@
 _Last updated: 2026-11-03_
 
 ## Now — do next
-- [ ] #5 Finish the VMS and PTS case studies — both written, no placeholders (2026-11-04); only the VMS role (IT Executive or IT Manager?) is left to confirm
+- [x] #5 Finish the VMS and PTS case studies — 2026-11-04
 
 ## Waiting on me (Claude needs this from me)
 - [x] Choose which job project becomes the first case study — VMS and PTS, 2026-11-03
 - [x] Give the real facts for VMS and PTS — 2026-11-04
-- [ ] Decide: name the companies in case studies, or keep them anonymous
+- [x] Decide: company names stay out of case studies; "overseas IT team" instead of the country — 2026-11-04
 - [ ] Facts for an Infrastructure case study and a Backup / DR case study (to feature them on Home)
 - [ ] Confirm the service list (needed before #10 Services page)
 - [ ] Update the CV itself to IT Manager (Jan 2026) and Guston Amava from 2023, so CV, site and LinkedIn agree
@@ -21,7 +21,7 @@ _Last updated: 2026-11-03_
 
 ## Sprint 1 — still open
 - [ ] #4 Rename Case studies → Work; create Lab page
-- [ ] #5 First real case study (anonymised)
+- [x] #5 First real case study (anonymised) — 2026-11-04
 - [x] #6 About page: experience timeline, capabilities — 2026-11-03
 - [ ] #8 Export wireframes PDF into `docs/03-design/`
 - [x] #9 Restructure Home for customer-first positioning (ADR-005) — 2026-11-03

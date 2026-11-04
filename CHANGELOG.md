@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- VMS case study role corrected to IT Manager. "Group IT team in Sri Lanka" replaced by "the group’s overseas IT team" on About and in case studies; company names stay out of case studies.
 - PTS case study rewritten: the system is being rebuilt to fit the two Myanmar factories, not retired. Adds overview cards, a project journey, three options and the owner's lessons; no placeholders left. URL changed to `/case-studies/production-tracking-rebuild/`.
 - VMS case study rewritten and retitled "From UAT Findings to a Successful Visitor Management Rollout": the Microsoft 365 register is shown as an interim continuity solution, retired once the improved main system was in use at both Myanmar factories. Adds project overview cards, a project journey timeline, UAT cycle, interim architecture and transition diagrams, capabilities, lessons learned and a closing call to action. No placeholders remain.
 - Case study template: optional overview fields (system, focus, environment, technologies); bullets restored in case study text.
