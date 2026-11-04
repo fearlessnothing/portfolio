@@ -188,14 +188,23 @@ button { color: inherit; }
 .about-path-period { padding-top: 3px; color: var(--accent); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
 .about-path h3 { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.3; }
 .about-path p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+/* "How I work" is the signature section: a full-width band between the two About columns. */
+.about-feature { margin: 8px auto 56px; padding: 44px 40px 48px; border: 1px solid var(--line); border-top: 3px solid var(--accent); background: color-mix(in srgb, var(--accent-soft) 40%, var(--bg)); }
+.about-feature h2 { margin: 10px 0 14px; font-size: clamp(26px, 3.8vw, 38px); font-weight: 600; line-height: 1.2; }
+.about-feature .about-lead { max-width: 720px; }
+.about-feature .about-approach { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.about-feature .about-approach li { grid-template-columns: 1fr; gap: 6px; }
+.about-feature .about-approach li:last-child:nth-child(odd) { grid-column: auto; }
+.about-grid-rest { padding-top: 0; }
 .about-lead { max-width: 620px; margin: 0 0 22px; color: var(--muted); font-size: 16px; }
 .about-bridge { display: grid; grid-template-columns: minmax(0, 1fr) 100px minmax(0, 1fr) 100px minmax(0, 1fr); align-items: stretch; margin: 0; padding: 0; list-style: none; }
 .about-bridge > li { display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 14px; border: 1px solid var(--line); background: var(--surface); text-align: center; }
 .about-bridge strong { color: var(--ink); font-size: 15px; line-height: 1.3; }
 .about-bridge span { color: var(--muted); font-size: 13px; line-height: 1.45; }
-.about-bridge .about-bridge-me { border: 2px solid var(--accent); background: var(--accent-soft); }
+.about-bridge .about-bridge-me { border: 2px solid var(--accent); background: var(--accent-soft); box-shadow: 0 8px 20px -12px rgba(23, 35, 58, .45); }
+.about-bridge .about-bridge-me strong { font-size: 17px; }
 .about-bridge .about-bridge-link { position: relative; padding: 0 4px; border: 0; background: none; }
-.about-bridge-link::before { display: block; color: var(--marker); font-size: 22px; font-weight: 700; line-height: 1; content: '⇄'; }
+.about-bridge-link::before { display: block; color: var(--marker); font-size: 26px; font-weight: 700; line-height: 1; content: '⇄'; }
 .about-bridge .about-bridge-link span { color: var(--marker); font-family: var(--mono); font-size: 11px; line-height: 1.35; text-transform: uppercase; }
 .about-subhead { margin: 34px 0 14px; font-size: 17px; font-weight: 700; }
 .about-approach { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
@@ -355,11 +364,9 @@ button { color: inherit; }
 .empty-state { padding: 32px; border: 1px solid var(--line); color: var(--muted); }
 
 @media (max-width: 1024px) {
-  /* About bridge: the side column leaves too little width, so stack it. */
-  .about-bridge { grid-template-columns: 1fr; }
-  .about-bridge .about-bridge-link { flex-direction: row; justify-content: center; gap: 8px; padding: 8px 0; }
-  .about-bridge-link::before { content: '⇅'; font-size: 18px; }
-  .about-bridge .about-bridge-link span + span::before { margin-right: 8px; content: '·'; }
+  .about-feature .about-approach { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .about-feature .about-approach li { grid-template-columns: 34px 1fr; gap: 10px; }
+  .about-feature .about-approach li:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 @media (max-width: 920px) {
   .about-approach { grid-template-columns: 1fr; }
@@ -394,6 +401,15 @@ button { color: inherit; }
   .sdlc-section { grid-template-columns: 1fr; gap: 36px; padding: 56px 0; }
   .sdlc-wheel { grid-row: 1; max-width: 440px; }
   .phase { grid-template-columns: 55px 1fr; gap: 10px 16px; }
+  .about-feature { margin-bottom: 40px; padding: 28px 18px 30px; }
+  .about-grid-spacer { display: none; }
+  /* Bridge stacks vertically on narrow screens. */
+  .about-bridge { grid-template-columns: 1fr; }
+  .about-bridge .about-bridge-link { flex-direction: row; justify-content: center; gap: 8px; padding: 8px 0; }
+  .about-bridge-link::before { content: '⇅'; font-size: 18px; }
+  .about-bridge .about-bridge-link span + span::before { margin-right: 8px; content: '·'; }
+  .about-feature .about-approach { grid-template-columns: 1fr; }
+  .about-feature .about-approach li:last-child:nth-child(odd) { grid-column: auto; }
   .phase-outcome { grid-column: 2; padding: 0; border: 0; }
   .cs-overview { grid-template-columns: 1fr 1fr; }
   .cs-overview-wide { grid-column: span 2; }

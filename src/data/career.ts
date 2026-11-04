@@ -93,8 +93,8 @@ export const experience: Job[] = [
 
 export const vendorSystems: SystemItem[] = [
   { name: 'FINAC Payroll & Time Attendance', note: 'Roll-out with the vendor for both factories.', status: 'In progress' },
-  { name: 'Visitor Management System', note: 'Led user acceptance testing and reported the changes needed.' },
-  { name: 'Production Tracking System', note: 'Gathered production feedback, reported to the Director and supported its rebuild.' },
+  { name: 'Visitor Management System', note: 'Coordinated factory-side UAT, requirements, change feedback and implementation support through successful use across both Myanmar factories.' },
+  { name: 'Production Tracking System', note: 'Gathered production feedback, explained the gaps to the developers, reported to the Director and supported the rebuild.' },
   { name: 'Plani8 (Solvei8)', note: 'Production planning.', status: 'In progress' },
   { name: 'ERP', note: 'Warehouse and production.' },
   { name: 'Fabric Barcode system' },
@@ -103,7 +103,7 @@ export const vendorSystems: SystemItem[] = [
 ];
 
 export const builtSystems: SystemItem[] = [
-  { name: 'Visitor register on Microsoft 365', note: 'Interim solution: Forms → Power Automate → SharePoint.', status: 'Retired' },
+  { name: 'Visitor register on Microsoft 365', note: 'Interim business-continuity solution using Microsoft Forms, Power Automate and SharePoint while the primary VMS was being improved.', status: 'Retired' },
   { name: 'Fabric Age Control dashboard', note: 'Tracks fabric age from arrival so older rolls are used first.' },
 ];
 
@@ -143,7 +143,8 @@ export const education: { name: string; org: string; status: string }[] = [
 
 export const certifications: { done: { name: string; org?: string }[]; inProgress: { name: string }[] } = {
   done: [
-    { name: 'MCSA 70-740', org: 'Loop Avoidance Training Center' },
+    // Owner to confirm: training course, or the official Microsoft exam/certification? Shown as training until confirmed.
+    { name: 'Windows Server 2016 (Exam 70-740) training', org: 'Loop Avoidance Training Center' },
     { name: 'Advanced Network Engineering', org: 'Youth Training Center' },
     { name: 'Server Administration', org: 'Myanmar IT Academy' },
     { name: 'Certificate of Human Resource Management' },

@@ -10,12 +10,12 @@ const systemGroups = [
   { title: 'Learning builds', items: learningBuilds },
 ];
 
-// My path: one chapter per career step, each with what it taught me (owner's own words, 2026-11-04).
+// My path: what each career step taught me (owner's own words, 2026-11-04).
 const path = [
-  { period: '2010 – 2017', role: 'IT Staff, Myanmar Police Organization', text: 'Seven years of running servers, networks and CCTV taught me two things: how much people depend on their systems, and how much depends on good communication.' },
-  { period: '2017 – 2018', role: 'IT Assistant, garment factory', text: 'My first job in garment manufacturing, including the warehouse ERP roll-out for barcodes, goods received and issuing.' },
-  { period: '2018 – 2019', role: 'Personal Assistant to the Managing Director', text: 'I stepped out of IT on purpose, to learn how a business is run. Once I understood what I needed to, I went back to the work I enjoy most.' },
-  { period: '2019 – today', role: 'IT Executive, then IT Manager', text: 'Leading IT for two factories. What I enjoy most now is learning how the whole supply chain works, process by process, and working out how IT can support it and make it digital.' },
+  { period: '2010 – 2017', role: 'IT Staff, Myanmar Police Organization', text: 'Running servers, networks and CCTV taught me how much people depend on reliable systems, and on good communication.' },
+  { period: '2017 – 2018', role: 'IT Assistant, garment factory', text: 'My first garment manufacturing role, and my first ERP roll-out: warehouse barcodes, goods received and issuing.' },
+  { period: '2018 – 2019', role: 'Personal Assistant to the Managing Director', text: 'I stepped closer to management on purpose, to see how decisions, communication and operations connect. Then I went back to IT, the work I enjoy most.' },
+  { period: '2019 – today', role: 'IT Executive, then IT Manager', text: 'From technical operations to IT management for two factories, business systems and digital improvement, learning how the supply chain works and where IT can support it.' },
 ];
 
 // How I work: steps taken from what I actually did on the VMS and PTS projects.
@@ -28,18 +28,18 @@ const approach = [
 ];
 
 const beliefs = [
-  { title: 'Technology has to fit the operation.', text: 'A system that works technically but not on the factory floor will be bypassed.', href: '/case-studies/visitor-management/', link: 'Visitor system case study' },
-  { title: 'Requirements start at ground level.', text: 'Ask who will use it and how it helps production before anything is built.', href: '/case-studies/production-tracking-rebuild/', link: 'Production tracking case study' },
-  { title: 'Keep the business running.', text: 'Use a simple bridge when needed, and retire it once the right long-term solution is ready.', href: '/case-studies/visitor-management/', link: 'Visitor system case study' },
+  { title: 'Technology has to fit the operation.', text: 'If it works technically but not on the factory floor, people will work around it.', href: '/case-studies/visitor-management/', link: 'Visitor system case study' },
+  { title: 'Requirements start at ground level.', text: 'Know who will use it, and how it helps production, before anything is built.', href: '/case-studies/production-tracking-rebuild/', link: 'Production tracking case study' },
+  { title: 'Keep the business running.', text: 'Use a simple bridge when needed, and retire it when the right solution is ready.', href: '/case-studies/visitor-management/', link: 'Visitor system case study' },
 ];
 ---
 
-<BaseLayout title="About" description="Min Hein Zaw, IT Manager for two garment factories in Myanmar: my path into IT, what I believe about technology at work, and my full CV.">
+<BaseLayout title="About" description="How Min Hein Zaw approaches IT operations, business systems, user requirements and digital improvement in manufacturing environments.">
   <section class="page-intro">
     <div class="container">
       <span class="eyebrow">About</span>
       <h1>The work I would choose every time.</h1>
-      <p>I have been obsessed with IT since I was young. Other work tires me out; IT work, even on a long day, still makes me happy. Today I am IT Manager for two garment factories in Myanmar, with {yearsInIt} years in IT behind me.</p>
+      <p>I’ve been drawn to IT since I was young. Even after a long day, solving an IT problem still gives me the same energy and curiosity that brought me into this field. Today I manage IT across two garment factories in Myanmar, building on more than {yearsInIt.replace('+', '')} years of hands-on experience.</p>
     </div>
   </section>
 
@@ -58,7 +58,7 @@ const beliefs = [
     <div class="about-main">
       <section class="about-block" aria-labelledby="path-title">
         <span class="eyebrow">01 / My path</span>
-        <h2 id="path-title">How I got here</h2>
+        <h2 id="path-title">What shaped the way I work</h2>
         <ol class="about-path">
           {path.map((step) => (
             <li>
@@ -69,25 +69,31 @@ const beliefs = [
         </ol>
       </section>
 
-      <section class="about-block" aria-labelledby="work-title">
-        <span class="eyebrow">02 / How I work</span>
-        <h2 id="work-title">Between the business and the technology</h2>
-        <p class="about-lead">Most of my work is translation: understanding what the factory needs, and making sure the people who build or supply systems understand it too.</p>
-        <ol class="about-bridge" aria-label="Who I connect">
-          <li><strong>Business &amp; factory users</strong><span>Every production department, from merchandising to delivery, and management</span></li>
-          <li class="about-bridge-link" aria-hidden="true"><span>needs</span><span>feedback</span></li>
-          <li class="about-bridge-me"><strong>IT — my role</strong><span>Translate, coordinate, keep things running</span></li>
-          <li class="about-bridge-link" aria-hidden="true"><span>requirements</span><span>testing</span></li>
-          <li><strong>Developers &amp; vendors</strong><span>The group’s IT team and outside vendors</span></li>
-        </ol>
-        <h3 class="about-subhead">How I approach a problem</h3>
-        <ol class="about-approach">
-          {approach.map((step, i) => (
-            <li><span class="about-approach-num">{String(i + 1).padStart(2, '0')}</span><div><strong>{step.title}</strong><p>{step.text}</p></div></li>
-          ))}
-        </ol>
-      </section>
+    </div>
+  </section>
 
+  <section class="container about-feature" aria-labelledby="work-title">
+    <span class="eyebrow">02 / How I work</span>
+    <h2 id="work-title">Between the business and the technology</h2>
+    <p class="about-lead">Most of my work is translation: understanding what the factory needs, and making sure the people who build or supply systems understand it too.</p>
+    <ol class="about-bridge" aria-label="Who I connect">
+      <li><strong>Business &amp; factory users</strong><span>Every production department, from merchandising to delivery, and management</span></li>
+      <li class="about-bridge-link" aria-hidden="true"><span>needs</span><span>feedback</span></li>
+      <li class="about-bridge-me"><strong>IT — my role</strong><span>Translate, coordinate, keep things running</span></li>
+      <li class="about-bridge-link" aria-hidden="true"><span>requirements</span><span>testing</span></li>
+      <li><strong>Developers &amp; vendors</strong><span>The group’s IT team and outside vendors</span></li>
+    </ol>
+    <h3 class="about-subhead">How I approach a problem</h3>
+    <ol class="about-approach">
+      {approach.map((step, i) => (
+        <li><span class="about-approach-num">{String(i + 1).padStart(2, '0')}</span><div><strong>{step.title}</strong><p>{step.text}</p></div></li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="container about-grid about-grid-rest">
+    <div class="about-grid-spacer" aria-hidden="true"></div>
+    <div class="about-main">
       <section class="about-block" aria-labelledby="beliefs-title">
         <span class="eyebrow">03 / What I believe</span>
         <h2 id="beliefs-title">Three things I hold on to</h2>
@@ -108,11 +114,11 @@ const beliefs = [
         <div class="about-beyond">
           <div>
             <h3>Why I teach</h3>
-            <p>I learned IT the hard way, without much money, and getting onto this path was not easy. Since 2018 I have taught Microsoft Office, PageMaker and Photoshop part-time, so that people who start where I started can learn IT more easily than I did.</p>
+            <p>I built my own IT path the hard way, without much money. Since 2018 I have taught Microsoft Office, PageMaker and Photoshop part-time, to make that path easier for people who start where I did.</p>
           </div>
           <div>
-            <h3>Still learning</h3>
-            <p>I am studying for a Higher Diploma in Computer Science, working on more certifications, and trying new tools in my own <a class="inline-link" href="/projects/#lab-title">lab builds</a>.</p>
+            <h3>What I’m exploring now</h3>
+            <p>Automation and AI-assisted workflows for business systems, tried out in my <a class="inline-link" href="/projects/#lab-title">lab builds</a>, alongside a Higher Diploma in Computer Science and more certifications.</p>
           </div>
         </div>
       </section>
