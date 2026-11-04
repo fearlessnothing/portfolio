@@ -179,6 +179,32 @@ button { color: inherit; }
 .about-block { padding-bottom: 52px; }
 .about-block + .about-block { padding-top: 46px; border-top: 1px solid var(--line); }
 .about-block h2 { scroll-margin-top: 96px; margin: 10px 0 24px; font-size: clamp(24px, 3.4vw, 32px); font-weight: 600; letter-spacing: 0; line-height: 1.2; }
+/* About: story sections and collapsible CV */
+.about-path { margin: 0; padding: 0; list-style: none; border-left: 2px solid var(--line); }
+.about-path li { position: relative; display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 0 0 26px 22px; }
+.about-path li::before { position: absolute; top: 7px; left: -7px; width: 12px; height: 12px; border: 2px solid var(--marker); border-radius: 50%; background: var(--bg); content: ''; }
+.about-path li:last-child { padding-bottom: 0; }
+.about-path li:last-child::before { background: var(--marker); }
+.about-path-period { padding-top: 3px; color: var(--accent); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
+.about-path h3 { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.3; }
+.about-path p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+.about-beliefs { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.about-beliefs li { padding: 18px 20px; border: 1px solid var(--line); border-left: 3px solid var(--accent); background: var(--surface); }
+.about-beliefs h3 { margin: 0; font-size: 18px; font-weight: 700; }
+.about-beliefs p { margin: 6px 0 10px; color: var(--muted); font-size: 15px; }
+.about-beyond { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.about-beyond h3 { margin: 0 0 8px; font-size: 16px; font-weight: 700; }
+.about-beyond p { margin: 0; color: var(--muted); font-size: 15px; }
+.inline-link { color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.about-cv { border-top: 1px solid var(--line); }
+.about-cv summary { display: flex; min-height: 44px; align-items: center; gap: 16px; padding: 26px 0; cursor: pointer; list-style: none; }
+.about-cv-text { display: flex; flex-direction: column; gap: 8px; }
+.about-cv summary::-webkit-details-marker { display: none; }
+.about-cv summary::after { flex: none; margin-left: auto; color: var(--accent); font-size: 22px; font-weight: 700; content: '+'; }
+.about-cv[open] summary::after { content: '−'; }
+.about-cv summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.about-cv-title { color: var(--ink); font-size: clamp(20px, 3vw, 26px); font-weight: 600; }
+.about-cv-body > .about-block:first-child { padding-top: 10px; }
 .timeline { margin: 0; padding: 0; list-style: none; }
 .timeline-item { display: grid; grid-template-columns: 130px 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid var(--line); }
 .timeline-item:first-child { padding-top: 0; border-top: 0; }
@@ -336,6 +362,8 @@ button { color: inherit; }
   .case-card { min-height: 0; }
   .process-steps { grid-template-columns: repeat(2, 1fr); row-gap: 24px; }
   .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+  .about-path li { grid-template-columns: 1fr; gap: 4px; }
+  .about-beyond { grid-template-columns: 1fr; }
   .home-timeline li { grid-template-columns: 1fr; gap: 2px; }
   .skill-groups, .cred-columns { grid-template-columns: 1fr; }
   .sdlc-section { grid-template-columns: 1fr; gap: 36px; padding: 56px 0; }

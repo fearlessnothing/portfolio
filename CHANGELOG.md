@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- About page rewritten as a story in my own words: why IT, my path (Police IT → garment factory → PA to the MD → IT Manager) with what each step taught me, three beliefs linked to the case studies, and why I teach. The full CV is still there in a collapsible section, and links into it (e.g. Home → Skills) open it automatically.
 - Company names removed from the whole site (About and Home timeline): employers now shown as "Garment manufacturing group", "Both Myanmar factories", "Pathein factory", "Garment factory", "Computer training centre" and "Private company". The Police years stay as they are.
 - Projects page rebuilt from real work: "Built at work" (Fabric Age Control dashboard, interim visitor register) and "Lab" (Style Control Workbook, hourly production automation). Template example projects removed. About page systems lists updated to match; PTS note now says it is being rebuilt.
 - VMS case study role corrected to IT Manager. "Group IT team in Sri Lanka" replaced by "the group’s overseas IT team" on About and in case studies; company names stay out of case studies.

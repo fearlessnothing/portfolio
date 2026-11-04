@@ -31,6 +31,7 @@
 - 2026-11-04: Security hardening (unplanned, owner request) — added `public/_headers` (CSP, HSTS, nosniff, frame/referrer/permissions policies), moved theme and menu scripts to `public/scripts/` so CSP can use `script-src 'self'`, added a privacy note to the Contact page, and wrote `docs/07-maintenance/security.md`. Dependency upgrades are still open.
 - 2026-11-04: PTS case study rewritten from the owner's answers: not retired but being rebuilt. Feedback gathered in meetings with production teams; gaps explained to the developers with users; stop-or-rebuild discussed with the group IT team and production teams; root cause: a system for eight group factories (six abroad) did not fit the two Myanmar factories; summary still manual for now. Role IT Manager. File renamed to `production-tracking-rebuild.md` (URL `/case-studies/production-tracking-rebuild/`). No placeholders left on the site.
 - 2026-11-04: Task #5 done — VMS role confirmed as IT Manager; company names stay out of case studies; "Sri Lanka" replaced by "the group’s overseas IT team" (About and case studies).
+- 2026-11-04: About page reworked (owner felt it read like a CV): story sections from the owner's own answers, full CV moved into a `<details>` block; `site.js` opens a closed `<details>` when the URL hash points inside it.
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro

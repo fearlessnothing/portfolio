@@ -29,3 +29,17 @@ mobileNav?.querySelectorAll('a').forEach((link) => link.addEventListener('click'
   menuButton?.setAttribute('aria-expanded', 'false');
 }));
 syncThemeButton();
+
+// Open a closed <details> (e.g. the About page CV) when a link points inside it.
+function openHashTarget() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (!id) return;
+  const target = document.getElementById(id);
+  const details = target?.closest('details');
+  if (details && !details.open) {
+    details.open = true;
+    target.scrollIntoView();
+  }
+}
+openHashTarget();
+window.addEventListener('hashchange', openHashTarget);
