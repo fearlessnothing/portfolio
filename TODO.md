@@ -14,7 +14,7 @@ _Last updated: 2026-11-03_
 - [x] Choose which job project becomes the first case study — VMS and PTS, 2026-11-03
 - [x] Give the real facts for VMS and PTS — 2026-11-04
 - [x] Decide: no company names anywhere on the site; "overseas IT team" instead of the country — 2026-11-04
-- [ ] Facts for an Infrastructure case study and a Backup / DR case study (to feature them on Home)
+- [ ] Facts for an Infrastructure case study (candidate: whole-factory IT set-up from construction, 2017–2018) and a Backup / DR case study
 - [ ] Confirm the service list (needed before #10 Services page)
 - [ ] Update the CV itself to IT Manager (Jan 2026) and Guston Amava from 2023, so CV, site and LinkedIn agree
 - [ ] Confirm "MCSA 70-740": a training course, or the official Microsoft exam/certification? (shown as training for now)

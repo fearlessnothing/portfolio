@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- About and CV: the 2017–2018 IT Assistant role now shows that I set up IT for a whole factory from the construction stage (cabling, network, CCTV, PCs and laptops) until users could start work.
 - About page polish: calmer hero copy; "My path" retitled "What shaped the way I work" with shorter lessons; "How I work" is now a full-width signature band (bridge diagram, five steps in one row on desktop); tighter belief and teaching copy; "What I’m exploring now"; new meta description. Full CV notes updated for VMS (UAT through successful use at both factories), the retired Microsoft 365 register and PTS. "MCSA 70-740" shown as "Windows Server 2016 (Exam 70-740) training" until confirmed.
 - About page: new "How I work" section with a Business ↔ IT ↔ Developers bridge diagram and a five-step problem approach taken from the VMS and PTS work. Stacks vertically below 1024 px.
 - About page rewritten as a story in my own words: why IT, my path (Police IT → garment factory → PA to the MD → IT Manager) with what each step taught me, three beliefs linked to the case studies, and why I teach. The full CV is still there in a collapsible section, and links into it (e.g. Home → Skills) open it automatically.

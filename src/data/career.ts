@@ -73,8 +73,9 @@ export const experience: Job[] = [
     place: 'Pathein',
     period: '2017 – 2018',
     points: [
+      'Set up IT for the whole factory from the construction stage: network cabling, network, CCTV, PCs and laptops, until every user could sit down and work.',
       'Took part in the 2017 ERP roll-out for the warehouse: barcode, goods received (GRN) and issuing software.',
-      'Hands-on support for laptops, desktops and network cabling.',
+      'Hands-on IT support for users, laptops, desktops and the network.',
     ],
   },
   {
