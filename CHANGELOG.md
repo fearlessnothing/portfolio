@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- Company names removed from the whole site (About and Home timeline): employers now shown as "Garment manufacturing group", "Both Myanmar factories", "Pathein factory", "Garment factory", "Computer training centre" and "Private company". The Police years stay as they are.
 - Projects page rebuilt from real work: "Built at work" (Fabric Age Control dashboard, interim visitor register) and "Lab" (Style Control Workbook, hourly production automation). Template example projects removed. About page systems lists updated to match; PTS note now says it is being rebuilt.
 - VMS case study role corrected to IT Manager. "Group IT team in Sri Lanka" replaced by "the group’s overseas IT team" on About and in case studies; company names stay out of case studies.
 - PTS case study rewritten: the system is being rebuilt to fit the two Myanmar factories, not retired. Adds overview cards, a project journey, three options and the owner's lessons; no placeholders left. URL changed to `/case-studies/production-tracking-rebuild/`.

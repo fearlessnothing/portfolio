@@ -30,6 +30,7 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 ## Content rules
 - Never invent numbers, results, dates, job titles or company facts. Use `[placeholder]` and ask.
 - No confidential employer data: no salaries, employee names, exact financials.
+- No company names anywhere on the site (employers described generically; say "the group’s overseas IT team", not the country).
 - Work (delivered at job) and Lab (learning builds) stay separate.
 
 ## Working rules

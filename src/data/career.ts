@@ -28,13 +28,13 @@ export const yearsInIt = '15+';
 export const experience: Job[] = [
   {
     title: 'IT Manager',
-    org: 'Concord Apparel Group',
+    org: 'Garment manufacturing group',
     place: 'Thanlyin (Yangon) and Pathein, Myanmar',
     period: '2019 – present',
     steps: [
-      { title: 'IT Manager', org: 'Guston Amava Ltd. & Amava Apparel Ltd.', period: 'Jan 2026 – present' },
-      { title: 'IT Executive', org: 'Guston Amava Ltd. & Amava Apparel Ltd.', period: '2023 – 2025' },
-      { title: 'IT Executive', org: 'Amava Apparel Ltd.', period: '2019 – 2023' },
+      { title: 'IT Manager', org: 'Both Myanmar factories', period: 'Jan 2026 – present' },
+      { title: 'IT Executive', org: 'Both Myanmar factories', period: '2023 – 2025' },
+      { title: 'IT Executive', org: 'Pathein factory', period: '2019 – 2023' },
     ],
     points: [
       'Run IT for two garment factories and supervise an IT Assistant at each site.',
@@ -51,14 +51,14 @@ export const experience: Job[] = [
   },
   {
     title: 'Part-time Teacher',
-    org: 'U Aung Teaching Center',
+    org: 'Computer training centre',
     place: 'Pathein',
     period: '2018 – present',
     points: ['Teach Microsoft Office and the basics of Adobe PageMaker and Photoshop.'],
   },
   {
     title: 'Personal Assistant to the Managing Director',
-    org: 'Shwe Mahar Khit Company',
+    org: 'Private company',
     place: 'Yangon',
     period: '2018 – 2019',
     points: [
@@ -69,7 +69,7 @@ export const experience: Job[] = [
   },
   {
     title: 'IT Assistant',
-    org: 'Amava Apparel Ltd.',
+    org: 'Garment factory',
     place: 'Pathein',
     period: '2017 – 2018',
     points: [
