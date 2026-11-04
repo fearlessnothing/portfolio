@@ -44,6 +44,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Removed
 - Illustrative (fictional) sample case study.
 ### Fixed
+- Theme toggle and mobile menu did nothing: `theme-init.js` and `site.js` both declared a top-level `themeColorMeta`, so the browser refused to run `site.js` (broken since the scripts were moved out of the layout). Both scripts now run in their own scope.
 - Accessibility: theme and menu buttons are 44 × 44 px; hexagon links show a white focus ring; Escape closes the mobile menu and returns focus (the button label now resets correctly); case-study index cards use h2 under the h1; the decorative SDLC wheel is hidden below 480 px, where the stage list is shown instead.
 - About CV: "Vendor systems I worked on" renamed "Group and vendor systems I worked on", because the visitor and production tracking systems were built by the group IT team.
 - 70-740 is a course, not a passed exam: moved from "Certifications — completed" to a new "Training" list on About, and removed from Home.
