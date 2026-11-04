@@ -31,6 +31,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Changed (docs)
 - Positioning changed to customer-first: freelance clients first, employers second (ADR-005). Charter, sitemap and risk register updated.
 ### Added
+- Favicon (indigo "M" with a copper dot) and a custom 404 page with links to Home, Case studies and Contact.
 - Third case study: "Building a New Factory's IT from the Ground Up" — setting up a new garment factory's IT during construction (around 20 users, 2 servers, around 70 CCTV cameras, about six months, mostly single-handed).
 - Security hardening: Cloudflare Pages security headers (CSP, HSTS, nosniff, frame/referrer/permissions policies) in `public/_headers`; theme and menu scripts moved to `public/scripts/` so the CSP can forbid inline scripts; privacy note on the Contact page; `docs/07-maintenance/security.md`. CSP `form-action` also allows `web3forms.com`, so the Web3Forms success redirect is not blocked.
 - SDLC wheel on the Process page: seven stages (Planning to Maintenance) as a decorative SVG, with the same stages as an accessible list and an Idea → Business impact path.
