@@ -109,7 +109,7 @@ export const builtSystems: SystemItem[] = [
 
 export const learningBuilds: SystemItem[] = [
   { name: 'Hourly production automation', note: 'Telegram → AI via n8n → SharePoint Excel.', status: 'In progress' },
-  { name: 'Style Control Workbook & live dashboard', note: 'Follows each order from merchandising to delivery.', status: 'In progress' },
+  { name: 'Style Control Workbook & live dashboard', note: 'Follows each order across every production department, from merchandising to delivery.', status: 'In progress' },
 ];
 
 export const skills: { group: string; items: string[] }[] = [
