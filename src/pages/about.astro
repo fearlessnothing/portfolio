@@ -194,6 +194,10 @@ const beliefs = [
                 <ul class="cred-list">
                   {certifications.inProgress.map((item) => <li><strong>{item.name}</strong></li>)}
                 </ul>
+                <h3>Training</h3>
+                <ul class="cred-list">
+                  {certifications.training.map((item) => <li><strong>{item.name}</strong><span>{item.org}</span></li>)}
+                </ul>
               </div>
             </div>
           </section>

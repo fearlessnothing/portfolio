@@ -19,7 +19,7 @@ _Last updated: 2026-11-03_
 - [x] Show three case studies on Home — 2026-11-04
 - [ ] Confirm the service list (needed before #10 Services page)
 - [ ] Update the CV itself to IT Manager (Jan 2026) and Guston Amava from 2023, so CV, site and LinkedIn agree
-- [ ] Confirm "MCSA 70-740": a training course, or the official Microsoft exam/certification? (shown as training for now)
+- [x] "MCSA 70-740" confirmed as a training course (exam not taken) — moved to a Training list — 2026-11-04
 - [ ] Optional: year for each certificate, issuer for the three without one, ERP product name
 
 ## Sprint 1 — still open

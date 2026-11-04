@@ -43,6 +43,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Removed
 - Illustrative (fictional) sample case study.
 ### Fixed
+- 70-740 is a course, not a passed exam: moved from "Certifications — completed" to a new "Training" list on About, and removed from Home.
 - Dependencies: `npm audit fix` and minor updates (Tailwind 4.3.4, @astrojs/check 0.9.12); 8 advisories down to 5. The rest need Astro 7 (breaking) and only affect build tools, not the static site.
 - `TODO.md` no longer lists the GitHub push as pending (nothing was unpushed), and its rule now says a repeated task number must be ticked in every section it appears in.
 - `CLAUDE.md` route pattern corrected to `/case-studies/[...slug]/` (rest parameter, not `[slug]`).

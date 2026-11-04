@@ -142,10 +142,8 @@ export const education: { name: string; org: string; status: string }[] = [
   { name: 'Law, 2nd year', org: 'Pathein University', status: 'Not completed' },
 ];
 
-export const certifications: { done: { name: string; org?: string }[]; inProgress: { name: string }[] } = {
+export const certifications: { done: { name: string; org?: string }[]; inProgress: { name: string }[]; training: { name: string; org: string }[] } = {
   done: [
-    // Owner to confirm: training course, or the official Microsoft exam/certification? Shown as training until confirmed.
-    { name: 'Windows Server 2016 (Exam 70-740) training', org: 'Loop Avoidance Training Center' },
     { name: 'Advanced Network Engineering', org: 'Youth Training Center' },
     { name: 'Server Administration', org: 'Myanmar IT Academy' },
     { name: 'Certificate of Human Resource Management' },
@@ -156,6 +154,10 @@ export const certifications: { done: { name: string; org?: string }[]; inProgres
     { name: 'CCNA' },
     { name: 'Professional Executive Diploma in Network Technology & Cyber Security' },
     { name: 'Diploma in Executive Human Resource Management' },
+  ],
+  // Courses attended without the matching exam (owner confirmed 2026-11-04: 70-740 exam not taken).
+  training: [
+    { name: 'Windows Server 2016 (70-740 course)', org: 'Loop Avoidance Training Center' },
   ],
 };
 
