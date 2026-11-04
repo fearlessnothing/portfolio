@@ -124,6 +124,8 @@ button { color: inherit; }
 .focus-list strong { display: block; font-size: 15px; }
 .focus-list p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
 .case-grid, .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.case-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.case-grid-3 .case-card h3 { font-size: 21px; }
 .case-card, .project-card { min-height: 260px; padding: 27px; border: 1px solid var(--line); background: var(--surface); transition: border-color 160ms ease, transform 160ms ease; }
 .case-card:hover, .project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
 .card-topline { display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
@@ -375,6 +377,7 @@ button { color: inherit; }
   .nav-link { font-size: 12px; }
   .split-layout, .about-grid, .contact-grid { gap: 45px; }
   .eco-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-grid-3 { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .header-inner, .footer-inner, .container { width: min(100% - 36px, 600px); }
