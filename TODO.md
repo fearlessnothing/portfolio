@@ -8,11 +8,11 @@
 _Last updated: 2026-11-03_
 
 ## Now — do next
-- [ ] #5 Finish the VMS and PTS case studies — VMS done 2026-11-03; PTS still has `[placeholder]` text
+- [ ] #5 Finish the VMS and PTS case studies — both written, no placeholders (2026-11-04); only the VMS role (IT Executive or IT Manager?) is left to confirm
 
 ## Waiting on me (Claude needs this from me)
 - [x] Choose which job project becomes the first case study — VMS and PTS, 2026-11-03
-- [ ] Give the real facts and numbers for PTS (no invented results) — VMS done 2026-11-03
+- [x] Give the real facts for VMS and PTS — 2026-11-04
 - [ ] Decide: name the companies in case studies, or keep them anonymous
 - [ ] Facts for an Infrastructure case study and a Backup / DR case study (to feature them on Home)
 - [ ] Confirm the service list (needed before #10 Services page)
@@ -29,7 +29,7 @@ _Last updated: 2026-11-03_
 
 ## Before first launch
 - [x] Remove or replace the illustrative sample case study — 2026-11-03
-- [ ] No `[placeholder]` left anywhere on the site
+- [x] No `[placeholder]` left anywhere on the site — 2026-11-04 (Projects page still has template text, see #4)
 - [ ] Connect the GitHub repo to Cloudflare Pages
 - [ ] Add the live URL as `site:` in `astro.config.mjs`
 - [ ] Web3Forms dashboard: restrict the access key to the live domain
