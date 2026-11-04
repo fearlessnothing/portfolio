@@ -44,6 +44,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Removed
 - Illustrative (fictional) sample case study.
 ### Fixed
+- Accessibility: theme and menu buttons are 44 × 44 px; hexagon links show a white focus ring; Escape closes the mobile menu and returns focus (the button label now resets correctly); case-study index cards use h2 under the h1; the decorative SDLC wheel is hidden below 480 px, where the stage list is shown instead.
 - About CV: "Vendor systems I worked on" renamed "Group and vendor systems I worked on", because the visitor and production tracking systems were built by the group IT team.
 - 70-740 is a course, not a passed exam: moved from "Certifications — completed" to a new "Training" list on About, and removed from Home.
 - Dependencies: `npm audit fix` and minor updates (Tailwind 4.3.4, @astrojs/check 0.9.12); 8 advisories down to 5. The rest need Astro 7 (breaking) and only affect build tools, not the static site.

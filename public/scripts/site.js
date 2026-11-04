@@ -18,16 +18,21 @@ themeButtons.forEach((button) => button.addEventListener('click', () => {
   localStorage.setItem('portfolio-theme', root.dataset.theme);
   syncThemeButton();
 }));
-menuButton?.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-  if (mobileNav) mobileNav.hidden = isOpen;
+function setMenu(open) {
+  if (!menuButton || !mobileNav) return;
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  mobileNav.hidden = !open;
+}
+menuButton?.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+mobileNav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+// Escape closes the mobile menu and returns focus to its button.
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') {
+    setMenu(false);
+    menuButton.focus();
+  }
 });
-mobileNav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-  if (mobileNav) mobileNav.hidden = true;
-  menuButton?.setAttribute('aria-expanded', 'false');
-}));
 syncThemeButton();
 
 // Open a closed <details> (e.g. the About page CV) when a link points inside it.

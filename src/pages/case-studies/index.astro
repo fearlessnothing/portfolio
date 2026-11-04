@@ -13,7 +13,7 @@ const caseStudies = await getSortedCaseStudies();
         {caseStudies.map((study, index) => (
           <a class="case-card" href={`/case-studies/${study.id}/`}>
             <div class="card-topline"><span>{study.data.role} / {study.data.duration}</span><span class="card-index">{String(index + 1).padStart(2, '0')}</span></div>
-            <h3>{study.data.title}</h3>
+            <h2>{study.data.title}</h2>
             <p>{study.data.summary}</p>
             <ul class="tag-list">{study.data.tags.map((tag) => <li>{tag}</li>)}</ul>
             <span class="text-link">Read case study <span aria-hidden="true">↗</span></span>

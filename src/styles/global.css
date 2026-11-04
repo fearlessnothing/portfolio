@@ -52,7 +52,7 @@ button { color: inherit; }
 .nav-link { position: relative; padding: 28px 0 25px; color: var(--muted); font-size: 14px; font-weight: 600; white-space: nowrap; }
 .nav-link:hover, .nav-link.active { color: var(--ink); }
 .nav-link.active::after { position: absolute; right: 0; bottom: 17px; left: 0; height: 2px; background: var(--accent); content: ''; }
-.theme-toggle, .menu-toggle { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; }
+.theme-toggle, .menu-toggle { display: grid; width: 44px; height: 44px; flex: 0 0 auto; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; }
 .theme-toggle { font-size: 19px; }
 .theme-toggle:hover, .menu-toggle:hover { border-color: var(--accent); color: var(--accent); }
 .mobile-nav, .menu-toggle { display: none; }
@@ -104,6 +104,8 @@ button { color: inherit; }
 .hex:hover img, .hex:focus-visible img { transform: scale(1.06); }
 .hex:hover::before, .hex:focus-visible::before { background: rgba(19, 32, 58, .64); }
 .hex:focus-visible { outline: none; }
+/* clip-path hides a normal outline, so ring the label instead. */
+.hex:focus-visible .hex-label { outline: 3px solid #ffffff; outline-offset: 6px; }
 .hex-label { font-size: clamp(13px, 1.5vw, 16px); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .hex-label, .hex-note { max-width: 78%; }
 .hex-note { margin-top: 8px; color: #dfe3ea; font-family: var(--mono); font-size: 12px; line-height: 1.5; text-transform: uppercase; }
@@ -130,7 +132,7 @@ button { color: inherit; }
 .case-card:hover, .project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
 .card-topline { display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
 .card-index { color: var(--marker); }
-.case-card h3, .project-card h3 { max-width: 480px; margin: 29px 0 12px; font-size: 25px; font-weight: 600; letter-spacing: 0; line-height: 1.2; }
+.case-card h2, .case-card h3, .project-card h3 { max-width: 480px; margin: 29px 0 12px; font-size: 25px; font-weight: 600; letter-spacing: 0; line-height: 1.2; }
 .case-card p, .project-card p { max-width: 570px; margin: 0; color: var(--muted); font-size: 14px; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 7px; margin: 19px 0 0; padding: 0; list-style: none; }
 .tag-list li { padding: 5px 8px; border: 1px solid var(--line); color: var(--muted); font-family: var(--mono); font-size: 11px; }
@@ -438,6 +440,8 @@ button { color: inherit; }
   .hex:nth-child(n+3) { margin-top: calc(var(--hex-h) * -.25 + var(--gap)); }
 }
 @media (max-width: 480px) {
+  /* The wheel is decorative; the stage list next to it carries the content. */
+  .sdlc-section .sdlc-wheel { display: none; }
   body { font-size: 14px; }
   .header-inner, .footer-inner, .container { width: calc(100% - 32px); }
   .wordmark-copy { font-size: 11px; }
