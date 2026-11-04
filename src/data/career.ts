@@ -92,6 +92,7 @@ export const experience: Job[] = [
   },
 ];
 
+// Systems built by the group IT team (VMS, PTS) or by outside vendors; not developed by me.
 export const vendorSystems: SystemItem[] = [
   { name: 'FINAC Payroll & Time Attendance', note: 'Roll-out with the vendor for both factories.', status: 'In progress' },
   { name: 'Visitor Management System', note: 'Coordinated factory-side UAT, requirements, change feedback and implementation support through successful use across both Myanmar factories.' },
