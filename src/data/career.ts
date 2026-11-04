@@ -20,7 +20,7 @@ export interface Job {
 export interface SystemItem {
   name: string;
   note?: string;
-  status?: 'In progress';
+  status?: 'In progress' | 'Retired';
 }
 
 export const yearsInIt = '15+';
@@ -94,7 +94,7 @@ export const experience: Job[] = [
 export const vendorSystems: SystemItem[] = [
   { name: 'FINAC Payroll & Time Attendance', note: 'Roll-out with the vendor for both factories.', status: 'In progress' },
   { name: 'Visitor Management System', note: 'Led user acceptance testing and reported the changes needed.' },
-  { name: 'Production Tracking System', note: 'Reviewed it with production teams, reported to the Director and coordinated its retirement.' },
+  { name: 'Production Tracking System', note: 'Gathered production feedback, reported to the Director and supported its rebuild.' },
   { name: 'Plani8 (Solvei8)', note: 'Production planning.', status: 'In progress' },
   { name: 'ERP', note: 'Warehouse and production.' },
   { name: 'Fabric Barcode system' },
@@ -103,15 +103,13 @@ export const vendorSystems: SystemItem[] = [
 ];
 
 export const builtSystems: SystemItem[] = [
-  { name: 'Visitor register on Microsoft 365', note: 'Forms → Power Automate → SharePoint.' },
-  { name: 'Fabric Age Control dashboard', note: 'One live view across both factories.' },
-  { name: 'Style Control Workbook & live dashboard', note: 'SharePoint workbook that follows each style and PO.', status: 'In progress' },
-  { name: 'Company website', note: 'Planning and wireframes.', status: 'In progress' },
+  { name: 'Visitor register on Microsoft 365', note: 'Interim solution: Forms → Power Automate → SharePoint.', status: 'Retired' },
+  { name: 'Fabric Age Control dashboard', note: 'Tracks fabric age from arrival so older rolls are used first.' },
 ];
 
 export const learningBuilds: SystemItem[] = [
   { name: 'Hourly production automation', note: 'Telegram → AI via n8n → SharePoint Excel.', status: 'In progress' },
-  { name: 'Marker planning AI agent', note: 'Captures cutting-marker planning know-how.', status: 'In progress' },
+  { name: 'Style Control Workbook & live dashboard', note: 'Follows each order from merchandising to delivery.', status: 'In progress' },
 ];
 
 export const skills: { group: string; items: string[] }[] = [

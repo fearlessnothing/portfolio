@@ -205,6 +205,11 @@ button { color: inherit; }
 .project-card { display: flex; min-height: 225px; flex-direction: column; }
 .project-card h3 { margin-top: 24px; }
 .project-card .tag-list { margin-top: auto; padding-top: 15px; }
+.project-section + .project-section { padding-top: 0; }
+.project-note { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+.project-card p + p { margin-top: 10px; }
+.project-card p strong { color: var(--ink); }
+.project-link { margin-top: 18px; }
 .process-list { counter-reset: phase; margin-top: 0; border-top: 1px solid var(--line); }
 .phase { display: grid; grid-template-columns: 90px 1fr .75fr; gap: 28px; padding: 27px 0; border-bottom: 1px solid var(--line); }
 .phase-num { color: var(--marker); font-family: var(--mono); font-size: 14px; }

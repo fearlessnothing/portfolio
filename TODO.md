@@ -29,7 +29,7 @@ _Last updated: 2026-11-03_
 
 ## Before first launch
 - [x] Remove or replace the illustrative sample case study — 2026-11-03
-- [x] No `[placeholder]` left anywhere on the site — 2026-11-04 (Projects page still has template text, see #4)
+- [x] No `[placeholder]` or template text left on the site — 2026-11-04
 - [ ] Connect the GitHub repo to Cloudflare Pages
 - [ ] Add the live URL as `site:` in `astro.config.mjs`
 - [ ] Web3Forms dashboard: restrict the access key to the live domain

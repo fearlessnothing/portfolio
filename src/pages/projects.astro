@@ -1,20 +1,72 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const projects = [
-  { code: 'OPS / 01', title: 'Factory network resilience', summary: 'Segmented network foundations, monitoring and recovery practices designed to keep production and office teams connected.', tags: ['Network', 'Resilience', 'Infrastructure'] },
-  { code: 'SEC / 02', title: 'Practical security baseline', summary: 'A phased uplift across identity, endpoint protection, access reviews, backup hygiene and incident readiness.', tags: ['Security', 'Identity', 'Governance'] },
-  { code: 'DATA / 03', title: 'Operational reporting', summary: 'A dependable reporting layer that gives production and business leads a clearer view of timely operational information.', tags: ['Data', 'Reporting', 'Visibility'] },
-  { code: 'TEAM / 04', title: 'IT service improvement', summary: 'Clearer request paths, documented ownership and service measures that make support easier to access and improve.', tags: ['Service desk', 'People', 'Process'] },
+interface Project {
+  title: string;
+  problem?: string;
+  solution: string;
+  tools: string[];
+  status?: 'In progress' | 'Retired';
+  link?: { href: string; label: string };
+}
+
+// Work: built on the job. Lab: own learning builds. Kept separate on purpose.
+const work: Project[] = [
+  {
+    title: 'Fabric Age Control dashboard',
+    problem: 'The warehouse holds hundreds of thousands of metres of fabric rolls. Fabric should not sit for years; when an order comes in, older rolls should be used first.',
+    solution: 'Tracks the age of each fabric from the day it arrives, so the team can see which rolls to use first.',
+    tools: ['Excel', 'SharePoint', 'Power Automate'],
+  },
+  {
+    title: 'Visitor register on Microsoft 365',
+    problem: 'Visitor registration had to keep running while the main visitor system was being improved.',
+    solution: 'An interim register that collected visits and notified the right people. Retired once the improved main system was in use.',
+    tools: ['Microsoft Forms', 'Power Automate', 'SharePoint'],
+    status: 'Retired',
+    link: { href: '/case-studies/visitor-management/', label: 'Read the case study' },
+  },
+];
+
+const lab: Project[] = [
+  {
+    title: 'Style Control Workbook & live dashboard',
+    problem: 'Once an order arrives, many teams handle it before it ships, and no single view showed where it stood.',
+    solution: 'Follows each order through the supply chain, from the merchandiser to final delivery, in one workbook and live dashboard.',
+    tools: ['Excel', 'SharePoint', 'Power Automate'],
+    status: 'In progress',
+  },
+  {
+    title: 'Hourly production automation',
+    solution: 'Hourly production updates sent on Telegram are read by an AI step in n8n and written to a SharePoint Excel file.',
+    tools: ['Telegram', 'n8n', 'AI', 'SharePoint', 'Excel'],
+    status: 'In progress',
+  },
+];
+
+const groups = [
+  { id: 'work', eyebrow: 'Built at work', title: 'Tools I built for the factories.', items: work },
+  { id: 'lab', eyebrow: 'Lab', title: 'Learning builds.', note: 'Personal projects where I try new tools. Not delivered work.', items: lab },
 ];
 ---
 
-<BaseLayout title="Projects">
-  <section class="page-intro"><div class="container"><span class="eyebrow">Project portfolio</span><h1>Better foundations for everyday work.</h1><p>Representative initiatives across the systems, safeguards and services that support a garment business. Replace these examples with your own delivery record.</p></div></section>
-  <section class="container section">
-    <div class="project-grid">
-      {projects.map((project) => <article class="project-card"><div class="card-topline"><span>Initiative</span><span class="card-index">{project.code}</span></div><h3>{project.title}</h3><p>{project.summary}</p><ul class="tag-list">{project.tags.map((tag) => <li>{tag}</li>)}</ul></article>)}
-    </div>
-    <p class="sample-notice">Project descriptions are portfolio prompts, not claims of completed client work. Edit them to reflect verified experience.</p>
-  </section>
+<BaseLayout title="Projects" description="Tools Min Hein Zaw built at work for two garment factories, and personal learning builds with Microsoft 365, n8n and AI.">
+  <section class="page-intro"><div class="container"><span class="eyebrow">Projects</span><h1>Small tools, real problems.</h1><p>Things I built myself: tools used at work in the factories, and learning builds where I try new ideas.</p></div></section>
+  {groups.map((group) => (
+    <section class="container section project-section" aria-labelledby={`${group.id}-title`}>
+      <div class="section-heading"><div><span class="eyebrow">{group.eyebrow}</span><h2 id={`${group.id}-title`}>{group.title}</h2>{group.note && <p class="project-note">{group.note}</p>}</div></div>
+      <div class="project-grid">
+        {group.items.map((project) => (
+          <article class="project-card">
+            <div class="card-topline"><span>{group.eyebrow}</span>{project.status && <span class="status-tag">{project.status}</span>}</div>
+            <h3>{project.title}</h3>
+            {project.problem && <p><strong>Problem.</strong> {project.problem}</p>}
+            <p class="project-solution"><strong>What it does.</strong> {project.solution}</p>
+            <ul class="tag-list">{project.tools.map((tool) => <li>{tool}</li>)}</ul>
+            {project.link && <a class="text-link project-link" href={project.link.href}>{project.link.label} <span aria-hidden="true">↗</span></a>}
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
 </BaseLayout>
