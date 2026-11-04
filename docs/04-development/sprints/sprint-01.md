@@ -32,6 +32,7 @@
 - 2026-11-04: PTS case study rewritten from the owner's answers: not retired but being rebuilt. Feedback gathered in meetings with production teams; gaps explained to the developers with users; stop-or-rebuild discussed with the group IT team and production teams; root cause: a system for eight group factories (six abroad) did not fit the two Myanmar factories; summary still manual for now. Role IT Manager. File renamed to `production-tracking-rebuild.md` (URL `/case-studies/production-tracking-rebuild/`). No placeholders left on the site.
 - 2026-11-04: Task #5 done — VMS role confirmed as IT Manager; company names stay out of case studies; "Sri Lanka" replaced by "the group’s overseas IT team" (About and case studies).
 - 2026-11-04: About page reworked (owner felt it read like a CV): story sections from the owner's own answers, full CV moved into a `<details>` block; `site.js` opens a closed `<details>` when the URL hash points inside it.
+- 2026-11-04: Infrastructure case study added from the owner's facts: new factory IT set-up during construction as IT support (around 20 users, 2 servers, around 70 CCTV cameras; vendor helped with CCTV cabling; maintenance team helped at times; about six months). Period assumed 2017 – 2018 (IT Assistant) — owner to confirm.
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro
