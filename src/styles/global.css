@@ -90,6 +90,9 @@ button { color: inherit; }
 .hero .button { border-color: #ffffff; background: transparent; color: #ffffff; }
 .hero .button.secondary { border-color: rgba(255, 255, 255, .45); }
 .hero .button:hover { border-color: #ffffff; background: #ffffff; color: #13203a; }
+/* Primary hero action is filled so it reads first; secondary stays outlined. */
+.hero .button:not(.secondary) { background: #ffffff; color: #13203a; }
+.hero .button:not(.secondary):hover { background: transparent; color: #ffffff; }
 .focus-strip { border-bottom: 1px solid var(--line); background: var(--surface); }
 .focus-strip ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin: 0 auto; padding: 18px 0; list-style: none; }
 .focus-strip li { color: var(--ink); font-family: var(--mono); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
@@ -119,12 +122,15 @@ button { color: inherit; }
 .split-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
 .split-layout h2 { margin: 12px 0 20px; font-size: clamp(30px, 4vw, 45px); font-weight: 600; letter-spacing: 0; line-height: 1.13; }
 .split-copy { color: var(--muted); }
-.focus-list { margin: 0; padding: 0; list-style: none; }
-.focus-list li { display: flex; gap: 17px; padding: 19px 0; border-top: 1px solid var(--line); }
-.focus-list li:last-child { border-bottom: 1px solid var(--line); }
-.focus-number { color: var(--marker); font-family: var(--mono); font-size: 12px; }
-.focus-list strong { display: block; font-size: 15px; }
-.focus-list p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+/* Home: philosophy copy sits beside the heading; featured cards and process preview. */
+.home-philosophy { align-self: end; }
+.home-philosophy .split-copy { margin: 0 0 18px; font-size: 18px; line-height: 1.6; }
+.home-featured { padding-top: 8px; }
+.home-case { display: flex; flex-direction: column; }
+.home-case .text-link { margin-top: auto; padding-top: 23px; }
+.case-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.home-flow { margin-top: 6px; }
+.home-cta { padding: 52px 0; }
 .case-grid, .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .case-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .case-grid-3 .case-card h3 { font-size: 21px; }
@@ -162,21 +168,6 @@ button { color: inherit; }
 .cs-card-featured .cs-card-facts { margin-top: 0; }
 .cs-card-body { display: flex; flex-direction: column; }
 .process-band { padding: 74px 0; background: var(--surface); border-block: 1px solid var(--line); }
-.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 34px; border-top: 1px solid var(--line); }
-.process-step { padding: 20px 20px 0 0; }
-.process-step span { color: var(--marker); font-family: var(--mono); font-size: 12px; }
-.process-step h3 { margin: 12px 0 8px; font-size: 16px; }
-.process-step p { margin: 0; color: var(--muted); font-size: 14px; }
-.eco-section { padding-top: 24px; }
-.eco-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
-.eco-col { padding-top: 16px; border-top: 2px solid var(--marker); }
-.eco-col h3 { margin: 0 0 4px; font-size: 16px; }
-.home-timeline { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.home-timeline li { display: grid; grid-template-columns: 170px minmax(0, 1fr) minmax(0, 1fr); gap: 6px 24px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.home-timeline-period { color: var(--accent); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
-.home-timeline strong { font-size: 15px; }
-.home-timeline-org { color: var(--muted); font-size: 14px; }
-.certs-section { padding-top: 24px; }
 .cta-band { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0; border-top: 1px solid var(--line); }
 .cta-band p { margin: 0; font-size: 22px; font-weight: 600; }
 .site-footer { border-top: 1px solid var(--line); }
@@ -431,7 +422,6 @@ button { color: inherit; }
   .main-nav { gap: 13px; }
   .nav-link { font-size: 12px; }
   .split-layout, .about-grid, .contact-grid { gap: 45px; }
-  .eco-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .case-grid-3 { grid-template-columns: 1fr; }
   /* Stage strip: 3 x 2 grid without arrows, so no arrow is left hanging at a line end. */
   .pr-flow { display: grid; grid-template-columns: repeat(3, max-content); gap: 10px; }
@@ -440,6 +430,11 @@ button { color: inherit; }
 }
 @media (max-width: 760px) {
   .pr-flow { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+  /* Home preview stays compact: 2 columns, numbers show the order. */
+  .pr-flow.home-flow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .home-flow li { display: block; }
+  .pr-flow.home-flow li:not(:last-child)::after { content: none; }
+  .home-flow a { width: 100%; }
   .pr-flow li { flex-direction: column; align-items: flex-start; }
   .pr-flow li:not(:last-child)::after { margin: 2px 0 2px 18px; content: '↓'; }
   .pr-stages { grid-template-columns: 1fr; }
@@ -460,11 +455,9 @@ button { color: inherit; }
   .split-layout, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 31px; }
   .case-grid, .project-grid { grid-template-columns: 1fr; }
   .case-card { min-height: 0; }
-  .process-steps { grid-template-columns: repeat(2, 1fr); row-gap: 24px; }
   .timeline-item { grid-template-columns: 1fr; gap: 6px; }
   .about-path li { grid-template-columns: 1fr; gap: 4px; }
   .about-beyond { grid-template-columns: 1fr; }
-  .home-timeline li { grid-template-columns: 1fr; gap: 2px; }
   .skill-groups, .cred-columns { grid-template-columns: 1fr; }
   .about-feature { margin-bottom: 40px; padding: 28px 18px 30px; }
   .about-grid-spacer { display: none; }
@@ -508,7 +501,7 @@ button { color: inherit; }
   .hero-actions { align-items: stretch; flex-direction: column; width: 100%; }
   .hero-actions .button { width: 100%; }
   .section-heading { align-items: flex-start; flex-direction: column; }
-  .results-grid, .cred-inline, .eco-grid { grid-template-columns: 1fr; }
+  .results-grid, .cred-inline { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .field.full { grid-column: auto; }
   .form-footer { align-items: flex-start; flex-direction: column; }
