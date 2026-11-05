@@ -9,6 +9,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 - Case study: Backup and recovery after a ransomware scare (2021 ransomware, 3-2-1 backups for ERP, Payroll and the file server, restore tests, network back within a day after the 2023 fire).
 - Case study: Covering a second factory when its IT team left (about three months in 2023, then IT Executive for both factories).
 ### Changed
+- Contact page: one line saying I am open to freelance projects (Microsoft 365 set-up, network set-up, server backup). Services page (task #10) dropped for now.
 - "Janet" corrected to JaNets (JUKI), a bought system that links sewing machines to track production in real time; added to the Home technology list.
 - GRN note now explains its job: after finance opens a purchase order, the warehouse records the goods as they arrive, with evidence.
 - Fabric Barcode system (records fabric as it arrives in the warehouse) and the fabric issuing system (issues fabric to Cutting) listed as two separate in-house systems.

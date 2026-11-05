@@ -8,7 +8,6 @@ _Last updated: 2026-11-05_
 
 ## Waiting on me (Claude needs this from me)
 
-- [ ] Confirm the service list (needed before #10 Services page)
 - [ ] Update the CV itself to IT Manager (Jan 2026) and Guston Amava from 2023, so CV, site and LinkedIn agree
 - [ ] Optional: year for each certificate, issuer for the three without one
 
@@ -16,7 +15,6 @@ _Last updated: 2026-11-05_
 
 - [ ] #4 Rename Case studies → Work; create Lab page
 - [ ] #8 Export wireframes PDF into `docs/03-design/`
-- [ ] #10 Services page (after service list is confirmed)
 
 ## Before first launch
 

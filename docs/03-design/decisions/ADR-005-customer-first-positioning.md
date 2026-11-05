@@ -39,3 +39,6 @@ Option 3.
 
 ## Amendment — 2026-11-03
 The owner chose a nine-section Home flow (hero → expertise → philosophy → case studies → technology ecosystem → how I work → experience → certifications → contact). The hexagons **stay**, but now show five areas of expertise instead of page navigation. "Cybersecurity" is shown as **Security & Backup**, because firewalls are run by the group IT team (R10). Only real case studies are featured; Infrastructure and Backup/DR case studies wait until their facts are confirmed. The "Hire me for a project" call to action and the Services section still wait for task #10.
+
+## Amendment — 2026-11-05
+The owner chose not to build a Services page for now. The site keeps its focus on employers; freelance stays open through one line on the Contact page: "Open to freelance projects: Microsoft 365 set-up, network set-up and server backup." Task #10 is dropped. A Services page can be added later if freelance work picks up.

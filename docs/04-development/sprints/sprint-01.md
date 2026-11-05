@@ -14,7 +14,7 @@
 | 7 | First git commit and push to GitHub | Must | Done 2026-10-15 |
 | 8 | Export wireframes PDF into `03-design/` | Should | To do |
 | 9 | Restructure Home for customer-first positioning (ADR-005) | Should | Done 2026-11-03 |
-| 10 | Create Services page (after service list is confirmed) | Should | To do |
+| 10 | Create Services page (after service list is confirmed) | Should | Dropped (2026-11-05: one freelance line on Contact instead) |
 
 ## Notes
 - 2026-10-15: Pre-sprint fixes done — sample case study job title set to `[placeholder]`; `CLAUDE.md` routes corrected (Work/Lab marked planned until task #4).
@@ -33,6 +33,7 @@
 - 2026-11-04: Task #5 done — VMS role confirmed as IT Manager; company names stay out of case studies; "Sri Lanka" replaced by "the group’s overseas IT team" (About and case studies).
 - 2026-11-04: About page reworked (owner felt it read like a CV): story sections from the owner's own answers, full CV moved into a `<details>` block; `site.js` opens a closed `<details>` when the URL hash points inside it.
 - 2026-11-04: Infrastructure case study added from the owner's facts: new factory IT set-up during construction as IT support (around 20 users, 2 servers, around 70 CCTV cameras; vendor helped with CCTV cabling; maintenance team helped at times; about six months). Period 2017 – 2018 (IT Assistant), confirmed by the owner. Home now features all three case studies.
+- 2026-11-05: Task #10 dropped by owner decision — no Services page for now. The Contact page gets one line instead: "Open to freelance projects: Microsoft 365 set-up, network set-up and server backup." A Services page can be added later if freelance work picks up (see ADR-005 amendment 2026-11-05).
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro
