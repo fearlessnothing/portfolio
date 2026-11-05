@@ -347,6 +347,15 @@ button { color: inherit; }
 .field label { font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
 .field input, .field textarea { width: 100%; border: 1px solid var(--line); border-radius: 0; outline: 0; background: var(--surface); color: var(--ink); padding: 12px 13px; }
 .field input:focus, .field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 18%, transparent); }
+/* Clear keyboard focus and a visible invalid state once the user has interacted. */
+.field input:focus-visible, .field textarea:focus-visible { box-shadow: 0 0 0 3px var(--accent); }
+.field input:user-invalid, .field textarea:user-invalid { border-color: var(--marker); }
+.field-hint { color: var(--muted); font-size: 12px; }
+.form-required { margin: 0 0 16px; color: var(--muted); font-size: 13px; }
+.contact-options { display: grid; gap: 18px; margin: 0; }
+.contact-options dt { margin-bottom: 4px; color: var(--marker); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
+.contact-options dd { max-width: 350px; margin: 0; color: var(--muted); }
+.contact-email:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .field textarea { min-height: 145px; resize: vertical; }
 .form-footer { display: flex; align-items: center; gap: 15px; margin-top: 19px; }
 .form-footer p { margin: 0; color: var(--muted); font-size: 12px; }
