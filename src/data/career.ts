@@ -96,7 +96,8 @@ export const experience: Job[] = [
 // Built by the group's in-house development team.
 export const groupSystems: SystemItem[] = [
   { name: 'ERP', note: 'All departments.' },
-  { name: 'Warehouse barcode and issuing system', note: 'Warehouse.' },
+  { name: 'Fabric Barcode system', note: 'Warehouse. Records fabric as it arrives.' },
+  { name: 'Fabric issuing system', note: 'Warehouse to Cutting. Issues fabric to the cutting department.' },
   { name: 'GRN (goods received)', note: 'Warehouse and finance.' },
   { name: 'Production Tracking System', note: 'Cutting and IE. Gathered production feedback, explained the gaps to the developers, reported to the Director and supported the rebuild.' },
   { name: 'Visitor Management System', note: 'All departments. Coordinated factory-side UAT, requirements, change feedback and implementation support through successful use across both Myanmar factories.' },
@@ -109,8 +110,7 @@ export const vendorSystems: SystemItem[] = [
   { name: 'Tracki8 and Maintaini8 (Solvei8)', note: 'Next, once Plani8 is stable.', status: 'Planned' },
   { name: 'FINAC Payroll (Datamation)', note: 'Project coordination; data and requirements gathering.', status: 'In progress' },
   { name: 'MYOB', note: 'Finance.' },
-  // Owner to confirm where these two belong (not in the 2026-11-05 list).
-  { name: 'Fabric Barcode system' },
+  // Owner to confirm where Janet belongs (not in the 2026-11-05 list).
   { name: 'Janet', note: 'Quality and production.' },
 ];
 
@@ -194,7 +194,7 @@ export const ecosystem: { group: string; items: string[] }[] = [
   },
   {
     group: 'Business systems',
-    items: ['ERP', 'Warehouse barcode & issuing', 'GRN', 'Payroll', 'Plani8 (Solvei8)', 'FINAC Payroll', 'MYOB', 'Raptool', 'TracyBox'],
+    items: ['ERP', 'Fabric barcode', 'Fabric issuing', 'GRN', 'Payroll', 'Plani8 (Solvei8)', 'FINAC Payroll', 'MYOB', 'Raptool', 'TracyBox'],
   },
 ];
 
