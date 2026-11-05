@@ -1,77 +1,133 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Seven SDLC stages. "Build & configure" replaces "Development": most work is
-// configuring vendor or Microsoft 365 systems, not writing software.
+// Six stages, taken from how the case-study work actually ran.
+// Keep examples short; the case studies tell the full story.
 const stages = [
-  { name: 'Planning', note: 'Goals, scope, budget and timeline.' },
-  { name: 'Analysis', note: 'How people work today and what they need.' },
-  { name: 'Design', note: 'Process, data and system design.' },
-  { name: 'Build & configure', note: 'Set up, configure or build the solution.' },
-  { name: 'Testing', note: 'User acceptance testing with the people who will use it.' },
-  { name: 'Deployment', note: 'Go-live, training and handover.' },
-  { name: 'Maintenance', note: 'Support, review and improve.' },
-];
+  {
+    id: 'understand',
+    verb: 'Understand',
+    lead: 'Start with the business problem, not the technology.',
+    activities: [
+      'Go to the floor and watch the work as it happens.',
+      'Talk with the people who do it, in meetings and during testing.',
+      'Follow how work moves from one team to the next.',
+    ],
+    example: { text: 'Production team meetings showed why a tracking system gave them little back.', href: '/case-studies/production-tracking-rebuild/', link: 'Production tracking' },
+  },
+  {
+    id: 'define',
+    verb: 'Define',
+    lead: 'Turn what I saw into something people can act on.',
+    activities: [
+      'Requirements and clear change requests.',
+      'Constraints, risks and who is responsible for what.',
+      'What success looks like for the operation.',
+    ],
+    example: { text: 'Factory feedback grouped into change requests for the developers.', href: '/case-studies/visitor-management/', link: 'Visitor system' },
+  },
+  {
+    id: 'stabilize',
+    verb: 'Stabilize',
+    lead: 'Keep the operation running while the real fix is prepared.',
+    activities: [
+      'Find a safe temporary workaround.',
+      'Keep interruption to daily work as small as possible.',
+      'Plan from the start how the workaround will be removed.',
+    ],
+    example: { text: 'A temporary Microsoft 365 register kept visitor registration running for about a month.', href: '/case-studies/visitor-management/', link: 'Visitor system' },
+  },
+  {
+    id: 'deliver',
+    verb: 'Deliver',
+    lead: 'Coordinate the people and the work.',
+    activities: [
+      'Coordinate developers, vendors and the group IT team.',
+      'Configuration, data preparation and testing.',
+      'Training and go-live support for users.',
+    ],
+    example: { text: 'A new factory’s cabling, network and servers, fitted around construction.', href: '/case-studies/factory-it-setup/', link: 'Factory IT set-up' },
+  },
+  {
+    id: 'validate',
+    verb: 'Validate',
+    lead: 'Does it work for the operation, not only technically?',
+    activities: [
+      'Test with real users and real workflows.',
+      'Re-test after every round of changes.',
+      'Give management a clear summary to decide on.',
+    ],
+    example: { text: 'Factory-side UAT found the gaps before the system went live.', href: '/case-studies/visitor-management/', link: 'Visitor system' },
+  },
+  {
+    id: 'improve',
+    verb: 'Improve',
+    lead: 'Delivery is not the end of the work.',
+    activities: [
+      'Collect feedback and document what was done.',
+      'Monitor, back up, and test that restores work.',
+      'Automate where it helps; retire temporary solutions.',
+    ],
+    example: { text: 'Daily backups with tested restores; the temporary visitor register retired.', href: '/case-studies/backup-and-recovery/', link: 'Backup and recovery' },
+  },
+].map((stage, i) => ({ ...stage, num: String(i + 1).padStart(2, '0') }));
 
-// Wheel geometry (SVG viewBox 600 x 600).
-const center = 300;
-const radius = 215;
-const step = 360 / stages.length;
-const toRad = (deg: number) => (deg * Math.PI) / 180;
-const nodes = stages.map((stage, i) => {
-  const angle = -90 + i * step;
-  return { ...stage, num: String(i + 1).padStart(2, '0'), x: center + radius * Math.cos(toRad(angle)), y: center + radius * Math.sin(toRad(angle)) };
-});
-const arrows = stages.map((_, i) => {
-  const angle = -90 + (i + 0.5) * step;
-  return { x: center + radius * Math.cos(toRad(angle)), y: center + radius * Math.sin(toRad(angle)), rotate: angle + 90 };
-});
-const flow = ['Idea', 'Solution', 'Deployment', 'Business impact'];
-
-const phases = [
-  { number: '01', title: 'Discover', description: 'Understand the business goals, factory footprint, production calendar and the daily experience of users.', outcome: 'A shared picture of the current state, constraints and priority risks.' },
-  { number: '02', title: 'Assess & prioritize', description: 'Map systems and dependencies, review security and continuity, and compare options against cost, risk and operational fit.', outcome: 'A sequenced roadmap with ownership, assumptions and decision points.' },
-  { number: '03', title: 'Design & plan', description: 'Define architecture, scope, service impacts, change windows, rollback paths and clear acceptance criteria.', outcome: 'A delivery plan that business and technical teams can act on.' },
-  { number: '04', title: 'Implement & test', description: 'Deliver in controlled phases, involve users, test integrations and maintain a safe route back.', outcome: 'Verified changes with support readiness and documented handover.' },
-  { number: '05', title: 'Operate & improve', description: 'Monitor service health, review incidents and adoption, capture lessons and refine the next improvement.', outcome: 'Sustainable services with visible measures and continuous learning.' },
+const questions = [
+  'Does it fit the operation?',
+  'Can users work with it?',
+  'Is it secure enough for its purpose?',
+  'Can IT support it?',
+  'What happens when it fails?',
+  'Can it be maintained?',
+  'Is temporary complexity becoming permanent?',
 ];
 ---
 
-<BaseLayout title="Process">
-  <section class="page-intro"><div class="container"><span class="eyebrow">Delivery approach</span><h1>Disciplined change, close to the work.</h1><p>A practical lifecycle that keeps production continuity, security and the people affected by change in view.</p></div></section>
-
-  <section class="container sdlc-section" aria-labelledby="sdlc-title">
-    <div class="sdlc-copy">
-      <span class="eyebrow">From idea to impact</span>
-      <h2 id="sdlc-title">Seven stages, applied to real business needs.</h2>
-      <ol class="sdlc-steps">
-        {nodes.map((stage) => <li><span class="sdlc-num">{stage.num}</span><div><h3>{stage.name}</h3><p>{stage.note}</p></div></li>)}
-      </ol>
-      <ol class="sdlc-flow" aria-label="Outcome path">
-        {flow.map((item) => <li>{item}</li>)}
-      </ol>
+<BaseLayout title="Process" description="What happens when Min Hein Zaw receives an IT or business-system problem in manufacturing: understand, define, stabilize, deliver, validate and improve.">
+  <section class="page-intro">
+    <div class="container">
+      <span class="eyebrow">Process</span>
+      <h1>What happens when a problem lands on my desk.</h1>
+      <p>Six stages I follow on factory IT and business-system work. They come from doing the work, not from a textbook, and each one links to a real case.</p>
+      <nav aria-label="Process stages">
+        <ol class="pr-flow">
+          {stages.map((stage) => <li><a href={`#${stage.id}`}><span>{stage.num}</span>{stage.verb}</a></li>)}
+        </ol>
+      </nav>
     </div>
-    <svg class="sdlc-wheel" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-      <circle class="wheel-ring" cx={center} cy={center} r={radius} />
-      {arrows.map((a) => <path class="wheel-arrow" d="M -7 -7 L 8 0 L -7 7 Z" transform={`translate(${a.x.toFixed(1)} ${a.y.toFixed(1)}) rotate(${a.rotate.toFixed(1)})`} />)}
-      <circle class="wheel-core" cx={center} cy={center} r="112" />
-      <text class="wheel-core-label" x={center} y="282">SDLC</text>
-      <text class="wheel-core-sub" x={center} y="318">Idea to impact</text>
-      {nodes.map((n) => (
-        <g transform={`translate(${n.x.toFixed(1)} ${n.y.toFixed(1)})`}>
-          <rect class="wheel-node" x="-80" y="-30" width="160" height="60" rx="30" />
-          <text class="wheel-num" x="0" y="-5">{n.num}</text>
-          <text class="wheel-name" x="0" y="18">{n.name}</text>
-        </g>
-      ))}
-    </svg>
   </section>
 
-  <section class="container content-section">
-    <div class="section-heading"><div><span class="eyebrow">Each engagement</span><h2>How the work runs in practice.</h2></div></div>
-    <div class="process-list">
-      {phases.map((phase) => <article class="phase"><div class="phase-num">PHASE / {phase.number}</div><div><h3>{phase.title}</h3><p>{phase.description}</p></div><div class="phase-outcome"><strong>Output</strong><br />{phase.outcome}</div></article>)}
+  <section class="container section" aria-labelledby="stages-title">
+    <h2 id="stages-title" class="pr-heading">The six stages</h2>
+    <ol class="pr-stages">
+      {stages.map((stage) => (
+        <li class="pr-stage" id={stage.id}>
+          <div class="pr-stage-top"><span class="pr-num">{stage.num}</span><h3>{stage.verb}</h3></div>
+          <p class="pr-lead">{stage.lead}</p>
+          <ul class="pr-activities">{stage.activities.map((a) => <li>{a}</li>)}</ul>
+          <p class="pr-example"><span>In practice</span>{stage.example.text} <a href={stage.example.href}>{stage.example.link} case study <span aria-hidden="true">→</span></a></p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="pr-decide" aria-labelledby="decide-title">
+    <div class="container pr-decide-inner">
+      <div>
+        <span class="eyebrow">How I decide</span>
+        <h2 id="decide-title">When deciding on a solution, I ask:</h2>
+      </div>
+      <ol class="pr-questions">
+        {questions.map((q) => <li>{q}</li>)}
+      </ol>
     </div>
-    <div class="sample-notice">Every engagement adapts to the factory's operating calendar, risk profile and available capacity. Production continuity comes first.</div>
+  </section>
+
+  <section class="container section pr-next">
+    <p>See the stages in real work.</p>
+    <div class="cs-cta-actions">
+      <a class="button" href="/case-studies/">View case studies</a>
+      <a class="button secondary" href="/contact/">Contact</a>
+    </div>
   </section>
 </BaseLayout>

@@ -26,7 +26,7 @@ _Last updated: 2026-11-05_
 
 ## Later (from the 2026-11-04 project review)
 
-- [ ] Use one process model across Home, About and Process; rewrite the generic Process phases
+- [ ] Align Home "How I work" (4 steps) and About "How I approach a problem" (5 steps) with the six Process stages; About could keep beliefs and link to Process
 - [ ] Home: use the same name for "Cybersecurity" (strip) and "Security & Backup" (hexagon)
 - [ ] Shared components for case cards and the case-study CTA; keep project data in one file
 - [ ] Contact form thank-you page on the site (after the live URL is known)
