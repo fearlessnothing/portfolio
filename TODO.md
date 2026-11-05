@@ -17,10 +17,8 @@ _Last updated: 2026-11-05_
 
 ## Before first launch
 
-- [ ] Connect the GitHub repo to Cloudflare Pages
-- [ ] Add the live URL as `site:` in `astro.config.mjs`, then add canonical, Open Graph tags and robots.txt
-- [ ] Web3Forms dashboard: restrict the access key to the live domain
-- [ ] After deploy: check security headers (`curl -I <url>`) and send one test message through the contact form
+- [ ] Web3Forms dashboard: restrict the access key to `minheinzaw.pages.dev`
+- [ ] Send one test message through the live contact form
 - [ ] Run the test plan (`docs/05-testing/test-plan.md`) on desktop and mobile
 - [ ] After launch: publish the portfolio case study (draft: `docs/04-development/portfolio-case-study-draft.md`); needs live URL, launch month and my lessons learned
 

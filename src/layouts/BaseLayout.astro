@@ -8,6 +8,8 @@ interface Props {
 
 const { title, description = 'IT leadership for resilient garment manufacturing in Myanmar.' } = Astro.props;
 const currentPath = Astro.url.pathname;
+const canonicalUrl = new URL(currentPath, Astro.site);
+const pageTitle = `${title} | Min Hein Zaw`;
 const isActive = (href: string) => currentPath === href || (href !== '/' && currentPath.startsWith(href));
 const navItems = [
   { href: '/', label: 'Home' },
@@ -26,7 +28,14 @@ const navItems = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f4f2ed" data-light="#f4f2ed" data-dark="#111b2c" />
-    <title>{title} | Min Hein Zaw</title>
+    <title>{pageTitle}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Min Hein Zaw" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
