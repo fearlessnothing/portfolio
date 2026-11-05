@@ -110,8 +110,7 @@ export const vendorSystems: SystemItem[] = [
   { name: 'Tracki8 and Maintaini8 (Solvei8)', note: 'Next, once Plani8 is stable.', status: 'Planned' },
   { name: 'FINAC Payroll (Datamation)', note: 'Project coordination; data and requirements gathering.', status: 'In progress' },
   { name: 'MYOB', note: 'Finance.' },
-  // Owner to confirm where Janet belongs (not in the 2026-11-05 list).
-  { name: 'Janet', note: 'Quality and production.' },
+  { name: 'JaNets (JUKI)', note: 'Sewing floor. Links sewing machines to track production in real time and support quality control.' },
 ];
 
 // Provided by buyers.
@@ -194,7 +193,7 @@ export const ecosystem: { group: string; items: string[] }[] = [
   },
   {
     group: 'Business systems',
-    items: ['ERP', 'Fabric barcode', 'Fabric issuing', 'GRN', 'Payroll', 'Plani8 (Solvei8)', 'FINAC Payroll', 'MYOB', 'Raptool', 'TracyBox'],
+    items: ['ERP', 'Fabric barcode', 'Fabric issuing', 'GRN', 'Payroll', 'Plani8 (Solvei8)', 'FINAC Payroll', 'MYOB', 'JaNets', 'Raptool', 'TracyBox'],
   },
 ];
 

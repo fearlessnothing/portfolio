@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Changed
+- "Janet" corrected to JaNets (JUKI), a bought system that links sewing machines to track production in real time; added to the Home technology list.
 - GRN note now explains its job: after finance opens a purchase order, the warehouse records the goods as they arrive, with evidence.
 - Fabric Barcode system (records fabric as it arrives in the warehouse) and the fabric issuing system (issues fabric to Cutting) listed as two separate in-house systems.
 - About CV systems regrouped by who built them: the group's in-house team (ERP, warehouse barcode and issuing, GRN, PTS, VMS, Payroll), bought from vendors (Solvei8 Plani8 now, Tracki8 and Maintaini8 planned; FINAC Payroll by Datamation; MYOB) and provided by buyers (Raptool, TracyBox). Home technology list updated to match.
