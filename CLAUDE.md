@@ -38,5 +38,5 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 2. After every change run `npm run check` and `npm run build`; fix errors before stopping.
 3. Never commit `.env` or any key. Web3Forms key is `PUBLIC_WEB3FORMS_ACCESS_KEY` in `.env`.
 4. Commit messages: `type: short description` (feat, fix, docs, style, refactor, chore).
-5. When a change finishes a backlog item, update `docs/04-development/sprints/sprint-XX.md`, `CHANGELOG.md` and tick it in `TODO.md`.
+5. When a change finishes a backlog item, update `docs/04-development/sprints/sprint-XX.md`, `CHANGELOG.md`, and remove it from `TODO.md` (TODO keeps only open tasks).
 6. Ask before adding a new dependency.
