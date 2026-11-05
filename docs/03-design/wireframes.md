@@ -19,7 +19,9 @@ Export: save the PDF export as `docs/03-design/wireframes-v1.pdf`.
 
 To regenerate it after a design change, run `npm run wireframes`. To use a local build instead, run `npm run wireframes -- http://localhost:4321`. The script is `scripts/export-wireframes.mjs`. It uses the installed Microsoft Edge and needs no extra packages.
 
-The earlier hand-drawn v2 is in Figma: https://www.figma.com/design/Kd9ruAifTtahQ1F1ij50cG
+Figma: https://www.figma.com/design/Kd9ruAifTtahQ1F1ij50cG
+- Page "Wireframes v3 (as built, Nov 2026)": the same 14 wireframes as editable Figma layers (text and boxes, no screenshots). They were imported from the live site on 2026-11-05.
+- Page "Archive: wireframes v2 (Oct 2026)": the earlier hand-drawn wireframes, kept for reference.
 
 ## Design iterations
 | Date | Change | Reason |
