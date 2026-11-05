@@ -23,6 +23,8 @@ const caseStudies = defineCollection({
     roleSummary: z.string().optional(),
     outcome: z.string().optional(),
     featured: z.boolean().optional(),
+    // Short facts shown as pills on the listing card. Only numbers stated in the case study.
+    highlights: z.array(z.string()).optional(),
   }),
 });
 

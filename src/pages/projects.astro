@@ -126,16 +126,20 @@ const statusClass = (status: Status) => `pj-status pj-status-${status.toLowerCas
       <div class="section-heading"><div><span class="eyebrow">{group.num} / {group.eyebrow}</span><h2 id={`${group.id}-title`}>{group.title}</h2><p class="project-note">{group.note}</p></div></div>
       <div class="project-grid">
         {group.items.map((project) => (
-          <article class="project-card pj-card">
-            <div class="pj-labels"><span class="pj-kind">{project.kind}</span>{project.status && <span class={statusClass(project.status)}>{project.status}</span>}</div>
-            <h3>{project.title}</h3>
-            {project.builtBy && <p class="pj-builtby">{project.builtBy}</p>}
-            <dl class="pj-facts">
-              <div><dt>{project.need.label}</dt><dd>{project.need.text}</dd></div>
-              <div><dt>My contribution</dt><dd>{project.contribution}</dd></div>
-            </dl>
-            {project.tech && <p class="pj-tech"><span>Technology</span>{project.tech.join(' · ')}</p>}
-            {project.link && <a class="text-link pj-link" href={project.link.href}>{project.link.label} <span aria-hidden="true">→</span></a>}
+          <article class:list={['project-card', 'pj-card', { 'pj-card-linked': project.link }]}>
+            <div class="pj-card-head">
+              <div class="pj-labels"><span class="pj-kind">{project.kind}</span>{project.status && <span class={statusClass(project.status)}>{project.status}</span>}</div>
+              <h3>{project.title}</h3>
+              {project.builtBy && <p class="pj-builtby">{project.builtBy}</p>}
+              {project.tech && <p class="pj-tech"><span>Technology</span>{project.tech.join(' · ')}</p>}
+            </div>
+            <div class="pj-card-body">
+              <dl class="pj-facts">
+                <div><dt>{project.need.label}</dt><dd>{project.need.text}</dd></div>
+                <div><dt>My contribution</dt><dd>{project.contribution}</dd></div>
+              </dl>
+              {project.link && <a class="text-link pj-link" href={project.link.href}>{project.link.label} <span aria-hidden="true">→</span></a>}
+            </div>
           </article>
         ))}
       </div>

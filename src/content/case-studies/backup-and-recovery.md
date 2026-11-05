@@ -22,6 +22,7 @@ tags:
   - "Servers"
   - "SQL"
 summary: "After ransomware hit one department in 2021, I put a 3-2-1 backup routine in place for the ERP, Payroll and file servers, tested restores, and later brought the network back within a day after a fire burned the point where every department's cables met."
+highlights: ["4 servers", "Daily ERP & Payroll backups", "Servers back in 1 day after fire"]
 category: "Backup and recovery"
 problem: "Ransomware in 2021 left some user data unrecoverable and showed that a server failure could stop operations."
 roleSummary: "Set up and ran a 3-2-1 backup routine for the ERP, Payroll and file servers, and tested restores."

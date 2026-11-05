@@ -24,6 +24,7 @@ tags:
   - "Microsoft 365"
 summary: "How factory feedback, iterative improvements and an interim Microsoft 365 solution helped move a visitor management system into successful operation across our Myanmar factories."
 featured: true
+highlights: ["In use at 2 Myanmar factories", "Interim register for about a month", "Interim retired"]
 category: "Systems implementation"
 problem: "Factory testing showed the group's new visitor system did not yet fit how visitors are handled on site, so it could not go live as it was."
 roleSummary: "Factory-side coordinator: ran UAT, turned user feedback into change requests, and kept visitor registration running with a temporary Microsoft 365 register."

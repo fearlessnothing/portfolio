@@ -54,12 +54,13 @@ const expertise = [
   <section class="explore" id="expertise" aria-labelledby="expertise-title">
     <div class="container">
       <div class="explore-heading"><span class="eyebrow">Expertise</span><h2 id="expertise-title">What I look after.</h2></div>
-      <div class="hex-grid">
-        {expertise.map((item) => (
-          <a class="hex" href="/about/#skills-title">
-            <Image src={item.image} alt="" widths={[240, 480]} sizes="(max-width: 600px) 42vw, 240px" />
-            <span class="hex-label">{item.label}</span>
-            <span class="hex-note">{item.note}</span>
+      <div class="expertise-grid">
+        {expertise.map((item, i) => (
+          <a class="expertise-card" href="/about/#skills-title">
+            <Image src={item.image} alt="" widths={[400, 800]} sizes="(max-width: 480px) 100vw, (max-width: 920px) 50vw, 33vw" />
+            <span class="expertise-num">0{i + 1}</span>
+            <span class="expertise-title">{item.label}</span>
+            <span class="expertise-note">{item.note}</span>
           </a>
         ))}
       </div>

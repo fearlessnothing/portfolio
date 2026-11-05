@@ -94,12 +94,13 @@ const beliefs = [
     <a class="text-link about-process-link" href="/process/">See the full process <span aria-hidden="true">→</span></a>
   </section>
 
-  <section class="container about-grid about-grid-rest">
-    <div class="about-grid-spacer" aria-hidden="true"></div>
+  <!-- 03 and 04: heading on the left, content on the right, so no column is left empty. -->
+  <section class="container about-split" aria-labelledby="beliefs-title">
+    <div class="about-split-head about-block">
+      <span class="eyebrow">03 / What I believe</span>
+      <h2 id="beliefs-title">Three things I hold on to</h2>
+    </div>
     <div class="about-main">
-      <section class="about-block" aria-labelledby="beliefs-title">
-        <span class="eyebrow">03 / What I believe</span>
-        <h2 id="beliefs-title">Three things I hold on to</h2>
         <ul class="about-beliefs">
           {beliefs.map((belief) => (
             <li>
@@ -109,11 +110,15 @@ const beliefs = [
             </li>
           ))}
         </ul>
-      </section>
+    </div>
+  </section>
 
-      <section class="about-block" aria-labelledby="beyond-title">
-        <span class="eyebrow">04 / Beyond the job</span>
-        <h2 id="beyond-title">Teaching and learning</h2>
+  <section class="container about-split" aria-labelledby="beyond-title">
+    <div class="about-split-head about-block">
+      <span class="eyebrow">04 / Beyond the job</span>
+      <h2 id="beyond-title">Teaching and learning</h2>
+    </div>
+    <div class="about-main">
         <div class="about-beyond">
           <div>
             <h3>Why I teach</h3>
@@ -124,8 +129,10 @@ const beliefs = [
             <p>AI-assisted workflows, automation and business systems for more digital operations. I try them in my <a class="inline-link" href="/projects/#lab-title">learning builds</a> first, not in production, while studying for a Higher Diploma in Computer Science and the CCNA.</p>
           </div>
         </div>
-      </section>
+    </div>
+  </section>
 
+  <section class="container about-cv-section">
       <details class="about-cv" id="cv">
         <summary><span class="about-cv-text"><span class="eyebrow">05 / Full CV</span><span class="about-cv-title">Experience, systems, skills, education and languages</span></span></summary>
         <div class="about-cv-body">
@@ -213,6 +220,5 @@ const beliefs = [
           </section>
         </div>
       </details>
-    </div>
   </section>
 </BaseLayout>

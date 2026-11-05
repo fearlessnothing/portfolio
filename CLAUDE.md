@@ -20,7 +20,8 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 
 ## Design rules
 - Denim palette (see `docs/03-design/design-system.md`): background `#f4f2ed`, accent indigo `#2b4a7a`, soft accent `#dce5f0`, copper marker `#a14f12`, ink `#17233a`, lines `#dad5ca`. Dark: background `#111b2c`.
-- Home hero and hexagon tiles: photo under an indigo overlay (`#13203a`) with white text, in both themes.
+- Home hero and expertise photo cards: photo under an indigo overlay (`#13203a`) with white text, in both themes.
+- Title glow: none in light mode; a faint glow in dark mode and on the hero only.
 - Stock photos: free Unsplash License only; record each one in `docs/03-design/image-credits.md`.
 - Fonts: Manrope (text), DM Mono (small uppercase labels).
 - Never place white text on light backgrounds. Small labels ≥ 12 px (tags ≥ 11 px). Text contrast ≥ 4.5:1. Touch targets ≥ 44 px.

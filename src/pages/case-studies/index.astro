@@ -33,6 +33,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
                   <div class="card-topline"><span>{study.data.category ?? study.data.system}</span><span class="card-index">{pad(index + 1)}</span></div>
                   <h3><a class="cs-card-link" href={`/case-studies/${study.id}/`}>{study.data.title}</a></h3>
                   <p class="cs-card-meta">{study.data.role} · {study.data.duration}</p>
+                  {study.data.highlights && <ul class="cs-pills" aria-label="Key facts">{study.data.highlights.map((h) => <li>{h}</li>)}</ul>}
                 </div>
                 <div class="cs-card-body">
                   <dl class="cs-card-facts">
@@ -57,6 +58,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
                 <div class="card-topline"><span>{study.data.category ?? study.data.system}</span><span class="card-index">{pad(featured.length + index + 1)}</span></div>
                 <h3><a class="cs-card-link" href={`/case-studies/${study.id}/`}>{study.data.title}</a></h3>
                 <p class="cs-card-meta">{study.data.role} · {study.data.duration}</p>
+                {study.data.highlights && <ul class="cs-pills" aria-label="Key facts">{study.data.highlights.map((h) => <li>{h}</li>)}</ul>}
                 <dl class="cs-card-facts">
                   <div><dt>Business problem</dt><dd>{study.data.problem ?? study.data.summary}</dd></div>
                   {study.data.roleSummary && <div><dt>My role</dt><dd>{study.data.roleSummary}</dd></div>}

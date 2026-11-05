@@ -18,6 +18,7 @@ tags:
   - "Decision-making"
 summary: "A group production tracking system did not fit our two Myanmar factories. I gathered feedback from production teams, worked through stop-or-rebuild options with the group IT team, and supported a rebuild that is now close to going back into use."
 featured: true
+highlights: ["Group system for 8 factories", "2 Myanmar factories affected", "Rebuild in progress"]
 category: "System review and decision"
 problem: "A group production tracking system did not fit our two Myanmar factories: teams entered data every day but got little back, and both factories asked to stop using it."
 roleSummary: "The link between production teams, the group's overseas IT team and the developers: gathered feedback, explained the gaps and reported to the Director."
