@@ -5,6 +5,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ## [Unreleased]
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
+### Added
+- Case study: Backup and recovery after a ransomware scare (2021 ransomware, 3-2-1 backups for ERP, Payroll and the file server, restore tests, network back within a day after the 2023 fire).
+- Case study: Covering a second factory when its IT team left (about three months in 2023, then IT Executive for both factories).
 ### Changed
 - "Janet" corrected to JaNets (JUKI), a bought system that links sewing machines to track production in real time; added to the Home technology list.
 - GRN note now explains its job: after finance opens a purchase order, the warehouse records the goods as they arrive, with evidence.
