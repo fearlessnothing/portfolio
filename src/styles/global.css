@@ -44,7 +44,7 @@ button { color: inherit; }
 .site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid var(--line); background: var(--header-bg); backdrop-filter: blur(14px); }
 .header-inner, .footer-inner { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
 .header-inner { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 26px; }
-.wordmark { display: inline-flex; flex-shrink: 0; align-items: center; gap: 11px; }
+.wordmark { display: inline-flex; flex-shrink: 0; align-items: center; gap: 11px; min-height: 44px; }
 .wordmark-mark { color: var(--accent); font-size: 27px; font-weight: 800; letter-spacing: 0; line-height: 1; }
 .wordmark-mark span { color: var(--marker); }
 .wordmark-copy { font-family: var(--mono); font-size: 12px; letter-spacing: 0; line-height: 1.4; }
@@ -67,6 +67,8 @@ button { color: inherit; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
 .section-heading h2 { margin: 8px 0 0; font-size: clamp(26px, 4vw, 38px); font-weight: 600; letter-spacing: 0; line-height: 1.16; }
 .text-link { display: inline-flex; align-items: center; gap: 9px; color: var(--accent); font-size: 14px; font-weight: 700; white-space: nowrap; }
+/* Stand-alone links get a 44px touch target; card "Read" labels are spans and stay compact. */
+a.text-link { min-height: 44px; }
 .text-link span { transition: transform 150ms ease; }
 .text-link:hover span { transform: translate(3px, -3px); }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 12px; padding: 0 18px; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); font-size: 14px; font-weight: 700; transition: background 150ms ease, color 150ms ease; }
@@ -168,7 +170,7 @@ button { color: inherit; }
 .cta-band p { margin: 0; font-size: 22px; font-weight: 600; }
 .site-footer { border-top: 1px solid var(--line); }
 .footer-inner { display: flex; min-height: 82px; align-items: center; justify-content: space-between; gap: 18px; color: var(--muted); font-family: var(--mono); font-size: 11px; text-transform: uppercase; }
-.footer-inner a { color: var(--accent); }
+.footer-inner a { display: inline-flex; min-height: 44px; align-items: center; color: var(--accent); }
 .footer-dot { padding: 0 7px; color: var(--marker); }
 .content-section { padding: 56px 0 90px; }
 .prose { max-width: 68ch; color: var(--muted); font-size: 1rem; }
@@ -374,7 +376,7 @@ button { color: inherit; }
 .result-item { padding: 19px; border: 1px solid var(--line); background: var(--surface); font-size: 14px; }
 .result-item::before { display: block; width: 20px; height: 2px; margin-bottom: 14px; background: var(--marker); content: ''; }
 .case-content { padding-top: 10px; }
-.back-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 44px; color: var(--accent); font-size: 14px; font-weight: 700; }
+.back-link { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; margin-top: 34px; color: var(--accent); font-size: 14px; font-weight: 700; }
 /* Case study components (overview cards and diagrams inside case study Markdown). */
 .cs-overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .cs-overview-item { padding: 16px 18px; border: 1px solid var(--line); background: var(--surface); }

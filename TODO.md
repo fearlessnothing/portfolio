@@ -17,7 +17,7 @@ _Last updated: 2026-11-05_
 
 ## Before first launch
 
-- [ ] Run the test plan (`docs/05-testing/test-plan.md`) on desktop and mobile
+- [ ] Test plan leftovers: Lighthouse on https://pagespeed.web.dev (mobile, all ≥ 90), quick check on my own phone, UAT with 2–3 people
 - [ ] After launch: publish the portfolio case study (draft: `docs/04-development/portfolio-case-study-draft.md`); needs live URL, launch month and my lessons learned
 
 ## Later (from the 2026-11-04 project review)
