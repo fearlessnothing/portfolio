@@ -23,7 +23,7 @@ Export: save the PDF export as `docs/03-design/wireframes-v1.pdf`.
 | 2026-10-14 | Decided Work / Lab split | Keeps delivered work and learning projects clearly separate |
 
 ## Planned changes for v2
-- Rename "Case studies" to **Work**; add **Lab** page
+- ~~Rename "Case studies" to **Work**; add **Lab** page~~ — dropped 2026-11-05 (Lab is a section of Projects)
 - Result-first case study headlines
 - Rounded cards (12–16 px)
 - Dark royal-blue footer

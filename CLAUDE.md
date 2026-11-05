@@ -11,7 +11,7 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 
 ## Structure
 - `src/pages/` — current routes: `/`, `/case-studies/`, `/case-studies/[...slug]/`, `/projects/`, `/about/`, `/process/`, `/contact/`
-- Planned (Sprint 1, task #4 — not built yet): rename `/case-studies/` → `/work/` and `/projects/` → `/lab/`
+- No `/work/` or `/lab/` rename (task #4 dropped). Lab is a section of `/projects/`.
 - `src/content/case-studies/*.md` — Work case studies. Frontmatter: title, role, duration, tags, summary, results, order
 - `src/layouts/BaseLayout.astro` — header, footer, theme toggle
 - `src/styles/global.css` — design tokens (light + dark)

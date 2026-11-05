@@ -1,30 +1,27 @@
 # Sitemap
 
+_Updated 2026-11-05 to match the built site. The planned `/work/`, `/lab/` and `/services/`
+pages were dropped by the owner (task #4 and task #10)._
+
 ```
-/                       Home
-├─ /services/           Services for clients (customer-first, ADR-005)
-├─ /work/               Case studies (delivered at work) — result-first list
-│   └─ /work/[slug]/    Case study detail
-├─ /lab/                Learning projects (self-directed builds)
-├─ /about/              Experience, capabilities, certifications, résumé
-├─ /process/            How I deliver + how this site was built
-└─ /contact/            Form, email, LinkedIn, GitHub
+/                          Home
+├─ /case-studies/          Case studies — result-first list
+│   └─ /case-studies/[slug]/  Case study detail
+├─ /projects/              Built at work + Lab (learning builds)
+├─ /about/                 Story, how I work, full CV
+├─ /process/               How I deliver (SDLC)
+├─ /contact/               Form, email, freelance line
+└─ /404                    Page not found
 ```
 
 ## Work vs Lab
-| | Work | Lab |
-|---|---|---|
-| What | Projects delivered at my job | Projects built to learn |
-| Shows | Problem → decision → **result** | **Wanted to learn** → built → **learned** |
-| Format | Full case study | Card with status (Done / In progress / Paused) |
+The rule still holds: delivered work and learning builds stay separate. They are separated
+by sections, not by page names.
 
-### Planned Work case studies
-1. Payroll & time attendance rollout across two factories
-2. Microsoft 365 rollout on the company domain
-3. Retiring a production tracking system (decision case)
-4. Automating hourly production reporting
-
-### Planned Lab projects
-Marker Agent (AI skill for cutting marker planning), POS system, n8n automation setup, factory 3D model, this portfolio site.
+| | Case studies | Projects: Built at work | Projects: Lab |
+|---|---|---|---|
+| What | Work delivered at my job, plus this portfolio (labelled as a personal project) | Small tools I built at work | Projects built to learn |
+| Shows | Problem → decision → **result** | What it does, tools, status | **Wanted to learn** → built → **learned** |
+| Format | Full case study | Card | Card with status |
 
 > Each item is published only after it is anonymised and, where needed, approved.

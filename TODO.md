@@ -13,7 +13,6 @@ _Last updated: 2026-11-05_
 
 ## Sprint 1 — still open
 
-- [ ] #4 Rename Case studies → Work; create Lab page
 - [ ] #8 Export wireframes PDF into `docs/03-design/`
 
 ## Before first launch

@@ -8,7 +8,7 @@
 | 1 | Fix Sprint 0 known issues (order field, theme-color, mobile aria-current) | Must | Done 2026-10-15 |
 | 2 | Apply soft blue design system to `global.css` (light + dark) | Must | Done 2026-10-15 |
 | 3 | Add name and title to header and hero | Must | Done 2026-10-19 |
-| 4 | Rename Case studies → Work; create Lab page | Must | To do |
+| 4 | Rename Case studies → Work; create Lab page | Must | Dropped (2026-11-05) |
 | 5 | Write first real case study (anonymised) | Must | Done 2026-11-04 (VMS and PTS) |
 | 6 | About page: experience timeline, capabilities | Must | Done 2026-11-03 |
 | 7 | First git commit and push to GitHub | Must | Done 2026-10-15 |
@@ -34,6 +34,7 @@
 - 2026-11-04: About page reworked (owner felt it read like a CV): story sections from the owner's own answers, full CV moved into a `<details>` block; `site.js` opens a closed `<details>` when the URL hash points inside it.
 - 2026-11-04: Infrastructure case study added from the owner's facts: new factory IT set-up during construction as IT support (around 20 users, 2 servers, around 70 CCTV cameras; vendor helped with CCTV cabling; maintenance team helped at times; about six months). Period 2017 – 2018 (IT Assistant), confirmed by the owner. Home now features all three case studies.
 - 2026-11-05: Task #10 dropped by owner decision — no Services page for now. The Contact page gets one line instead: "Open to freelance projects: Microsoft 365 set-up, network set-up and server backup." A Services page can be added later if freelance work picks up (see ADR-005 amendment 2026-11-05).
+- 2026-11-05: Task #4 dropped by owner decision — keep "Case studies" and "Projects". Projects already separates "Built at work" from "Lab", and the portfolio case study (personal project) would not fit a page named "Work". Sitemap updated to match the built site.
 - Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
 
 ## Review / Retro
