@@ -42,3 +42,5 @@ The owner chose a nine-section Home flow (hero → expertise → philosophy → 
 
 ## Amendment — 2026-11-05
 The owner chose not to build a Services page for now. The site keeps its focus on employers; freelance stays open through one line on the Contact page: "Open to freelance projects: Microsoft 365 set-up, network set-up and server backup." Task #10 is dropped. A Services page can be added later if freelance work picks up.
+
+Update 2026-11-05 (owner): the freelance line now reads "Open to small projects: PC and laptop set-up, Microsoft 365, network and cabling, and servers. I can also help you find where AI fits into everyday workflows." AI is offered as advice on where it fits, not as delivered production systems.
