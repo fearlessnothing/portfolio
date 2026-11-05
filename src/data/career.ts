@@ -98,7 +98,7 @@ export const groupSystems: SystemItem[] = [
   { name: 'ERP', note: 'All departments.' },
   { name: 'Fabric Barcode system', note: 'Warehouse. Records fabric as it arrives.' },
   { name: 'Fabric issuing system', note: 'Warehouse to Cutting. Issues fabric to the cutting department.' },
-  { name: 'GRN (goods received)', note: 'Warehouse and finance.' },
+  { name: 'GRN (goods received)', note: 'Warehouse and finance. After finance opens a purchase order, the warehouse records the goods as they arrive, with evidence.' },
   { name: 'Production Tracking System', note: 'Cutting and IE. Gathered production feedback, explained the gaps to the developers, reported to the Director and supported the rebuild.' },
   { name: 'Visitor Management System', note: 'All departments. Coordinated factory-side UAT, requirements, change feedback and implementation support through successful use across both Myanmar factories.' },
   { name: 'Payroll', note: 'HR. In use today; FINAC Payroll is being prepared to replace it.' },
