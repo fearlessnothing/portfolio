@@ -285,6 +285,29 @@ button { color: inherit; }
 .project-card h3 { margin-top: 24px; }
 .project-card .tag-list { margin-top: auto; padding-top: 15px; }
 .project-section + .project-section { padding-top: 0; }
+/* Projects page: jump links, ownership labels and status badges. */
+.pj-jump { display: flex; flex-wrap: wrap; gap: 10px; margin: 30px 0 0; padding: 0; list-style: none; }
+.pj-jump a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
+.pj-jump a span { color: var(--marker); }
+.pj-jump a:hover { border-color: var(--accent); }
+.pj-jump a:focus-visible, .pj-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.pj-section { scroll-margin-top: 80px; }
+.pj-card:hover { transform: none; }
+.pj-labels { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.pj-kind { color: var(--muted); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
+.pj-status { padding: 3px 8px; border: 1px solid transparent; font-family: var(--mono); font-size: 12px; font-weight: 500; text-transform: uppercase; }
+.pj-status-implemented { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+.pj-status-in-progress { border-color: var(--marker); color: var(--marker); }
+.pj-status-learning { border-color: var(--line); color: var(--ink); border-style: dashed; }
+.pj-status-retired { background: var(--bg); border-color: var(--line); color: var(--muted); }
+.pj-card h3 { margin: 20px 0 4px; font-size: 22px; }
+.pj-builtby { margin: 0; color: var(--muted); font-size: 13px; font-style: italic; }
+.pj-facts { display: grid; gap: 12px; margin: 16px 0 0; }
+.pj-facts dt { margin-bottom: 2px; color: var(--marker); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
+.pj-facts dd { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.pj-tech { margin: 16px 0 0; padding-top: 12px; border-top: 1px dashed var(--line); color: var(--muted); font-size: 13px; }
+.pj-tech span { margin-right: 8px; color: var(--ink); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
+.pj-link { margin-top: auto; padding-top: 18px; }
 .project-note { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
 .project-card p + p { margin-top: 10px; }
 .project-card p strong { color: var(--ink); }
