@@ -17,6 +17,12 @@ const caseStudies = defineCollection({
     environment: z.string().optional(),
     technologies: z.array(z.string()).optional(),
     technologiesNote: z.string().optional(),
+    // Listing-card fields (Case Studies page).
+    category: z.string().optional(),
+    problem: z.string().optional(),
+    roleSummary: z.string().optional(),
+    outcome: z.string().optional(),
+    featured: z.boolean().optional(),
   }),
 });
 

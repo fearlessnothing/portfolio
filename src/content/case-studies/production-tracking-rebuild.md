@@ -17,6 +17,11 @@ tags:
   - "Requirements"
   - "Decision-making"
 summary: "A group production tracking system did not fit our two Myanmar factories. I gathered feedback from production teams, worked through stop-or-rebuild options with the group IT team, and supported a rebuild that is now close to going back into use."
+featured: true
+category: "System review and decision"
+problem: "A group production tracking system did not fit our two Myanmar factories: teams entered data every day but got little back, and both factories asked to stop using it."
+roleSummary: "The link between production teams, the group's overseas IT team and the developers: gathered feedback, explained the gaps and reported to the Director."
+outcome: "A stop-or-rebuild discussion led to a rebuild that is now close to going back into use."
 results:
   - "Feedback from production teams at both Myanmar factories collected in meetings and passed to the development team."
   - "Stop-or-rebuild decision worked through with the group IT team and production teams; the system is being rebuilt."

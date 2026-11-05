@@ -20,6 +20,10 @@ tags:
   - "Remote support"
   - "Multi-site"
 summary: "When the IT staff at the group's second factory all left, I went there to support more than 100 users on site, with no handover, while supporting nearly 60 users at my own factory remotely. After about three months I was appointed IT Executive for both factories."
+category: "IT operations"
+problem: "The IT staff at the group's second factory all left with no handover, leaving more than 100 users without support."
+roleSummary: "Supported that factory on site while supporting my own factory remotely, for about three months."
+outcome: "Both factories kept their IT support, and I was appointed IT Executive for both."
 results:
   - "More than 100 users supported on site at the second factory, with no handover."
   - "Nearly 60 users at my own factory supported remotely, with same-day trips when a remote fix was not possible."

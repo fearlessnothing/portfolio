@@ -17,6 +17,10 @@ tags:
   - "CCTV"
   - "Servers"
 summary: "While a new garment factory was still being built, I set up its IT almost single-handed: cabling, network, two servers, around 70 CCTV cameras, PCs and laptops, until the first users could sit down and work."
+category: "Infrastructure"
+problem: "A new garment factory needed working IT before its first users arrived, while the building was still under construction."
+roleSummary: "IT support, doing most of the work myself: cabling, network, two servers, CCTV, PCs and laptops."
+outcome: "IT ready for around 20 users, with 2 servers and around 70 CCTV cameras, after about six months."
 results:
   - "IT ready for around 20 users, with 2 servers and around 70 CCTV cameras."
   - "Cabling, network, servers, PCs and laptops installed myself; a vendor helped with the CCTV cabling."

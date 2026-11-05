@@ -3,23 +3,73 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSortedCaseStudies } from '../../lib/case-studies';
 
 const caseStudies = await getSortedCaseStudies();
+const featured = caseStudies.filter((study) => study.data.featured);
+const others = caseStudies.filter((study) => !study.data.featured);
+const method = ['Problem', 'Context', 'My role', 'Decision', 'Action', 'Outcome'];
+const pad = (n: number) => String(n).padStart(2, '0');
 ---
 
-<BaseLayout title="Case Studies" description="Selected IT operations and transformation case studies for garment manufacturing.">
-  <section class="page-intro"><div class="container"><span class="eyebrow">Selected work</span><h1>Problems understood. Improvements delivered.</h1><p>Examples of the decisions, trade-offs and outcomes behind practical technology leadership in manufacturing.</p></div></section>
-  <section class="container section">
-    {caseStudies.length ? (
-      <div class="case-grid">
-        {caseStudies.map((study, index) => (
-          <a class="case-card" href={`/case-studies/${study.id}/`}>
-            <div class="card-topline"><span>{study.data.role} / {study.data.duration}</span><span class="card-index">{String(index + 1).padStart(2, '0')}</span></div>
-            <h2>{study.data.title}</h2>
-            <p>{study.data.summary}</p>
-            <ul class="tag-list">{study.data.tags.map((tag) => <li>{tag}</li>)}</ul>
-            <span class="text-link">Read case study <span aria-hidden="true">↗</span></span>
-          </a>
-        ))}
-      </div>
-    ) : <p class="empty-state">No case studies published yet.</p>}
+<BaseLayout title="Case Studies" description="Selected real-world IT case studies from garment manufacturing: the business problem, my role, the decisions made and the outcome.">
+  <section class="page-intro">
+    <div class="container">
+      <span class="eyebrow">Case studies</span>
+      <h1>Real problems from factory operations, and how I worked through them.</h1>
+      <p>Selected real-world IT case studies from manufacturing operations. Each one follows the same path, from the business problem to the outcome.</p>
+      <ol class="cs-method" aria-label="How each case study is told">
+        {method.map((step) => <li>{step}</li>)}
+      </ol>
+    </div>
   </section>
+
+  {caseStudies.length ? (
+    <>
+      {featured.length > 0 && (
+        <section class="container section cs-list-section" aria-labelledby="featured-title">
+          <h2 id="featured-title" class="cs-list-heading">Featured case studies</h2>
+          <div class="cs-featured-list">
+            {featured.map((study, index) => (
+              <article class="cs-card cs-card-featured">
+                <div class="cs-card-head">
+                  <div class="card-topline"><span>{study.data.category ?? study.data.system}</span><span class="card-index">{pad(index + 1)}</span></div>
+                  <h3><a class="cs-card-link" href={`/case-studies/${study.id}/`}>{study.data.title}</a></h3>
+                  <p class="cs-card-meta">{study.data.role} · {study.data.duration}</p>
+                </div>
+                <div class="cs-card-body">
+                  <dl class="cs-card-facts">
+                    <div><dt>Business problem</dt><dd>{study.data.problem ?? study.data.summary}</dd></div>
+                    {study.data.roleSummary && <div><dt>My role</dt><dd>{study.data.roleSummary}</dd></div>}
+                    {study.data.outcome && <div><dt>Outcome</dt><dd>{study.data.outcome}</dd></div>}
+                  </dl>
+                  <span class="text-link" aria-hidden="true">Read case study <span>→</span></span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {others.length > 0 && (
+        <section class="container section cs-list-section cs-list-more" aria-labelledby="more-title">
+          <h2 id="more-title" class="cs-list-heading">More case studies</h2>
+          <div class="case-grid case-grid-3">
+            {others.map((study, index) => (
+              <article class="cs-card">
+                <div class="card-topline"><span>{study.data.category ?? study.data.system}</span><span class="card-index">{pad(featured.length + index + 1)}</span></div>
+                <h3><a class="cs-card-link" href={`/case-studies/${study.id}/`}>{study.data.title}</a></h3>
+                <p class="cs-card-meta">{study.data.role} · {study.data.duration}</p>
+                <dl class="cs-card-facts">
+                  <div><dt>Business problem</dt><dd>{study.data.problem ?? study.data.summary}</dd></div>
+                  {study.data.roleSummary && <div><dt>My role</dt><dd>{study.data.roleSummary}</dd></div>}
+                  {study.data.outcome && <div><dt>Outcome</dt><dd>{study.data.outcome}</dd></div>}
+                </dl>
+                <span class="text-link" aria-hidden="true">Read case study <span>→</span></span>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
+  ) : (
+    <section class="container section"><p class="empty-state">No case studies published yet.</p></section>
+  )}
 </BaseLayout>

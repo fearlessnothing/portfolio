@@ -23,6 +23,11 @@ tags:
   - "Business continuity"
   - "Microsoft 365"
 summary: "How factory feedback, iterative improvements and an interim Microsoft 365 solution helped move a visitor management system into successful operation across our Myanmar factories."
+featured: true
+category: "Systems implementation"
+problem: "Factory testing showed the group's new visitor system did not yet fit how visitors are handled on site, so it could not go live as it was."
+roleSummary: "Factory-side coordinator: ran UAT, turned user feedback into change requests, and kept visitor registration running with a temporary Microsoft 365 register."
+outcome: "The improved system is in use at both Myanmar factories, and the temporary register has been retired."
 results:
   - "Factory UAT findings and requirements fed into the improvement of the main visitor system."
   - "The improved system was validated and is in use at both Myanmar factories."

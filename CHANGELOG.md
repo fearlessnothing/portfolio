@@ -10,6 +10,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 - Case study: Backup and recovery after a ransomware scare (2021 ransomware, 3-2-1 backups for ERP, Payroll and the file server, restore tests, network back within a day after the 2023 fire).
 - Case study: Covering a second factory when its IT team left (about three months in 2023, then IT Executive for both factories).
 ### Changed
+- Case Studies page rebuilt as an evidence page: method strip (Problem → Context → My role → Decision → Action → Outcome), VMS and PTS as large featured cards, the other three as supporting cards. Every card shows category, business problem, my role and outcome (new optional frontmatter fields). Whole card clickable through the title link, clear keyboard focus, no hover-only content, hover lift off under reduced motion.
 - Task #4 (rename Case studies → Work, Projects → Lab) dropped; sitemap, wireframe notes and `CLAUDE.md` updated to the built routes.
 - Contact page: one line saying I am open to freelance projects (Microsoft 365 set-up, network set-up, server backup). Services page (task #10) dropped for now.
 - "Janet" corrected to JaNets (JUKI), a bought system that links sewing machines to track production in real time; added to the Home technology list.
