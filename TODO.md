@@ -23,6 +23,7 @@ _Last updated: 2026-11-05_
 - [ ] Web3Forms dashboard: restrict the access key to the live domain
 - [ ] After deploy: check security headers (`curl -I <url>`) and send one test message through the contact form
 - [ ] Run the test plan (`docs/05-testing/test-plan.md`) on desktop and mobile
+- [ ] After launch: publish the portfolio case study (draft: `docs/04-development/portfolio-case-study-draft.md`); needs live URL, launch month and my lessons learned
 
 ## Later (from the 2026-11-04 project review)
 
