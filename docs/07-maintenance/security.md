@@ -13,7 +13,7 @@ runtime input is the Web3Forms contact form.
 | MIME sniffing | `X-Content-Type-Options: nosniff`. | `public/_headers` |
 | Referrer | `Referrer-Policy: strict-origin-when-cross-origin`. | `public/_headers` |
 | Browser features | `Permissions-Policy` disables camera, microphone, geolocation, payment and USB. | `public/_headers` |
-| Content Security Policy | Scripts only from this origin (no inline scripts). Styles from this origin plus Google Fonts. Form posts only to Web3Forms (`api.web3forms.com`, plus `web3forms.com` for its error page; successful sends redirect to this site's `/thanks/` page). Objects and `<base>` changes blocked. | `public/_headers` |
+| Content Security Policy | Scripts only from this origin (no inline scripts). Styles from this origin plus Google Fonts. Form posts only to Web3Forms (`api.web3forms.com`, plus `web3forms.com` for its error page). `form-action` also allows `'self'`, because browsers check the redirect back to `/thanks/` against it too. Objects and `<base>` changes blocked. | `public/_headers` |
 | Inline scripts | Theme init and menu/theme logic moved to `public/scripts/theme-init.js` and `public/scripts/site.js` so CSP can use `script-src 'self'`. | `src/layouts/BaseLayout.astro` |
 | Form spam | Hidden `botcheck` honeypot field. Web3Forms filters submissions. | `src/pages/contact.astro` |
 | Privacy | Contact page says the form is handled by Web3Forms and nothing is stored on this site. | `src/pages/contact.astro` |
