@@ -26,7 +26,6 @@ _Last updated: 2026-11-05_
 
 ## Later (from the 2026-11-04 project review)
 
-- [ ] Align About "How I approach a problem" (5 steps) with the six Process stages; About could keep beliefs and link to Process
 - [ ] Shared components for case cards and the case-study CTA; keep project data in one file
 - [ ] Contact form thank-you page on the site (after the live URL is known)
 - [ ] Crop the hero photo to a wide ratio to make it lighter

@@ -226,6 +226,8 @@ button { color: inherit; }
 .about-bridge-link::before { display: block; color: var(--marker); font-size: 26px; font-weight: 700; line-height: 1; content: '⇄'; }
 .about-bridge .about-bridge-link span { color: var(--marker); font-family: var(--mono); font-size: 11px; line-height: 1.35; text-transform: uppercase; }
 .about-subhead { margin: 34px 0 14px; font-size: 17px; font-weight: 700; }
+.about-process-link { margin-top: 22px; }
+.about-process-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .about-approach { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
 .about-approach li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 16px; border: 1px solid var(--line); background: var(--surface); }
 .about-approach li:last-child:nth-child(odd) { grid-column: 1 / -1; }

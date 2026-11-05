@@ -14,10 +14,10 @@ const systemGroups = [
 
 // My path: what each career step taught me (owner's own words, 2026-11-04).
 const path = [
-  { period: '2010 – 2017', role: 'IT Staff, Myanmar Police Organization', text: 'Running servers, networks and CCTV taught me how much people depend on reliable systems, and on good communication.' },
-  { period: '2017 – 2018', role: 'IT Assistant (IT support), garment factory', text: 'I set up the factory’s IT from the construction stage, from cabling to network, CCTV, PCs and laptops, until users could sit down and work. It was also my first ERP roll-out.' },
-  { period: '2018 – 2019', role: 'Personal Assistant to the Managing Director', text: 'I stepped closer to management on purpose, to see how decisions, communication and operations connect. Then I went back to IT, the work I enjoy most.' },
-  { period: '2019 – today', role: 'IT Executive, then IT Manager', text: 'From technical operations to IT management for two factories, business systems and digital improvement, learning how the supply chain works and where IT can support it.' },
+  { period: '2010 – 2017', role: 'IT Staff, Myanmar Police Organization', text: 'Running servers, networks and CCTV showed me how much people depend on reliable systems, and on clear communication.' },
+  { period: '2017 – 2018', role: 'IT Assistant (IT support), garment factory', text: 'Setting up a new factory’s IT from the construction stage taught me how the whole system fits together. It was also my first ERP roll-out.' },
+  { period: '2018 – 2019', role: 'Personal Assistant to the Managing Director', text: 'I moved closer to management on purpose, to see how decisions and operations connect. Then I returned to IT, the work I enjoy most.' },
+  { period: '2019 – today', role: 'IT Executive, then IT Manager', text: 'From technical operations to managing IT for two factories, while learning how the supply chain works and where IT can help.' },
 ];
 
 // How I work: steps taken from what I actually did on the VMS and PTS projects.
@@ -41,7 +41,7 @@ const beliefs = [
     <div class="container">
       <span class="eyebrow">About</span>
       <h1>The work I would choose every time.</h1>
-      <p>I’ve been drawn to IT since I was young. Even after a long day, solving an IT problem still gives me the same energy and curiosity that brought me into this field. Today I manage IT across two garment factories in Myanmar, building on more than {yearsInIt.replace('+', '')} years of hands-on experience.</p>
+      <p>IT has held my interest since I was young, and solving an IT problem still gives me the same curiosity it did then. Today I manage IT for two garment factories in Myanmar, with more than {yearsInIt.replace('+', '')} years of hands-on experience behind me.</p>
     </div>
   </section>
 
@@ -91,6 +91,7 @@ const beliefs = [
         <li><span class="about-approach-num">{String(i + 1).padStart(2, '0')}</span><div><strong>{step.title}</strong><p>{step.text}</p></div></li>
       ))}
     </ol>
+    <a class="text-link about-process-link" href="/process/">See the full process <span aria-hidden="true">→</span></a>
   </section>
 
   <section class="container about-grid about-grid-rest">
@@ -116,11 +117,11 @@ const beliefs = [
         <div class="about-beyond">
           <div>
             <h3>Why I teach</h3>
-            <p>I built my own IT path the hard way, without much money. Since 2018 I have taught Microsoft Office, PageMaker and Photoshop part-time, to make that path easier for people who start where I did.</p>
+            <p>I built my IT path the hard way, with little money. Since 2018 I have taught Microsoft Office, PageMaker and Photoshop part-time, to make that path easier for people who start where I did.</p>
           </div>
           <div>
             <h3>What I’m exploring now</h3>
-            <p>Automation and AI-assisted workflows for business systems, tried out in my <a class="inline-link" href="/projects/#lab-title">lab builds</a>, alongside a Higher Diploma in Computer Science and more certifications.</p>
+            <p>AI-assisted workflows, automation and business systems for more digital operations. I try them in my <a class="inline-link" href="/projects/#lab-title">learning builds</a> first, not in production, while studying for a Higher Diploma in Computer Science and the CCNA.</p>
           </div>
         </div>
       </section>

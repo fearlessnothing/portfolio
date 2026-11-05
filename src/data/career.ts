@@ -120,8 +120,8 @@ export const buyerSystems: SystemItem[] = [
 ];
 
 export const builtSystems: SystemItem[] = [
-  { name: 'Visitor register on Microsoft 365', note: 'Interim business-continuity solution using Microsoft Forms, Power Automate and SharePoint while the primary VMS was being improved.', status: 'Retired' },
-  { name: 'Fabric Age Control dashboard', note: 'Tracks fabric age from arrival so older rolls are used first.' },
+  { name: 'Fabric Age Control dashboard', note: 'Tracks fabric age from arrival so older rolls are used first. In daily use in the warehouse.' },
+  { name: 'Visitor register on Microsoft 365 (interim)', note: 'Temporary business-continuity solution using Microsoft Forms, Power Automate and SharePoint while the primary VMS was being improved. Not the final VMS.', status: 'Retired' },
 ];
 
 export const learningBuilds: SystemItem[] = [
