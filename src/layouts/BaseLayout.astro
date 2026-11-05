@@ -4,9 +4,11 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  /** Keep the page out of search results (e.g. the contact thank-you page). */
+  noindex?: boolean;
 }
 
-const { title, description = 'IT leadership for resilient garment manufacturing in Myanmar.' } = Astro.props;
+const { title, description = 'IT leadership for resilient garment manufacturing in Myanmar.', noindex = false } = Astro.props;
 const currentPath = Astro.url.pathname;
 const canonicalUrl = new URL(currentPath, Astro.site);
 const pageTitle = `${title} | Min Hein Zaw`;
@@ -27,6 +29,7 @@ const navItems = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <meta name="theme-color" content="#f4f2ed" data-light="#f4f2ed" data-dark="#111b2c" />
     <title>{pageTitle}</title>
     <link rel="canonical" href={canonicalUrl} />

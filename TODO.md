@@ -14,6 +14,5 @@ _Last updated: 2026-11-05_
 ## Later (from the 2026-11-04 project review)
 
 - [ ] Shared components for case cards and the case-study CTA; keep project data in one file
-- [ ] Contact form thank-you page on the site (after the live URL is known)
 - [ ] Crop the hero photo to a wide ratio to make it lighter
 - [ ] Upgrade Astro 5 → 7 (clears the last 5 npm audit advisories; breaking change, own task)

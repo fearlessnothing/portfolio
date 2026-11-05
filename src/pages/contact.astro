@@ -1,9 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Web3Forms public form key (PUBLIC_ by design, restricted to the live domain in the
-// Web3Forms dashboard). Read from .env, never hard-coded.
+// Web3Forms public form key (PUBLIC_ by design; domain restriction needs a paid plan,
+// so the honeypot is the spam guard). Read from .env, never hard-coded.
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? '';
+// After a successful send, Web3Forms redirects here. Same domain, so it works on the free plan.
+const thanksUrl = new URL('/thanks/', Astro.site).href;
 const email = 'mr.munheinzaw1992@gmail.com';
 ---
 
@@ -35,6 +37,7 @@ const email = 'mr.munheinzaw1992@gmail.com';
     <form action="https://api.web3forms.com/submit" method="POST" aria-describedby="form-required">
       <input type="hidden" name="access_key" value={accessKey} />
       <input type="hidden" name="from_name" value="Portfolio contact form" />
+      <input type="hidden" name="redirect" value={thanksUrl} />
       <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <p class="form-required" id="form-required">All fields are required.</p>
       <div class="form-grid">
@@ -44,7 +47,7 @@ const email = 'mr.munheinzaw1992@gmail.com';
         <div class="field full"><label for="message">Message</label><textarea id="message" name="message" maxlength="3000" required></textarea></div>
       </div>
       <div class="form-footer"><button class="button" type="submit">Send message <span aria-hidden="true">→</span></button></div>
-      <p class="form-privacy">This form is handled by Web3Forms, a third-party service. Your name, email, subject and message are sent to Web3Forms and forwarded to me by email; nothing is stored on this site. After sending, Web3Forms shows a confirmation page.</p>
+      <p class="form-privacy">This form is handled by Web3Forms, a third-party service. Your name, email, subject and message are sent to Web3Forms and forwarded to me by email; nothing is stored on this site. After sending, you return to a thank-you page on this site.</p>
       {!accessKey && <p class="sample-notice" role="status">Contact form is not configured yet. Add your Web3Forms key to <code>.env</code> before deployment.</p>}
     </form>
   </section>

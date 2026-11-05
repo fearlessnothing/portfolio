@@ -13,7 +13,7 @@ runtime input is the Web3Forms contact form.
 | MIME sniffing | `X-Content-Type-Options: nosniff`. | `public/_headers` |
 | Referrer | `Referrer-Policy: strict-origin-when-cross-origin`. | `public/_headers` |
 | Browser features | `Permissions-Policy` disables camera, microphone, geolocation, payment and USB. | `public/_headers` |
-| Content Security Policy | Scripts only from this origin (no inline scripts). Styles from this origin plus Google Fonts. Form posts only to Web3Forms (`api.web3forms.com`, plus `web3forms.com` for its success page redirect). Objects and `<base>` changes blocked. | `public/_headers` |
+| Content Security Policy | Scripts only from this origin (no inline scripts). Styles from this origin plus Google Fonts. Form posts only to Web3Forms (`api.web3forms.com`, plus `web3forms.com` for its error page; successful sends redirect to this site's `/thanks/` page). Objects and `<base>` changes blocked. | `public/_headers` |
 | Inline scripts | Theme init and menu/theme logic moved to `public/scripts/theme-init.js` and `public/scripts/site.js` so CSP can use `script-src 'self'`. | `src/layouts/BaseLayout.astro` |
 | Form spam | Hidden `botcheck` honeypot field. Web3Forms filters submissions. | `src/pages/contact.astro` |
 | Privacy | Contact page says the form is handled by Web3Forms and nothing is stored on this site. | `src/pages/contact.astro` |
@@ -24,9 +24,10 @@ runtime input is the Web3Forms contact form.
 
 ## Manual checks (owner)
 
-- **Web3Forms key:** in the Web3Forms dashboard, restrict the access key to the production
-  domain (and any preview domain if forms should work there). A `PUBLIC_` key is visible in
-  the page source by design, so domain restriction is what stops reuse.
+- **Web3Forms key:** domain restriction needs a paid Web3Forms plan, so it was skipped
+  (owner decision, 2026-11-05). A `PUBLIC_` key is visible in the page source by design.
+  The honeypot field and Web3Forms' own filtering are the spam controls. If spam becomes a
+  problem, rotate the key in the dashboard and update `.env`.
 - **Deployment:** confirm the live response includes the headers above
   (`curl -I https://<site>/` or browser dev tools → Network → Headers).
 - **Dependencies:** run `npm audit` monthly with the maintenance plan. The site has no
