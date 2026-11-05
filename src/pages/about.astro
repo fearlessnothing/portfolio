@@ -2,10 +2,12 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import profilePhoto from '../assets/profile.jpg';
-import { yearsInIt, experience, vendorSystems, builtSystems, learningBuilds, skills, education, certifications, languages } from '../data/career';
+import { yearsInIt, experience, groupSystems, vendorSystems, buyerSystems, builtSystems, learningBuilds, skills, education, certifications, languages } from '../data/career';
 
 const systemGroups = [
-  { title: 'Group and vendor systems I worked on', items: vendorSystems },
+  { title: 'Built by the group’s in-house team', items: groupSystems },
+  { title: 'Bought from vendors', items: vendorSystems },
+  { title: 'Provided by buyers', items: buyerSystems },
   { title: 'Solutions I built at work', items: builtSystems },
   { title: 'Learning builds', items: learningBuilds },
 ];

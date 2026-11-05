@@ -11,7 +11,8 @@ _Last updated: 2026-11-05_
 - [ ] Facts for a Backup / DR case study
 - [ ] Confirm the service list (needed before #10 Services page)
 - [ ] Update the CV itself to IT Manager (Jan 2026) and Guston Amava from 2023, so CV, site and LinkedIn agree
-- [ ] Optional: year for each certificate, issuer for the three without one, ERP product name
+- [ ] Optional: year for each certificate, issuer for the three without one
+- [ ] Where do "Fabric Barcode system" and "Janet" belong (in-house, bought, or buyer-provided)? Is Fabric Barcode the same as the warehouse barcode system?
 
 ## Sprint 1 — still open
 

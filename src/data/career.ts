@@ -20,7 +20,7 @@ export interface Job {
 export interface SystemItem {
   name: string;
   note?: string;
-  status?: 'In progress' | 'Retired';
+  status?: 'In progress' | 'Planned' | 'Retired';
 }
 
 export const yearsInIt = '15+';
@@ -92,16 +92,32 @@ export const experience: Job[] = [
   },
 ];
 
-// Systems built by the group IT team (VMS, PTS) or by outside vendors; not developed by me.
+// Systems in use at work, by who built them (owner, 2026-11-05). None were developed by me.
+// Built by the group's in-house development team.
+export const groupSystems: SystemItem[] = [
+  { name: 'ERP', note: 'All departments.' },
+  { name: 'Warehouse barcode and issuing system', note: 'Warehouse.' },
+  { name: 'GRN (goods received)', note: 'Warehouse and finance.' },
+  { name: 'Production Tracking System', note: 'Cutting and IE. Gathered production feedback, explained the gaps to the developers, reported to the Director and supported the rebuild.' },
+  { name: 'Visitor Management System', note: 'All departments. Coordinated factory-side UAT, requirements, change feedback and implementation support through successful use across both Myanmar factories.' },
+  { name: 'Payroll', note: 'HR. In use today; FINAC Payroll is being prepared to replace it.' },
+];
+
+// Bought from outside vendors. I coordinate the Solvei8 and FINAC projects.
 export const vendorSystems: SystemItem[] = [
-  { name: 'FINAC Payroll & Time Attendance', note: 'Roll-out with the vendor for both factories.', status: 'In progress' },
-  { name: 'Visitor Management System', note: 'Coordinated factory-side UAT, requirements, change feedback and implementation support through successful use across both Myanmar factories.' },
-  { name: 'Production Tracking System', note: 'Gathered production feedback, explained the gaps to the developers, reported to the Director and supported the rebuild.' },
-  { name: 'Plani8 (Solvei8)', note: 'Production planning.', status: 'In progress' },
-  { name: 'ERP', note: 'Warehouse and production.' },
+  { name: 'Plani8 (Solvei8)', note: 'Production planning. Project coordination; being rolled out now.', status: 'In progress' },
+  { name: 'Tracki8 and Maintaini8 (Solvei8)', note: 'Next, once Plani8 is stable.', status: 'Planned' },
+  { name: 'FINAC Payroll (Datamation)', note: 'Project coordination; data and requirements gathering.', status: 'In progress' },
+  { name: 'MYOB', note: 'Finance.' },
+  // Owner to confirm where these two belong (not in the 2026-11-05 list).
   { name: 'Fabric Barcode system' },
   { name: 'Janet', note: 'Quality and production.' },
+];
+
+// Provided by buyers.
+export const buyerSystems: SystemItem[] = [
   { name: 'Raptool', note: 'Shipment tracking from packing to customer.' },
+  { name: 'TracyBox' },
 ];
 
 export const builtSystems: SystemItem[] = [
@@ -178,7 +194,7 @@ export const ecosystem: { group: string; items: string[] }[] = [
   },
   {
     group: 'Business systems',
-    items: ['ERP (warehouse & production)', 'FINAC Payroll & Time Attendance', 'Plani8 production planning', 'Fabric Barcode', 'Janet (QA)', 'Raptool (shipments)'],
+    items: ['ERP', 'Warehouse barcode & issuing', 'GRN', 'Payroll', 'Plani8 (Solvei8)', 'FINAC Payroll', 'MYOB', 'Raptool', 'TracyBox'],
   },
 ];
 
