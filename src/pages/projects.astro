@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-type Status = 'Implemented' | 'In progress' | 'Learning' | 'Retired';
+type Status = 'Production' | 'Implemented' | 'In progress' | 'Learning' | 'Retired';
 
 interface Project {
   title: string;
@@ -22,8 +22,9 @@ const builtAtWork: Project[] = [
   {
     title: 'Fabric Age Control dashboard',
     kind: 'Built by me',
+    status: 'Production',
     need: { label: 'Problem', text: 'Fabric should not sit in the warehouse for years; when an order comes in, older rolls should be used first.' },
-    contribution: 'Built a dashboard that tracks each fabric’s age from the day it arrives.',
+    contribution: 'Built a dashboard that tracks each fabric’s age from the day it arrives. Used every day in the warehouse.',
     tech: ['Excel', 'SharePoint', 'Power Automate'],
   },
 ];

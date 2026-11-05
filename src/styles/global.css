@@ -296,7 +296,7 @@ button { color: inherit; }
 .pj-labels { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
 .pj-kind { color: var(--muted); font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
 .pj-status { padding: 3px 8px; border: 1px solid transparent; font-family: var(--mono); font-size: 12px; font-weight: 500; text-transform: uppercase; }
-.pj-status-implemented { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+.pj-status-production, .pj-status-implemented { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
 .pj-status-in-progress { border-color: var(--marker); color: var(--marker); }
 .pj-status-learning { border-color: var(--line); color: var(--ink); border-style: dashed; }
 .pj-status-retired { background: var(--bg); border-color: var(--line); color: var(--muted); }
