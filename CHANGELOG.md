@@ -7,6 +7,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Added
 - Site live on Cloudflare Pages at https://minheinzaw.pages.dev (auto-deploys from `main`). Security headers checked on the live site.
+- Live contact form tested: message received. Web3Forms domain restriction skipped because it needs the paid plan; the access key is public by design, and the honeypot field stays as spam protection.
 - `site` URL in `astro.config.mjs`; canonical link and Open Graph / Twitter tags on every page; `robots.txt`.
 - Draft case study about building this portfolio with an AI coding assistant, the SDLC way (in `docs/`, not published until launch).
 - Case study: Backup and recovery after a ransomware scare (2021 ransomware, 3-2-1 backups for ERP, Payroll and the file server, restore tests, network back within a day after the 2023 fire).
