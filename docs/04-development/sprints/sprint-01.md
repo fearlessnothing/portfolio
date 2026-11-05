@@ -12,7 +12,7 @@
 | 5 | Write first real case study (anonymised) | Must | Done 2026-11-04 (VMS and PTS) |
 | 6 | About page: experience timeline, capabilities | Must | Done 2026-11-03 |
 | 7 | First git commit and push to GitHub | Must | Done 2026-10-15 |
-| 8 | Export wireframes PDF into `03-design/` | Should | To do |
+| 8 | Export wireframes PDF into `03-design/` | Should | Done 2026-11-05 (`wireframes-v2.pdf`, as built) |
 | 9 | Restructure Home for customer-first positioning (ADR-005) | Should | Done 2026-11-03 |
 | 10 | Create Services page (after service list is confirmed) | Should | Dropped (2026-11-05: one freelance line on Contact instead) |
 
@@ -40,3 +40,4 @@
 ## Review / Retro
 _To be filled at the end of the sprint._
 - 2026-11-03: VMS case study rewritten from the owner's corrected story: UAT findings → requirements → interim Microsoft 365 register for continuity → main VMS improved and validated → in use at both Myanmar factories → interim solution retired. All placeholders removed; overview cards and diagrams added (optional schema fields, `cs-` CSS). PTS still has placeholders.
+- 2026-11-05: Task #8 done — wireframes exported from the live site with `npm run wireframes` (`docs/03-design/wireframes-v2.pdf`, 7 pages × desktop and mobile).

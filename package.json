@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "wireframes": "node scripts/export-wireframes.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.0",

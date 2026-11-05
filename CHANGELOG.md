@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Added
+- `npm run wireframes` (`scripts/export-wireframes.mjs`): exports as-built grey wireframes of all 7 pages, desktop and mobile, to `docs/03-design/wireframes-v2.pdf` using headless Edge. No new dependency. Closes Sprint 1 task #8.
 - Site live on Cloudflare Pages at https://minheinzaw.pages.dev (auto-deploys from `main`). Security headers checked on the live site.
 - Live contact form tested: message received. Web3Forms domain restriction skipped because it needs the paid plan; the access key is public by design, and the honeypot field stays as spam protection.
 - Test plan run on the live site (results in `docs/05-testing/test-plan.md`). Fixed: wordmark, footer link, stand-alone arrow links and case-study back links now have 44 px touch targets. Lighthouse on Home: mobile 95 / 100 / 100 / 100, desktop 100 in all four.

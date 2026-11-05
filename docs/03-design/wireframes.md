@@ -14,6 +14,13 @@ Created 2026-10-14 in a Claude design canvas: 7 artboards.
 
 Export: save the PDF export as `docs/03-design/wireframes-v1.pdf`.
 
+## Wireframes v2 (as built)
+`wireframes-v2.pdf` is generated from the live site, so it always matches what is built. It has 7 pages (Home, Case studies, Case study detail, Projects, About, Process, Contact) at 1280 px desktop and 390 px mobile. Colours are removed, and photos are shown as grey boxes with a cross.
+
+To regenerate it after a design change, run `npm run wireframes`. To use a local build instead, run `npm run wireframes -- http://localhost:4321`. The script is `scripts/export-wireframes.mjs`. It uses the installed Microsoft Edge and needs no extra packages.
+
+The earlier hand-drawn v2 is in Figma: https://www.figma.com/design/Kd9ruAifTtahQ1F1ij50cG
+
 ## Design iterations
 | Date | Change | Reason |
 |---|---|---|
