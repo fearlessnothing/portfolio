@@ -42,3 +42,4 @@ _To be filled at the end of the sprint._
 - 2026-11-03: VMS case study rewritten from the owner's corrected story: UAT findings → requirements → interim Microsoft 365 register for continuity → main VMS improved and validated → in use at both Myanmar factories → interim solution retired. All placeholders removed; overview cards and diagrams added (optional schema fields, `cs-` CSS). PTS still has placeholders.
 - 2026-11-05: Task #8 done — wireframes exported from the live site with `npm run wireframes` (`docs/03-design/wireframes-v2.pdf`, 7 pages × desktop and mobile).
 - 2026-11-05: Figma wireframes updated to the as-built site (new page "Wireframes v3 (as built, Nov 2026)", 14 editable frames); the old page was renamed "Archive: wireframes v2 (Oct 2026)".
+- 2026-11-05: Site launched (owner). Phone check and UAT skipped by owner decision. Portfolio case study published at `/case-studies/portfolio-site/` (launch month Nov 2026; lessons learned confirmed by owner).

@@ -6,6 +6,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 ### Planned (Sprint 1)
 - Soft blue design system, Work / Lab structure, first real case study.
 ### Added
+- Case study: Building this portfolio with an AI coding assistant, the SDLC way (`/case-studies/portfolio-site/`, Oct – Nov 2026). Shows the live URL, Lighthouse scores and the owner's lessons learned, and states openly that the Web3Forms domain restriction was skipped to keep the project free. The draft in `docs/04-development/` was removed.
 - `npm run wireframes` (`scripts/export-wireframes.mjs`): exports as-built grey wireframes of all 7 pages, desktop and mobile, to `docs/03-design/wireframes-v2.pdf` using headless Edge. No new dependency. Closes Sprint 1 task #8.
 - Site live on Cloudflare Pages at https://minheinzaw.pages.dev (auto-deploys from `main`). Security headers checked on the live site.
 - Live contact form tested: message received. Web3Forms domain restriction skipped because it needs the paid plan; the access key is public by design, and the honeypot field stays as spam protection.

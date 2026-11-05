@@ -33,7 +33,7 @@ Automated with a headless Edge script and a link crawler against the live site.
 - **Confidentiality:** page text scanned for company names, salaries, currency amounts and personal names. Only the contact email found.
 - **Console:** no script errors.
 - **Lighthouse (pagespeed.web.dev, Home, owner run):** Mobile: Performance 95, Accessibility 100, Best Practices 100, SEO 100 (FCP 1.5 s, LCP 2.5 s, TBT 0 ms, CLS 0, Speed Index 3.9 s). Desktop: 100 / 100 / 100 / 100. **Pass** (target ≥ 90). Remaining hints: render-blocking CSS (~0.7 s on mobile) and image size (~54 KiB on mobile); the hero crop task in `TODO.md` covers the image.
-- **Open:** check on a real phone; UAT below.
+- **Closed 2026-11-05:** the owner launched the site and chose to skip the real-phone check and the UAT round below.
 
 ## UAT
 2–3 people (e.g. a colleague in IT, a friend in HR) review the live preview and answer:
