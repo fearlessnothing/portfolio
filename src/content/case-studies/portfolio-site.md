@@ -2,7 +2,7 @@
 title: "Built with AI. Directed by me."
 system: "Personal portfolio website"
 order: 6
-role: "Product owner and project lead (personal project)"
+role: "Personal project"
 duration: "Oct – Nov 2026"
 environment: "Personal project · free tools only"
 focus:
@@ -23,11 +23,11 @@ tags:
   - "Security"
   - "Personal project"
 summary: "I treated this portfolio like a real IT project: defining the requirements, shaping the architecture and design, working in iterations, reviewing the implementation, testing each release and documenting the decisions. AI accelerated the coding, but the direction, standards, validation and final decisions remained mine."
-highlights: ["7 SDLC phases documented", "Lighthouse mobile 95–100", "Free tools only"]
+highlights: ["7 SDLC phases documented", "Lighthouse-tested", "Zero software cost"]
 category: "Personal project · AI-assisted delivery"
-problem: "I needed a portfolio that shows how I run IT work, built on a zero budget and without writing the code myself."
-roleSummary: "Product owner and project lead: set the rules, wrote the requirements, made every decision and reviewed every change made by the AI assistant."
-outcome: "Live at minheinzaw.pages.dev, documented from planning to maintenance, with Lighthouse scores of 95–100."
+problem: "I wanted a portfolio that demonstrated how I approach IT work, not just where I had worked. The constraint was simple: build it with zero software cost and use AI to accelerate implementation."
+roleSummary: "As product owner and project lead, I defined the requirements, set the design and quality standards, reviewed each iteration and decided what moved forward. AI accelerated the implementation while I retained ownership of scope, validation and final decisions."
+outcome: "A live portfolio with the complete journey documented from requirements and design through testing, deployment and maintenance."
 results:
   - "Live at https://minheinzaw.pages.dev, built and hosted with free tools only."
   - "Documented across the full SDLC: 21 documents from planning to maintenance, including 5 decision records, sprint logs and a changelog."
