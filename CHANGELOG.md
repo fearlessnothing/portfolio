@@ -3,23 +3,35 @@
 Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [SemVer](https://semver.org).
 
 ## [Unreleased]
-### Planned (Sprint 1)
-- Soft blue design system, Work / Lab structure, first real case study.
 ### Added
 - Thank-you page `/thanks/` (not indexed). After a successful send, the contact form now returns visitors here instead of the Web3Forms confirmation page, using Web3Forms' hidden `redirect` field (same domain, free plan). The page has a "Read case studies" button and a "Back to home" button. `BaseLayout` gained an optional `noindex` prop. The contact privacy note was updated to match. CSP `form-action` now also allows `'self'`. Without it, browsers blocked the redirect back to `/thanks/` and the page stayed on Contact.
 - Case study: Building this portfolio with an AI coding assistant, the SDLC way (`/case-studies/portfolio-site/`, Oct – Nov 2026). Shows the live URL, Lighthouse scores and the owner's lessons learned, and states openly that the Web3Forms domain restriction was skipped to keep the project free. The draft in `docs/04-development/` was removed.
 - `npm run wireframes` (`scripts/export-wireframes.mjs`): exports as-built grey wireframes of all 7 pages, desktop and mobile, to `docs/03-design/wireframes-v2.pdf` using headless Edge. No new dependency. Closes Sprint 1 task #8.
-- Site live on Cloudflare Pages at https://minheinzaw.pages.dev (auto-deploys from `main`). Security headers checked on the live site.
 - Live contact form tested: message received. Web3Forms domain restriction skipped because it needs the paid plan; the access key is public by design, and the honeypot field stays as spam protection.
 - Test plan run on the live site (results in `docs/05-testing/test-plan.md`). Fixed: wordmark, footer link, stand-alone arrow links and case-study back links now have 44 px touch targets. Lighthouse on Home: mobile 95 / 100 / 100 / 100, desktop 100 in all four.
-- `site` URL in `astro.config.mjs`; canonical link and Open Graph / Twitter tags on every page; `robots.txt`.
-- Draft case study about building this portfolio with an AI coding assistant, the SDLC way (in `docs/`, not published until launch).
-- Case study: Backup and recovery after a ransomware scare (2021 ransomware, 3-2-1 backups for ERP, Payroll and the file server, restore tests, network back within a day after the 2023 fire).
-- Case study: Covering a second factory when its IT team left (about three months in 2023, then IT Executive for both factories).
 ### Changed
 - Home hero: the denim photo was replaced by an illustration of an IT room in front of a factory floor (AI-generated with ChatGPT, supplied by the owner). It sits under a radial overlay that is darkest behind the text, so more of the picture shows at the edges. `hero-denim.jpg` was removed.
 - Home hero photo cropped from square (2400×2400) to 16:9 (2400×1350). The visible area on desktop is unchanged. Built hero images are about 25–30% lighter (desktop 1400w: 324 KB → 233 KB).
 - Shared components, with no visible change (built HTML of all 14 pages compared before and after: identical). `CaseStudyCard` (featured, standard and home variants) replaces three copies of the card markup. `CaseStudyCta` is added once by the case-study template, and the six copies inside the Markdown files were removed. Projects data moved from `projects.astro` to `src/data/projects.ts`.
+
+## [1.0.0] - 2026-11-05
+### Added
+- Site live on Cloudflare Pages at https://minheinzaw.pages.dev (auto-deploys from `main`). Security headers checked on the live site.
+- `site` URL in `astro.config.mjs`; canonical link and Open Graph / Twitter tags on every page; `robots.txt`.
+- Draft case study about building this portfolio with an AI coding assistant, the SDLC way (in `docs/`, not published until launch).
+- Case study: Backup and recovery after a ransomware scare (2021 ransomware, 3-2-1 backups for ERP, Payroll and the file server, restore tests, network back within a day after the 2023 fire).
+- Case study: Covering a second factory when its IT team left (about three months in 2023, then IT Executive for both factories).
+- Favicon (indigo "M" with a copper dot) and a custom 404 page with links to Home, Case studies and Contact.
+- Third case study: "Building a New Factory's IT from the Ground Up" — setting up a new garment factory's IT during construction (around 20 users, 2 servers, around 70 CCTV cameras, about six months, mostly single-handed).
+- Security hardening: Cloudflare Pages security headers (CSP, HSTS, nosniff, frame/referrer/permissions policies) in `public/_headers`; theme and menu scripts moved to `public/scripts/` so the CSP can forbid inline scripts; privacy note on the Contact page; `docs/07-maintenance/security.md`. CSP `form-action` also allows `web3forms.com`, so the Web3Forms success redirect is not blocked.
+- SDLC wheel on the Process page: seven stages (Planning to Maintenance) as a decorative SVG, with the same stages as an accessible list and an Idea → Business impact path.
+- Focus-area strip under the home hero: Infrastructure • Cybersecurity • Microsoft 365 • Business Systems • Automation.
+- Two real case study drafts: rebuilding the visitor system on Microsoft 365, and retiring the production tracking system. Unconfirmed facts are marked `[placeholder]`.
+- Email address on the Contact page, next to the form.
+- `TODO.md` at the root: one-page view of next tasks, inputs I owe, and launch steps.
+- Profile photo on the About page (cropped, metadata removed, served as WebP).
+- Project pushed to GitHub (`main` branch) for sync between laptops.
+### Changed
 - UI polish across pages: no heading glow in light mode (faint glow kept in dark mode and on the hero); body text 16 px (15 px on phones) and a 68-character reading measure for case-study prose and About text. Home expertise hexagons replaced by rectangular photo cards (3 + 2 on desktop, 2 columns on tablet, 1 on phones) with number, title and tags. About sections 03 and 04 now use a heading-left, content-right layout, so the empty left column is gone; the CV stays collapsed and still opens from `/about/#skills-title` links. Projects: a section with one card spans the full width with a head | details split; only cards with a link react on hover. Case Studies: key-fact pills on every card, using only numbers stated in each case study.
 - Contact freelance line widened (owner): PC and laptop set-up, Microsoft 365, network and cabling, servers, CCTV installation, and help finding where AI fits into everyday workflows.
 - Contact page polish: headline "Let's talk about practical IT."; simple "Ways to reach me" list (email, freelance line); form fields are now Name, Email, Subject and Message (Organization removed, Subject added; the visitor's subject becomes the email subject); "All fields are required" note, email hint, length limits, mobile email keyboard, stronger keyboard focus ring and an invalid-field border after interaction; privacy note says Web3Forms shows the confirmation page.
@@ -57,19 +69,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com). Versioning: [Sem
 - Home page redesigned: full-width photo hero with navy overlay and a hexagon grid linking to the main pages (replaces the focus-area strip). Image sources in `docs/03-design/image-credits.md`.
 - Home hero copy rewritten in a personal voice ("Curious by nature. IT by choice.") and now includes my name.
 - Design switched from green to soft blue (light + dark); dark mode uses navy (`#0b1426`).
-### Changed (docs)
 - Positioning changed to customer-first: freelance clients first, employers second (ADR-005). Charter, sitemap and risk register updated.
-### Added
-- Favicon (indigo "M" with a copper dot) and a custom 404 page with links to Home, Case studies and Contact.
-- Third case study: "Building a New Factory's IT from the Ground Up" — setting up a new garment factory's IT during construction (around 20 users, 2 servers, around 70 CCTV cameras, about six months, mostly single-handed).
-- Security hardening: Cloudflare Pages security headers (CSP, HSTS, nosniff, frame/referrer/permissions policies) in `public/_headers`; theme and menu scripts moved to `public/scripts/` so the CSP can forbid inline scripts; privacy note on the Contact page; `docs/07-maintenance/security.md`. CSP `form-action` also allows `web3forms.com`, so the Web3Forms success redirect is not blocked.
-- SDLC wheel on the Process page: seven stages (Planning to Maintenance) as a decorative SVG, with the same stages as an accessible list and an Idea → Business impact path.
-- Focus-area strip under the home hero: Infrastructure • Cybersecurity • Microsoft 365 • Business Systems • Automation.
-- Two real case study drafts: rebuilding the visitor system on Microsoft 365, and retiring the production tracking system. Unconfirmed facts are marked `[placeholder]`.
-- Email address on the Contact page, next to the form.
-- `TODO.md` at the root: one-page view of next tasks, inputs I owe, and launch steps.
-- Profile photo on the About page (cropped, metadata removed, served as WebP).
-- Project pushed to GitHub (`main` branch) for sync between laptops.
 ### Removed
 - Illustrative (fictional) sample case study.
 ### Fixed
