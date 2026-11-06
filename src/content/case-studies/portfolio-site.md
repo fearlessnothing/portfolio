@@ -1,5 +1,5 @@
 ---
-title: "Building this portfolio with an AI coding assistant, the SDLC way"
+title: "Built with AI. Directed by me."
 system: "Personal portfolio website"
 order: 6
 role: "Product owner and project lead (personal project)"
@@ -22,7 +22,7 @@ tags:
   - "AI-assisted development"
   - "Security"
   - "Personal project"
-summary: "I built this portfolio with an AI coding assistant and ran it like a real IT project, planned, designed, built, tested and documented in sprints. I set the requirements and rules, made every decision and checked every result. The assistant wrote the code."
+summary: "I treated this portfolio like a real IT project: defining the requirements, shaping the architecture and design, working in iterations, reviewing the implementation, testing each release and documenting the decisions. AI accelerated the coding, but the direction, standards, validation and final decisions remained mine."
 highlights: ["7 SDLC phases documented", "Lighthouse mobile 95–100", "Free tools only"]
 category: "Personal project · AI-assisted delivery"
 problem: "I needed a portfolio that shows how I run IT work, built on a zero budget and without writing the code myself."
