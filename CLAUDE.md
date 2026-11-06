@@ -14,6 +14,8 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 - No `/work/` or `/lab/` rename (task #4 dropped). Lab is a section of `/projects/`.
 - `src/content/case-studies/*.md` — Work case studies. Frontmatter: title, role, duration, tags, summary, results, order
 - `src/layouts/BaseLayout.astro` — header, footer, theme toggle
+- `src/components/` — `CaseStudyCard` (case cards on Home and /case-studies/), `CaseStudyCta` (end of every case study; do not paste it into Markdown)
+- `src/data/` — `career.ts` (About/CV), `projects.ts` (Projects page)
 - `src/styles/global.css` — design tokens (light + dark)
 - `docs/` — SDLC documentation (planning → maintenance). `CHANGELOG.md` at root.
 - `TODO.md` — one-page "what next" list. Read it at the start of a session.

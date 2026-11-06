@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import CaseStudyCta from '../../components/CaseStudyCta.astro';
 
 export async function getStaticPaths() {
   const studies = await getCollection('case-studies');
@@ -28,7 +29,7 @@ const hasOverview = Boolean(data.focus?.length);
       </section>
     )}
     <div class="results-grid">{data.results.map((result) => <div class="result-item">{result}</div>)}</div>
-    <div class="prose case-content"><Content /></div>
+    <div class="prose case-content"><Content /><CaseStudyCta /></div>
     <a class="back-link" href="/case-studies/">← Back to all case studies</a>
   </article>
 </BaseLayout>

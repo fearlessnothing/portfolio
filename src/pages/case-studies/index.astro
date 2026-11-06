@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyCard from '../../components/CaseStudyCard.astro';
 import { getSortedCaseStudies } from '../../lib/case-studies';
 
 const caseStudies = await getSortedCaseStudies();
 const featured = caseStudies.filter((study) => study.data.featured);
 const others = caseStudies.filter((study) => !study.data.featured);
 const method = ['Problem', 'Context', 'My role', 'Decision', 'Action', 'Outcome'];
-const pad = (n: number) => String(n).padStart(2, '0');
 ---
 
 <BaseLayout title="Case Studies" description="Selected real-world IT case studies from garment manufacturing: the business problem, my role, the decisions made and the outcome.">
@@ -27,24 +27,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
         <section class="container section cs-list-section" aria-labelledby="featured-title">
           <h2 id="featured-title" class="cs-list-heading">Featured case studies</h2>
           <div class="cs-featured-list">
-            {featured.map((study, index) => (
-              <article class="cs-card cs-card-featured">
-                <div class="cs-card-head">
-                  <div class="card-topline"><span>{study.data.category ?? study.data.system}</span><span class="card-index">{pad(index + 1)}</span></div>
-                  <h3><a class="cs-card-link" href={`/case-studies/${study.id}/`}>{study.data.title}</a></h3>
-                  <p class="cs-card-meta">{study.data.role} · {study.data.duration}</p>
-                  {study.data.highlights && <ul class="cs-pills" aria-label="Key facts">{study.data.highlights.map((h) => <li>{h}</li>)}</ul>}
-                </div>
-                <div class="cs-card-body">
-                  <dl class="cs-card-facts">
-                    <div><dt>Business problem</dt><dd>{study.data.problem ?? study.data.summary}</dd></div>
-                    {study.data.roleSummary && <div><dt>My role</dt><dd>{study.data.roleSummary}</dd></div>}
-                    {study.data.outcome && <div><dt>Outcome</dt><dd>{study.data.outcome}</dd></div>}
-                  </dl>
-                  <span class="text-link" aria-hidden="true">Read case study <span>→</span></span>
-                </div>
-              </article>
-            ))}
+            {featured.map((study, index) => <CaseStudyCard study={study} number={index + 1} variant="featured" />)}
           </div>
         </section>
       )}
@@ -53,20 +36,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
         <section class="container section cs-list-section cs-list-more" aria-labelledby="more-title">
           <h2 id="more-title" class="cs-list-heading">More case studies</h2>
           <div class="case-grid case-grid-3">
-            {others.map((study, index) => (
-              <article class="cs-card">
-                <div class="card-topline"><span>{study.data.category ?? study.data.system}</span><span class="card-index">{pad(featured.length + index + 1)}</span></div>
-                <h3><a class="cs-card-link" href={`/case-studies/${study.id}/`}>{study.data.title}</a></h3>
-                <p class="cs-card-meta">{study.data.role} · {study.data.duration}</p>
-                {study.data.highlights && <ul class="cs-pills" aria-label="Key facts">{study.data.highlights.map((h) => <li>{h}</li>)}</ul>}
-                <dl class="cs-card-facts">
-                  <div><dt>Business problem</dt><dd>{study.data.problem ?? study.data.summary}</dd></div>
-                  {study.data.roleSummary && <div><dt>My role</dt><dd>{study.data.roleSummary}</dd></div>}
-                  {study.data.outcome && <div><dt>Outcome</dt><dd>{study.data.outcome}</dd></div>}
-                </dl>
-                <span class="text-link" aria-hidden="true">Read case study <span>→</span></span>
-              </article>
-            ))}
+            {others.map((study, index) => <CaseStudyCard study={study} number={featured.length + index + 1} />)}
           </div>
         </section>
       )}

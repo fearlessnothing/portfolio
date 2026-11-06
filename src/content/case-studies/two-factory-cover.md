@@ -74,11 +74,3 @@ In 2023 I supported IT only for the Pathein factory. Then the IT staff at the gr
 - **A well-kept site needs less of you.** Because Pathein had been looked after every day, I did not need to worry about it while I was away. Thanlyin, left alone for a long time, needed fixing from the first day.
 - **Handover matters.** Without one, the next person has to learn everything from scratch.
 
-<div class="cs-cta">
-  <p>Technology works best when it fits the operation.</p>
-  <div class="cs-cta-actions">
-    <a class="button" href="/case-studies/">View other case studies</a>
-    <a class="button secondary" href="/projects/">View projects</a>
-    <a class="button secondary" href="/contact/">Contact</a>
-  </div>
-</div>

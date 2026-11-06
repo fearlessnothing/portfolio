@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  study: CollectionEntry<'case-studies'>;
+  /** Position shown in the top-right corner (1-based). */
+  number: number;
+  /**
+   * featured: large two-column card on /case-studies/
+   * standard: grid card on /case-studies/
+   * home: short card on the home page (whole card is the link)
+   */
+  variant?: 'featured' | 'standard' | 'home';
+}
+
+const { study, number, variant = 'standard' } = Astro.props;
+const { data } = study;
+const href = `/case-studies/${study.id}/`;
+const index = String(number).padStart(2, '0');
+const problem = data.problem ?? data.summary;
+---
+
+{variant === 'home' ? (
+  <a class="case-card home-case" href={href}>
+    <div class="card-topline"><span>{data.category ?? 'Case study'}</span><span class="card-index">{index}</span></div>
+    <h3>{data.title}</h3>
+    <p>{problem}</p>
+    <span class="text-link">Read case study <span aria-hidden="true">→</span></span>
+  </a>
+) : (
+  <article class:list={['cs-card', { 'cs-card-featured': variant === 'featured' }]}>
+    {variant === 'featured' ? (
+      <>
+        <div class="cs-card-head">
+          <div class="card-topline"><span>{data.category ?? data.system}</span><span class="card-index">{index}</span></div>
+          <h3><a class="cs-card-link" href={href}>{data.title}</a></h3>
+          <p class="cs-card-meta">{data.role} · {data.duration}</p>
+          {data.highlights && <ul class="cs-pills" aria-label="Key facts">{data.highlights.map((h) => <li>{h}</li>)}</ul>}
+        </div>
+        <div class="cs-card-body">
+          <dl class="cs-card-facts">
+            <div><dt>Business problem</dt><dd>{problem}</dd></div>
+            {data.roleSummary && <div><dt>My role</dt><dd>{data.roleSummary}</dd></div>}
+            {data.outcome && <div><dt>Outcome</dt><dd>{data.outcome}</dd></div>}
+          </dl>
+          <span class="text-link" aria-hidden="true">Read case study <span>→</span></span>
+        </div>
+      </>
+    ) : (
+      <>
+        <div class="card-topline"><span>{data.category ?? data.system}</span><span class="card-index">{index}</span></div>
+        <h3><a class="cs-card-link" href={href}>{data.title}</a></h3>
+        <p class="cs-card-meta">{data.role} · {data.duration}</p>
+        {data.highlights && <ul class="cs-pills" aria-label="Key facts">{data.highlights.map((h) => <li>{h}</li>)}</ul>}
+        <dl class="cs-card-facts">
+          <div><dt>Business problem</dt><dd>{problem}</dd></div>
+          {data.roleSummary && <div><dt>My role</dt><dd>{data.roleSummary}</dd></div>}
+          {data.outcome && <div><dt>Outcome</dt><dd>{data.outcome}</dd></div>}
+        </dl>
+        <span class="text-link" aria-hidden="true">Read case study <span>→</span></span>
+      </>
+    )}
+  </article>
+)}

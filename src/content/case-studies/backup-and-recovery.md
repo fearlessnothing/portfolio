@@ -91,11 +91,3 @@ On one day early in 2023, a fire at the Thanlyin factory burned the place where 
 - **A backup is only real once you have restored it.** Testing restores is what makes the routine worth trusting.
 - **Be ready before something happens.** The fire was a very worrying day. Since then I keep backups current at all times, so whatever happens, we can bring the servers back quickly.
 
-<div class="cs-cta">
-  <p>Technology works best when it fits the operation.</p>
-  <div class="cs-cta-actions">
-    <a class="button" href="/case-studies/">View other case studies</a>
-    <a class="button secondary" href="/projects/">View projects</a>
-    <a class="button secondary" href="/contact/">Contact</a>
-  </div>
-</div>

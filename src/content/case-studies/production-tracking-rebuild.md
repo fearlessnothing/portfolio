@@ -110,11 +110,3 @@ Many of the changes are now complete, and we are working to bring the system bac
 - **Confirm the production impact before building.** Check that the system will be useful to production, not only that it can be built.
 - **Gather requirements at ground level.** Requirements should come from the factory floor, especially when one system serves sites that work differently.
 
-<div class="cs-cta">
-  <p>Technology works best when it fits the operation.</p>
-  <div class="cs-cta-actions">
-    <a class="button" href="/case-studies/">View other case studies</a>
-    <a class="button secondary" href="/projects/">View projects</a>
-    <a class="button secondary" href="/contact/">Contact</a>
-  </div>
-</div>

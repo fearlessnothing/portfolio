@@ -168,11 +168,3 @@ The goal was never to run two competing systems. The Microsoft 365 register supp
 
 <blockquote class="cs-quote">The goal is not to keep every solution we build. The goal is to keep the business running while moving toward the right long-term solution.</blockquote>
 
-<div class="cs-cta">
-  <p>Technology works best when it fits the operation.</p>
-  <div class="cs-cta-actions">
-    <a class="button" href="/case-studies/">View other case studies</a>
-    <a class="button secondary" href="/projects/">View projects</a>
-    <a class="button secondary" href="/contact/">Contact</a>
-  </div>
-</div>

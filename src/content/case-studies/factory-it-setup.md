@@ -73,11 +73,3 @@ The building was still under construction, so IT work could only go ahead in are
 - **Understand the whole system.** Doing everything myself, from the cabling design upwards, taught me how the whole system fits together when a company starts from nothing.
 - **Plan IT around the building.** On a new site, IT work follows construction; planning for that avoids surprises.
 
-<div class="cs-cta">
-  <p>Technology works best when it fits the operation.</p>
-  <div class="cs-cta-actions">
-    <a class="button" href="/case-studies/">View other case studies</a>
-    <a class="button secondary" href="/projects/">View projects</a>
-    <a class="button secondary" href="/contact/">Contact</a>
-  </div>
-</div>

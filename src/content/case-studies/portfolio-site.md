@@ -93,11 +93,3 @@ In my job I coordinate systems that other people build: in-house developers, the
 - **Small steps are easy to trust.** One small change at a time, each with a check and a commit, made every change easy to review and undo.
 - **Test the live site.** Testing the live site found issues the local checks missed, such as touch targets under 44 px.
 
-<div class="cs-cta">
-  <p>Technology works best when it fits the operation.</p>
-  <div class="cs-cta-actions">
-    <a class="button" href="/case-studies/">View other case studies</a>
-    <a class="button secondary" href="/projects/">View projects</a>
-    <a class="button secondary" href="/contact/">Contact</a>
-  </div>
-</div>
