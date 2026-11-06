@@ -68,7 +68,7 @@ export const experience: Job[] = [
     ],
   },
   {
-    title: 'IT Assistant',
+    title: 'IT Support',
     org: 'Garment factory',
     place: 'Pathein',
     period: '2017 – 2018',
@@ -144,7 +144,7 @@ export const skills: { group: string; items: string[] }[] = [
   },
   {
     group: 'Infrastructure',
-    items: ['Windows Server 2008–2016', 'Active Directory', 'VMware ESXi', 'TCP/IP', 'Network printers', 'CCTV', 'IT asset database'],
+    items: ['Windows Server 2008 – 2016', 'Active Directory', 'VMware ESXi', 'TCP/IP', 'Network printers', 'CCTV', 'IT asset database'],
   },
   {
     group: 'Automation & AI',

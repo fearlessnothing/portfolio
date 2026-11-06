@@ -1,9 +1,9 @@
 ---
-title: "Building a New Factory's IT from the Ground Up"
+title: "Building a new factory's IT from the ground up"
 system: "Factory IT infrastructure"
 order: 3
-role: "IT Assistant (IT support)"
-duration: "About 6 months · 2017 – 2018"
+role: "IT Support"
+duration: "2017 – 2018 · About 6 months"
 environment: "New garment factory under construction"
 focus:
   - "Network cabling"

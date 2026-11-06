@@ -1,5 +1,5 @@
 ---
-title: "From UAT Findings to a Successful Visitor Management Rollout"
+title: "From UAT findings to a successful visitor management rollout"
 system: "Visitor Management System"
 order: 1
 role: "IT Manager"

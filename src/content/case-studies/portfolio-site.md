@@ -1,9 +1,9 @@
 ---
-title: "Building This Portfolio with an AI Coding Assistant, the SDLC Way"
+title: "Building this portfolio with an AI coding assistant, the SDLC way"
 system: "Personal portfolio website"
 order: 6
 role: "Product owner and project lead (personal project)"
-duration: "Oct 2026 – Nov 2026"
+duration: "Oct – Nov 2026"
 environment: "Personal project · free tools only"
 focus:
   - "SDLC from planning to maintenance"

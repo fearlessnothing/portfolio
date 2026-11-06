@@ -1,9 +1,9 @@
 ---
-title: "Covering a Second Factory When Its IT Team Left"
+title: "Covering a second factory when its IT team left"
 system: "IT support across two factories"
 order: 5
 role: "IT Executive"
-duration: "About 3 months · 2023"
+duration: "2023 · About 3 months"
 environment: "Two garment factories: Pathein and Thanlyin (Yangon)"
 focus:
   - "On-site support"

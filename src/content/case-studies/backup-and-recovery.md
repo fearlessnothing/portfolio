@@ -1,5 +1,5 @@
 ---
-title: "Backup and Recovery After a Ransomware Scare"
+title: "Backup and recovery after a ransomware scare"
 system: "Server backup and recovery"
 order: 4
 role: "IT Executive"

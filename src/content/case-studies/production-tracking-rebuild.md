@@ -1,9 +1,9 @@
 ---
-title: "Turning Production Feedback into a Better IT Decision"
+title: "Turning production feedback into a better IT decision"
 system: "Production Tracking System"
 order: 2
 role: "IT Manager"
-duration: "Implementation / Feb – Oct 2026"
+duration: "Feb – Oct 2026"
 environment: "Manufacturing / factory operations"
 focus:
   - "System review"
