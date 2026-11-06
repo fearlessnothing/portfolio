@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CaseStudyCard from '../components/CaseStudyCard.astro';
 import { getSortedCaseStudies } from '../lib/case-studies';
-import heroImage from '../assets/home/hero-denim.jpg';
+import heroImage from '../assets/home/hero-it-room.jpg';
 import infrastructureImage from '../assets/home/expertise-infrastructure.jpg';
 import securityImage from '../assets/home/expertise-security.jpg';
 import m365Image from '../assets/home/expertise-m365.jpg';
@@ -34,7 +34,7 @@ const expertise = [
 
 <BaseLayout title="Home" description="Min Hein Zaw, IT Manager for two garment factories in Myanmar: infrastructure, security, Microsoft 365, business systems and digital improvement.">
   <section class="hero">
-    <Image class="hero-bg" src={heroImage} alt="" widths={[800, 1400, 2000]} sizes="100vw" loading="eager" fetchpriority="high" />
+    <Image class="hero-bg" src={heroImage} alt="" widths={[800, 1200, 1536]} sizes="100vw" loading="eager" fetchpriority="high" />
     <div class="container hero-inner">
       <span class="eyebrow">IT Manager / Garment manufacturing</span>
       <h1><span class="hero-line">Curious by nature.</span> <span class="hero-line"><em>IT</em> by choice.</span></h1>
