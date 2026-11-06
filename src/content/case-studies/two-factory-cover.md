@@ -1,5 +1,5 @@
 ---
-title: "Covering a second factory when its IT team left"
+title: "Supporting two factories through an IT staffing transition"
 system: "IT support across two factories"
 order: 5
 role: "IT Executive"
@@ -20,11 +20,11 @@ tags:
   - "Remote support"
   - "Multi-site"
 summary: "When the IT staff at the group's second factory all left, I went there to support more than 100 users on site, with no handover, while supporting nearly 60 users at my own factory remotely. After about three months I was appointed IT Executive for both factories."
-highlights: ["100+ users on site", "~60 users remote", "~3 months"]
+highlights: ["100+ on-site users", "~60 remote users", "2 factories", "~3 months"]
 category: "IT operations"
-problem: "The IT staff at the group's second factory all left with no handover, leaving more than 100 users without support."
-roleSummary: "Supported that factory on site while supporting my own factory remotely, for about three months."
-outcome: "Both factories kept their IT support, and I was appointed IT Executive for both."
+problem: "A staffing transition at the group's second factory created an immediate IT support gap for more than 100 on-site users."
+roleSummary: "Provided on-site support for the second factory while continuing remote support for my existing site, maintaining IT coverage across both operations for approximately three months."
+outcome: "Maintained IT support across both factories through the transition and subsequently took responsibility as IT Executive across both sites."
 results:
   - "More than 100 users supported on site at the second factory, with no handover."
   - "Nearly 60 users at my own factory supported remotely, with same-day trips when a remote fix was not possible."

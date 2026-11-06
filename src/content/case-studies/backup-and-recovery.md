@@ -1,5 +1,5 @@
 ---
-title: "Backup and recovery after a ransomware scare"
+title: "Strengthening backup and recovery after a ransomware incident"
 system: "Server backup and recovery"
 order: 4
 role: "IT Executive"
@@ -22,11 +22,11 @@ tags:
   - "Servers"
   - "SQL"
 summary: "After ransomware hit one department in 2021, I put a 3-2-1 backup routine in place for the ERP, Payroll and file servers, tested restores, and later brought the network back within a day after a fire burned the point where every department's cables met."
-highlights: ["4 servers", "Daily ERP & Payroll backups", "Servers back in 1 day after fire"]
+highlights: ["4 servers", "Daily ERP & Payroll backups", "3-2-1 backup", "Servers back in 1 day after fire"]
 category: "Backup and recovery"
-problem: "Ransomware in 2021 left some user data unrecoverable and showed that a server failure could stop operations."
-roleSummary: "Set up and ran a 3-2-1 backup routine for the ERP, Payroll and file servers, and tested restores."
-outcome: "Restores proven; after a 2023 fire, the servers were back in use within one full day."
+problem: "A ransomware incident in 2021 left some user data unrecoverable and exposed a critical weakness: a server failure could interrupt operations."
+roleSummary: "Implemented and maintained a 3-2-1 backup approach for ERP, Payroll and file-server data, with scheduled backups and restore testing."
+outcome: "Restores were proven in testing. After a 2023 fire burned the factory's central network cabling point, the servers were back in service within one full day."
 results:
   - "ERP and Payroll databases (about 2 GB) backed up every day; the file server (about 2 TB) every three months."
   - "Restores tested on SQL databases and on a whole Windows Server."

@@ -19,9 +19,9 @@ tags:
 summary: "While a new garment factory was still being built, I set up its IT almost single-handed: cabling, network, two servers, around 70 CCTV cameras, PCs and laptops, until the first users could sit down and work."
 highlights: ["~20 users", "2 servers", "~70 CCTV cameras", "~6 months"]
 category: "Infrastructure"
-problem: "A new garment factory needed working IT before its first users arrived, while the building was still under construction."
-roleSummary: "IT support, doing most of the work myself: cabling, network, two servers, CCTV, PCs and laptops."
-outcome: "IT ready for around 20 users, with 2 servers and around 70 CCTV cameras, after about six months."
+problem: "A new garment factory needed its core IT environment ready before users moved in, while the site itself was still under construction."
+roleSummary: "Handled the factory-side IT setup across cabling, networking, servers, CCTV and user devices, supporting the environment from installation through operational readiness."
+outcome: "Delivered the core IT environment required for factory operations, supporting around 20 users, two servers and approximately 70 CCTV cameras within about six months."
 results:
   - "IT ready for around 20 users, with 2 servers and around 70 CCTV cameras."
   - "Cabling, network, servers, PCs and laptops installed myself; a vendor helped with the CCTV cabling."
