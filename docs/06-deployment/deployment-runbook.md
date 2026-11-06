@@ -16,3 +16,5 @@
 
 ## Rollback
 Cloudflare Pages → Deployments → choose the last good deployment → **Rollback**.
+
+**Caution:** **Retry deployment** rebuilds the *same* commit. Using it on an older deployment puts that old version back in production. To fix a missing deploy, push a new commit or use **Rollback** on the newest good deployment. (On 2026-11-06, retrying an older deployment undid a CSP fix until it was rolled forward.)
