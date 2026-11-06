@@ -35,9 +35,7 @@ runtime input is the Web3Forms contact form.
 
 ## Known follow-ups
 
-- Upgrade Astro 5 → 7 when the project is ready for a breaking change; re-run
-  `npm run check` and `npm run build` afterwards.
-- `npm audit fix` and minor updates done 2026-11-04 (8 → 5 advisories). The 5 left (astro, esbuild, sharp, zod) clear only with Astro 7. They affect the build and dev server on this laptop, not the published static files.
+- `npm audit fix` and minor updates done 2026-11-04 (8 → 5 advisories). Astro 5 → 7 upgrade done 2026-11-06: `npm audit` reports 0 vulnerabilities.
 - Consider self-hosting the Google Fonts files to remove the third-party request.
 - Consider removing the remaining inline `style` attributes to drop `'unsafe-inline'` from
   `style-src`.

@@ -69,7 +69,7 @@ In my job I coordinate systems that other people build: in-house developers, the
 - **No secrets in the repository:** the `.env` file is never committed. The repository was scanned for keys, passwords and internal data.
 - **Security headers:** Content Security Policy (scripts only from this site, and the form can post only to Web3Forms), HSTS, clickjacking protection and `nosniff`. Camera, microphone and location are turned off. All were checked on the live site.
 - **No inline scripts:** scripts moved into separate files so the policy could stay strict.
-- **Dependencies:** `npm audit` advisories went from 8 to 5. The remaining 5 affect only the build tools and will clear with the next major Astro upgrade.
+- **Dependencies:** `npm audit` advisories went from 8 to 5, then to 0 after upgrading to Astro 7.
 - **Contact form:** spam honeypot and a privacy note. The form key is public by design. Restricting it to this domain needs a paid plan, so I left that out to keep the project free.
 - **Documented:** every control is listed in the security document, and the maintenance plan includes a monthly audit.
 

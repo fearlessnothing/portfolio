@@ -13,5 +13,7 @@ Content-heavy site, case studies in Markdown, must be fast and free to host.
 ## Decision
 Astro 5 with `output: 'static'` and Tailwind CSS v4.
 
+Amendment 2026-11-06: upgraded to Astro 7 to clear the npm audit advisories. The decision is unchanged.
+
 ## Consequences
 Any static host works; adding a case study is one Markdown file.

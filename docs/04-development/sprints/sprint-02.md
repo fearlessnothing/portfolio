@@ -11,7 +11,7 @@
 | 3 | Publish the `project-review/` folder and link it from the portfolio case study | Should | Done 2026-11-06 |
 | 4 | CHANGELOG: cut release 1.0.0 (go-live), merge duplicate headings, drop the stale planned block | Should | Done 2026-11-06 |
 | 5 | Consistent formats: case-study durations, ranges, role labels, heading case | Should | Done 2026-11-06 |
-| 6 | Upgrade Astro 5 → 7 (clears the last 5 npm audit advisories) | Could | To do |
+| 6 | Upgrade Astro 5 → 7 (clears the last 5 npm audit advisories) | Could | Done 2026-11-06 |
 
 ## Decisions
 - 2026-11-06: The portfolio-site case study stays in Case Studies; it is not moved to Projects (owner decision). A move to `/projects/portfolio-site/` was started and fully reverted before any commit.
@@ -28,6 +28,7 @@
 - 2026-11-06: CHANGELOG release `[1.0.0] - 2026-11-05` taken from commit `c3ec4a2`, which recorded the site going live. Entries were regrouped, not rewritten (`6753fce`).
 - 2026-11-06: Formats unified (`891de03`): 4 durations, 1 range dash, "2019 – today" → "2019 – present", the role label, and 6 case-study titles in sentence case. Date formats were already consistent: "Mon YYYY" in site labels, full month names in prose, ISO dates in docs.
 - 2026-11-06: Owner could not tell the review link was clickable. Cause: `a { color: inherit; text-decoration: none; }` applied to links in case-study text. Fixed with a `.prose a:not([class])` style (accent, bold, underline); checked in light and dark.
+- 2026-11-06: Task #6 done — Astro 5.18.2 → 7.4.7 on branch `chore/astro-7`; `npm audit`: 0 vulnerabilities. Only code change: `z` from `astro/zod`. `compressHTML: true` and the Astro 5 CSS targets keep the built output as before (without them, mobile breakpoints used range syntax that older iPhones ignore). Added `.node-version` (24) for Cloudflare. Checked: 14 pages same HTML; 56 screenshots (1280 / 360 px, light / dark) match; dev server works. Certificate-year item parked by the owner and removed from TODO.
 
 ## Review / Retro
 _To be filled at the end of the sprint._

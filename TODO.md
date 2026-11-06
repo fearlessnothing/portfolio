@@ -6,10 +6,4 @@
 
 _Last updated: 2026-11-06_
 
-## Waiting on me (Claude needs this from me)
-
-- [ ] Optional: year for each certificate, issuer for the three without one
-
-## Later (from the 2026-11-04 project review)
-
-- [ ] Upgrade Astro 5 → 7 (clears the last 5 npm audit advisories; breaking change, own task)
+Nothing open right now.

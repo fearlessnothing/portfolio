@@ -1,7 +1,7 @@
 # CLAUDE.md — Portfolio project
 
 Personal portfolio for Min Hein Zaw, targeting an IT Manager role in manufacturing.
-Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflare Pages. Budget: free only.
+Static site: Astro 7 (`output: 'static'`, Node 24 via `.node-version`) + Tailwind CSS v4. Hosted on Cloudflare Pages. Budget: free only.
 
 ## Commands
 - `npm run dev` — local dev server (http://localhost:4321)
