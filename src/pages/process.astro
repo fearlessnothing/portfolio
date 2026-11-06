@@ -35,16 +35,16 @@ const stages = [
       'Keep interruption to daily work as small as possible.',
       'Plan from the start how the workaround will be removed.',
     ],
-    example: { text: 'A temporary Microsoft 365 register kept visitor registration running for about a month.', href: '/case-studies/visitor-management/', link: 'Visitor system' },
+    example: { text: 'A temporary Microsoft 365 register kept visitor registration running for about a month while the main VMS was improved. Once the improved VMS was in use at both Myanmar factories, the register was retired.', href: '/case-studies/visitor-management/', link: 'Visitor system' },
   },
   {
     id: 'deliver',
     verb: 'Deliver',
-    lead: 'Coordinate the people and the work.',
+    lead: 'Turn the agreed solution into something people can actually use.',
     activities: [
       'Coordinate developers, vendors and the group IT team.',
-      'Configuration, data preparation and testing.',
-      'Training and go-live support for users.',
+      'Prepare data, configure and test what is needed.',
+      'Train users and support go-live.',
     ],
     example: { text: 'A new factory’s cabling, network and servers, fitted around construction.', href: '/case-studies/factory-it-setup/', link: 'Factory IT set-up' },
   },
@@ -68,7 +68,7 @@ const stages = [
       'Monitor, back up, and test that restores work.',
       'Automate where it helps; retire temporary solutions.',
     ],
-    example: { text: 'Daily backups with tested restores; the temporary visitor register retired.', href: '/case-studies/backup-and-recovery/', link: 'Backup and recovery' },
+    example: { text: 'Daily ERP and Payroll backups, copied to an external drive and the cloud, with restores tested.', href: '/case-studies/backup-and-recovery/', link: 'Backup and recovery' },
   },
 ].map((stage, i) => ({ ...stage, num: String(i + 1).padStart(2, '0') }));
 
@@ -80,6 +80,7 @@ const questions = [
   'What happens when it fails?',
   'Can it be maintained?',
   'Is temporary complexity becoming permanent?',
+  'Does the value justify the cost and complexity?',
 ];
 ---
 
@@ -109,6 +110,7 @@ const questions = [
         </li>
       ))}
     </ol>
+    <p class="pr-loop"><span aria-hidden="true">↺</span>Improvement often reveals the next thing to understand. <a href="#understand">Back to 01 Understand</a></p>
   </section>
 
   <section class="pr-decide" aria-labelledby="decide-title">
