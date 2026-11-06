@@ -12,5 +12,4 @@ _Last updated: 2026-11-06_
 
 ## Later (from the 2026-11-04 project review)
 
-- [ ] Crop the hero photo to a wide ratio to make it lighter
 - [ ] Upgrade Astro 5 → 7 (clears the last 5 npm audit advisories; breaking change, own task)

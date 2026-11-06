@@ -4,7 +4,7 @@ Stock photos are from Unsplash under the [Unsplash License](https://unsplash.com
 
 | File (`src/assets/`) | Used on | Source |
 |---|---|---|
-| `home/hero-denim.jpg` | Home hero background | https://images.unsplash.com/photo-1604176354204-9268737828e4 |
+| `home/hero-denim.jpg` | Home hero background (cropped 2026-11-06 from 2400×2400 to the centre 2400×1350, 16:9) | https://images.unsplash.com/photo-1604176354204-9268737828e4 |
 | `home/expertise-infrastructure.jpg` | Home expertise hexagon: Infrastructure | https://images.unsplash.com/photo-1520869562399-e772f042f422 |
 | `home/expertise-security.jpg` | Home expertise hexagon: Security & Backup | https://images.unsplash.com/photo-1597852074816-d933c7d2b988 |
 | `home/expertise-m365.jpg` | Home expertise hexagon: Microsoft 365 | https://images.unsplash.com/photo-1573164713714-d95e436ab8d6 |
