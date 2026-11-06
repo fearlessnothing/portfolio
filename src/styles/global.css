@@ -178,6 +178,9 @@ a.text-link { min-height: 44px; }
 .prose h2 { margin: 48px 0 13px; color: var(--ink); font-size: 25px; font-weight: 600; letter-spacing: 0; line-height: 1.25; }
 .prose h3 { color: var(--ink); font-size: 17px; font-weight: 700; }
 .prose p { margin: 0 0 16px; }
+/* Links written in Markdown (no class) must look like links. */
+.prose a:not([class]) { color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.prose a:not([class]):hover { text-decoration-thickness: 2px; }
 .prose ul, .prose ol { padding-left: 21px; }
 .prose ul { list-style: disc; }
 .prose ol { list-style: decimal; }

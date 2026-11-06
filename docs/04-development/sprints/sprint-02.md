@@ -27,6 +27,7 @@
 - 2026-11-06: `project-review/` published (commit `bcfe92f`). Scan found no Windows usernames, emails, keys or employee names. Two local paths in the raw tool output were made relative. One quote from the owner's private notes (finding H-01) was made generic by owner choice. The training centre named in it is already listed on the About CV.
 - 2026-11-06: CHANGELOG release `[1.0.0] - 2026-11-05` taken from commit `c3ec4a2`, which recorded the site going live. Entries were regrouped, not rewritten (`6753fce`).
 - 2026-11-06: Formats unified (`891de03`): 4 durations, 1 range dash, "2019 – today" → "2019 – present", the role label, and 6 case-study titles in sentence case. Date formats were already consistent: "Mon YYYY" in site labels, full month names in prose, ISO dates in docs.
+- 2026-11-06: Owner could not tell the review link was clickable. Cause: `a { color: inherit; text-decoration: none; }` applied to links in case-study text. Fixed with a `.prose a:not([class])` style (accent, bold, underline); checked in light and dark.
 
 ## Review / Retro
 _To be filled at the end of the sprint._
