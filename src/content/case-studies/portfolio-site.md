@@ -3,6 +3,7 @@ title: "Built with AI. Directed by me."
 system: "Personal portfolio website"
 order: 6
 role: "Personal project"
+roleDetail: "Product owner and project lead (personal project)"
 duration: "Oct – Nov 2026"
 environment: "Personal project · free tools only"
 focus:

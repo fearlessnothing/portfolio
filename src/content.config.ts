@@ -7,6 +7,8 @@ const caseStudies = defineCollection({
     title: z.string(),
     order: z.number().int(),
     role: z.string(),
+    // Optional longer role shown on the case-study page; `role` stays short for cards.
+    roleDetail: z.string().optional(),
     duration: z.string(),
     tags: z.array(z.string()),
     summary: z.string(),

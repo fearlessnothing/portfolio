@@ -15,11 +15,11 @@ const hasOverview = Boolean(data.focus?.length);
 ---
 
 <BaseLayout title={data.title} description={data.summary}>
-  <section class="page-intro"><div class="container"><a class="back-link" href="/case-studies/">← All case studies</a><span class="eyebrow" style="margin-top: 24px">{data.system ?? 'Case study'}</span><h1>{data.title}</h1><p>{data.summary}</p>{!hasOverview && <div class="case-meta"><span>Role / {data.role}</span><span>Duration / {data.duration}</span></div>}</div></section>
+  <section class="page-intro"><div class="container"><a class="back-link" href="/case-studies/">← All case studies</a><span class="eyebrow" style="margin-top: 24px">{data.system ?? 'Case study'}</span><h1>{data.title}</h1><p>{data.summary}</p>{!hasOverview && <div class="case-meta"><span>Role / {data.roleDetail ?? data.role}</span><span>Duration / {data.duration}</span></div>}</div></section>
   <article class="container content-section">
     {hasOverview && (
       <section class="cs-overview" aria-label="Project overview">
-        <div class="cs-overview-item"><span>Role</span><p>{data.role}</p></div>
+        <div class="cs-overview-item"><span>Role</span><p>{data.roleDetail ?? data.role}</p></div>
         <div class="cs-overview-item"><span>Timeline</span><p>{data.duration}</p></div>
         {data.environment && <div class="cs-overview-item"><span>Environment</span><p>{data.environment}</p></div>}
         <div class="cs-overview-item cs-overview-wide"><span>Focus</span><ul class="tag-list">{data.focus?.map((item) => <li>{item}</li>)}</ul></div>
