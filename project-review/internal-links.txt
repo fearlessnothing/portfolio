@@ -1,0 +1,10 @@
+/
+/_astro/about.CR38LWpb.css
+/about/
+/case-studies/
+/case-studies/factory-it-setup/
+/case-studies/production-tracking-rebuild/
+/case-studies/visitor-management/
+/contact/
+/process/
+/projects/

@@ -1,0 +1,64 @@
+
+> myanmar-garment-it-portfolio@1.0.0 build
+> astro build
+
+[2m16:50:59[22m [34m[content][39m Syncing content
+[2m16:50:59[22m [34m[content][39m Synced content
+[2m16:50:59[22m [34m[types][39m Generated [2m637ms[22m
+[2m16:50:59[22m [34m[build][39m output: [34m"static"[39m
+[2m16:50:59[22m [34m[build][39m mode: [34m"static"[39m
+[2m16:50:59[22m [34m[build][39m directory: [34mdist\[39m
+[2m16:50:59[22m [34m[build][39m Collecting build info...
+[2m16:50:59[22m [34m[build][39m [32m✓ Completed in 670ms.[39m
+[2m16:50:59[22m [34m[build][39m Building static entrypoints...
+[2m16:51:02[22m [34m[vite][39m [32m✓ built in 3.02s[39m
+[2m16:51:02[22m [34m[build][39m [32m✓ Completed in 3.08s.[39m
+
+[42m[30m generating static routes [39m[49m
+[2m16:51:02[22m [32m▶[39m src/pages/about.astro
+[2m16:51:02[22m   [34m└─[39m [2m/about/index.html[22m [2m(+20ms)[22m 
+[2m16:51:02[22m [32m▶[39m src/pages/case-studies/[...slug].astro
+[2m16:51:02[22m   [34m├─[39m [2m/case-studies/visitor-management/index.html[22m [2m(+4ms)[22m 
+[2m16:51:02[22m   [34m├─[39m [2m/case-studies/production-tracking-rebuild/index.html[22m [2m(+3ms)[22m 
+[2m16:51:02[22m   [34m└─[39m [2m/case-studies/factory-it-setup/index.html[22m [2m(+2ms)[22m 
+[2m16:51:02[22m [32m▶[39m src/pages/case-studies/index.astro
+[2m16:51:02[22m   [34m└─[39m [2m/case-studies/index.html[22m [2m(+3ms)[22m 
+[2m16:51:02[22m [32m▶[39m src/pages/contact.astro
+[2m16:51:02[22m   [34m└─[39m [2m/contact/index.html[22m [2m(+2ms)[22m 
+[2m16:51:02[22m [32m▶[39m src/pages/index.astro
+[2m16:51:02[22m   [34m└─[39m [2m/index.html[22m [2m(+7ms)[22m 
+[2m16:51:02[22m [32m▶[39m src/pages/process.astro
+[2m16:51:02[22m   [34m└─[39m [2m/process/index.html[22m [2m(+3ms)[22m 
+[2m16:51:02[22m [32m▶[39m src/pages/projects.astro
+[2m16:51:02[22m   [34m└─[39m [2m/projects/index.html[22m [2m(+3ms)[22m 
+[2m16:51:02[22m [32m✓ Completed in 151ms.
+[39m
+[42m[30m generating optimized images [39m[49m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-security.Dg_zAgRI_Z2j2D48.webp [2m(reused cache entry)[22m [2m(+28ms)[22m [2m(1/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-infrastructure.BjAYah8j_8LFkV.webp [2m(reused cache entry)[22m [2m(+34ms)[22m [2m(2/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-m365.Ci0Y96jv_1esY0B.webp [2m(reused cache entry)[22m [2m(+45ms)[22m [2m(3/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/hero-denim.DuN47rOs_uAuCb.webp [2m(reused cache entry)[22m [2m(+57ms)[22m [2m(4/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-automation.DPNw6qaz_1YJrHd.webp [2m(reused cache entry)[22m [2m(+62ms)[22m [2m(5/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/profile.B0rSi0wY_Z14sVIG.webp [2m(reused cache entry)[22m [2m(+91ms)[22m [2m(6/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-security.Dg_zAgRI_1xNrqi.webp [2m(reused cache entry)[22m [2m(+84ms)[22m [2m(7/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-business.Dc7Vw0Ym_1pH36.webp [2m(reused cache entry)[22m [2m(+124ms)[22m [2m(8/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/hero-denim.DuN47rOs_1pzCEy.webp [2m(reused cache entry)[22m [2m(+69ms)[22m [2m(9/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-automation.DPNw6qaz_1KNcp3.webp [2m(reused cache entry)[22m [2m(+67ms)[22m [2m(10/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-infrastructure.BjAYah8j_ZoxR7d.webp [2m(reused cache entry)[22m [2m(+104ms)[22m [2m(11/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-m365.Ci0Y96jv_ZLd68f.webp [2m(reused cache entry)[22m [2m(+104ms)[22m [2m(12/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-business.Dc7Vw0Ym_Z1bUlgp.webp [2m(reused cache entry)[22m [2m(+37ms)[22m [2m(13/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-automation.DPNw6qaz_ZdK05Q.webp [2m(reused cache entry)[22m [2m(+34ms)[22m [2m(14/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/hero-denim.DuN47rOs_1mN0OT.webp [2m(reused cache entry)[22m [2m(+49ms)[22m [2m(15/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-security.Dg_zAgRI_Z1sbRkh.webp [2m(reused cache entry)[22m [2m(+71ms)[22m [2m(16/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-infrastructure.BjAYah8j_1KN3t8.webp [2m(reused cache entry)[22m [2m(+57ms)[22m [2m(17/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-m365.Ci0Y96jv_Z1SHmtw.webp [2m(reused cache entry)[22m [2m(+57ms)[22m [2m(18/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/expertise-business.Dc7Vw0Ym_RgsLW.webp [2m(reused cache entry)[22m [2m(+47ms)[22m [2m(19/20)[22m
+[2m16:51:02[22m   [32m▶[39m /_astro/hero-denim.DuN47rOs_Z1bB1UB.webp [2m(reused cache entry)[22m [2m(+40ms)[22m [2m(20/20)[22m
+[2m16:51:02[22m [32m✓ Completed in 217ms.
+[39m
+[2m16:51:02[22m [34m[build][39m 9 page(s) built in [1m4.14s[22m
+[2m16:51:02[22m [34m[build][39m [1mComplete![22m
+
+real	0m6.951s
+user	0m0.105s
+sys	0m0.105s

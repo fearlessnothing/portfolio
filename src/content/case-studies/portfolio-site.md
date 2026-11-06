@@ -64,7 +64,7 @@ In my job I coordinate systems that other people build: in-house developers, the
 
 ## Security
 
-- **Security review:** I had the site checked for security issues, then ran a full project review and fixed what it found.
+- **Security review:** I had the site checked for security issues, then ran a [full project review](https://github.com/fearlessnothing/portfolio/tree/main/project-review) and fixed what it found.
 - **No secrets in the repository:** the `.env` file is never committed. The repository was scanned for keys, passwords and internal data.
 - **Security headers:** Content Security Policy (scripts only from this site, and the form can post only to Web3Forms), HSTS, clickjacking protection and `nosniff`. Camera, microphone and location are turned off. All were checked on the live site.
 - **No inline scripts:** scripts moved into separate files so the policy could stay strict.

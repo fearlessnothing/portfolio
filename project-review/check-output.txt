@@ -1,0 +1,17 @@
+
+> myanmar-garment-it-portfolio@1.0.0 check
+> astro check
+
+[2m16:50:51[22m [34m[content][39m Syncing content
+[2m16:50:51[22m [34m[content][39m Synced content
+[2m16:50:51[22m [34m[types][39m Generated [2m835ms[22m
+[2m16:50:51[22m [34m[check][39m Getting diagnostics for Astro files in the project folder...
+Result (15 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+
+real	0m12.561s
+user	0m0.167s
+sys	0m0.107s
