@@ -29,6 +29,7 @@ Static site: Astro 5 (`output: 'static'`) + Tailwind CSS v4. Hosted on Cloudflar
 - Never place white text on light backgrounds. Small labels ≥ 12 px (tags ≥ 11 px). Text contrast ≥ 4.5:1. Touch targets ≥ 44 px.
 - Mobile-first; no horizontal scroll from 360 px to 1440 px.
 - Photo placeholders are plain boxes — never label what image should go in them.
+- Headings in sentence case (job titles and system names keep their capitals). Ranges use an en dash with spaces: "2019 – present", "Feb – Oct 2026".
 
 ## Content rules
 - Never invent numbers, results, dates, job titles or company facts. Use `[placeholder]` and ask.

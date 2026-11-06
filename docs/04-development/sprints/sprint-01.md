@@ -1,4 +1,6 @@
-# Sprint 1 — Real content & new design (planned)
+# Sprint 1 — Real content & new design (closed)
+
+**Dates:** 2026-10-15 → 2026-11-05 (closed at go-live). Post-launch work continues in [Sprint 2](sprint-02.md).
 
 **Goal:** The site shows who I am, with one real case study, in the soft blue design.
 
@@ -35,15 +37,12 @@
 - 2026-11-04: Infrastructure case study added from the owner's facts: new factory IT set-up during construction as IT support (around 20 users, 2 servers, around 70 CCTV cameras; vendor helped with CCTV cabling; maintenance team helped at times; about six months). Period 2017 – 2018 (IT Assistant), confirmed by the owner. Home now features all three case studies.
 - 2026-11-05: Task #10 dropped by owner decision — no Services page for now. The Contact page gets one line instead: "Open to freelance projects: Microsoft 365 set-up, network set-up and server backup." A Services page can be added later if freelance work picks up (see ADR-005 amendment 2026-11-05).
 - 2026-11-05: Task #4 dropped by owner decision — keep "Case studies" and "Projects". Projects already separates "Built at work" from "Lab", and the portfolio case study (personal project) would not fit a page named "Work". Sitemap updated to match the built site.
-- Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
-
-## Review / Retro
-_To be filled at the end of the sprint._
 - 2026-11-03: VMS case study rewritten from the owner's corrected story: UAT findings → requirements → interim Microsoft 365 register for continuity → main VMS improved and validated → in use at both Myanmar factories → interim solution retired. All placeholders removed; overview cards and diagrams added (optional schema fields, `cs-` CSS). PTS still has placeholders.
 - 2026-11-05: Task #8 done — wireframes exported from the live site with `npm run wireframes` (`docs/03-design/wireframes-v2.pdf`, 7 pages × desktop and mobile).
 - 2026-11-05: Figma wireframes updated to the as-built site (new page "Wireframes v3 (as built, Nov 2026)", 14 editable frames); the old page was renamed "Archive: wireframes v2 (Oct 2026)".
 - 2026-11-05: Site launched (owner). Phone check and UAT skipped by owner decision. Portfolio case study published at `/case-studies/portfolio-site/` (launch month Nov 2026; lessons learned confirmed by owner).
 - 2026-11-05: Contact thank-you page `/thanks/` added (Web3Forms `redirect` field, noindex). Checked at 1280 and 360 px, light and dark. First live test: the redirect was blocked by CSP `form-action` (no `'self'`), so the page stayed on Contact. Fixed by allowing `'self'`. Retrying an older deployment then put the old CSP back. After a rollback to `8be14e6` the owner re-tested on 2026-11-06: the thank-you page works and the message arrives.
-- 2026-11-06: Shared components (project-review item) done: `CaseStudyCard`, `CaseStudyCta` and `src/data/projects.ts`. Built HTML identical before and after. CV update confirmed done by the owner.
-- 2026-11-06: Hero photo cropped to 16:9 (project-review item). Built images 25–30% lighter; desktop view unchanged, mobile shows a slightly closer crop. Vendor names (Solvei8, Datamation) allowed on the site by owner decision; rule clarified in `CLAUDE.md`.
-- 2026-11-06: Home hero replaced with an owner-supplied AI illustration (IT room in front of the factory floor), radial overlay (option B chosen by owner). Built hero images now 33–85 KB (were 80–462 KB). No horizontal scroll at 360, 390, 768, 1024 and 1440 px. Image rules in `CLAUDE.md` updated to allow owner-supplied AI illustrations.
+- Before the first deploy: add the live URL as `site:` in `astro.config.mjs` once the Cloudflare Pages address is known.
+
+## Review / Retro
+_To be filled at the end of the sprint._
